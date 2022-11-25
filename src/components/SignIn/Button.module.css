@@ -1,0 +1,13 @@
+.button {
+    width: 12.5rem;
+    /* height: 3rem; */
+    /* position: inherit; */
+    padding: 0.5em;
+    border: solid 2px red;
+    border-radius: 0.75rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* background-color: red; */
+    background-image: linear-gradient(to bottom, rgb(250, 70, 70), red); 
+    color: white;
+    font-size: large;
+}

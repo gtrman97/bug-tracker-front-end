@@ -3,8 +3,8 @@ import { Outlet, Link } from "react-router-dom";
 import styles from "./SignInForm.module.css";
 import FormHeader from "./FormHeader.jsx";
 import bugIcon from "../../images/icons/bug.png";
-import Label from "../SignIn/Label";
-import Button from "../SignIn/Button";
+import Label from "../SignIn/Label.jsx";
+import Button from "../SignIn/Button.jsx";
 
 const SignInForm = () => {
   return (
