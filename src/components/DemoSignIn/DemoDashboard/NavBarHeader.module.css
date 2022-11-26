@@ -1,0 +1,14 @@
+.nav-bar-header {
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 1rem; */
+    width: 100%;
+    border-bottom: solid 2px grey;
+
+}
+.heading {
+    padding: 1rem;
+    font-size: small;
+}

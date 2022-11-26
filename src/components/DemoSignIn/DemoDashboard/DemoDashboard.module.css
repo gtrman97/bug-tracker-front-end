@@ -1,0 +1,28 @@
+#demo-app {
+  background-color: #f0f2f5;
+  /* width: 100vw; */
+  height: 100vh;
+  border: solid 2px rebeccapurple;
+
+  display: grid;
+  grid-template-areas:
+    "side-nav head-nav"
+    "side-nav dashboard";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+}
+.side-nav {
+  border: solid 2px red;
+  grid-area: side-nav;
+}
+.head-nav {
+  border: solid 2px blue;
+  grid-area: head-nav;
+}
+.dashboard {
+  border: solid 2px green;
+  grid-area: dashboard;
+  display: flex;
+  padding: 0.25rem;
+  gap: 1rem;
+}

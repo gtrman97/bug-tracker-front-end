@@ -1,0 +1,25 @@
+.option {
+  /* border: solid 2px blue; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 5rem;
+  height: 10rem;
+  /* border: solid 2px red; */
+}
+
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  /* border: solid 2px black; */
+  /* border-radius: 50%; */
+  /* padding: 0.1rem; */
+}
+.user, .title {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #e22e6d;
+}
+.link {
+  /* text-decoration: none; */
+
+}

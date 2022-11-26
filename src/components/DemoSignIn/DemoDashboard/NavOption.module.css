@@ -1,0 +1,15 @@
+.link {
+    list-style-type: none;
+    width: 18rem;
+    height: 3.5rem;
+    border: solid 2px gray;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+}
+.active {
+    background-color: rgba(199, 199, 199, 0.2);
+}

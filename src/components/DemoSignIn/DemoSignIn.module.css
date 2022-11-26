@@ -1,0 +1,52 @@
+.demo-sign-in {
+  text-align: center;
+  background-image: repeating-linear-gradient(135deg, red, blue, green);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.demo-sign-in-form {
+  width: 20rem;
+  height: 35rem;
+  /* border: solid 2px #FF1D19; */
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5%;
+}
+#logo {
+  width: 20%;
+  height: 15%;
+}
+
+#users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15%;
+  /* border: solid 2px red; */
+}
+
+.link {
+  /* text-decoration: none; */
+  color: #e22e6d;
+}
+
+.option {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media (min-width: 768px) {
+  #logo {
+    width: 10px;
+    height: 10px;
+    border: solid 2px red;
+  }
+}
+
