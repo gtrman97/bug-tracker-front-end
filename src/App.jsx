@@ -1,9 +1,9 @@
 // import { useState } from 'react'
 import { Routes, Route } from "react-router-dom";
-import SignInForm from "./components/SignIn/SignInForm.jsx";
-import ForgotPassword from "./components/ForgotPassword/ForgotPassword.jsx"
-import SignUpForm from "./components/SignUp/SignUpForm.jsx";
-import DemoSignIn from "./components/DemoSignIn/DemoSignIn.jsx"
+import SignInForm from "./components/SignIn/SignInForm";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword"
+import SignUpForm from "./components/SignUp/SignUpForm";
+import DemoSignIn from "./components/DemoSignIn/DemoSignIn"
 import DemoDashboard from "./components/DemoSignIn/DemoDashboard/DemoDashboard"
 import './App.css'
 
