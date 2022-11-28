@@ -2,7 +2,9 @@
   height: 46rem;
   /* border: solid 2px grey; */
   border-radius: 0.75rem;
-  background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);  display: block;
+  /* background-image: linear-gradient(195deg, #42424a 0%, #191919 100%); */
+  background-image: var(--black);
+  display: block;
   /* position: fixed; */
   top: 0.5rem;
   /* left: 1rem; */

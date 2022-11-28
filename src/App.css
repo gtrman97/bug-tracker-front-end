@@ -3,3 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --black: linear-gradient(195deg, #42424a 0%, #191919 100%);
+}
