@@ -8,7 +8,7 @@ const Avatar = (props) => {
   return (
     <div className={styles.option}>
       <Link to="/demo-dashboard" permissions={props.userId}  className={styles.link}>
-        <img src={avatar} alt="avatar" className={styles["avatar"]} />
+        <img src={props.avatar} alt="avatar" className={styles["avatar"]} />
         <p className={styles.user}>{props.title}</p>
       </Link>
     </div>
