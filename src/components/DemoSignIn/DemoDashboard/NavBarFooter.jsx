@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./NavBarFooter.module.css";
 // import NavLink from "./NavLink";
 import { NavLink, Link } from "react-router-dom";
-import avatar from "../../../images/icons/user.png";
+import avatar from "../../../images/icons/default_avatar.svg";
 import signIn from "../../../images/icons/sign-in.png";
 import clipboard from "../../../images/icons/clipboards.png";
 

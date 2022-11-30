@@ -8,6 +8,6 @@
 }
 .gradient {
     border-radius: 0.5rem;
-    background-image: linear-gradient(to bottom, rgb(250, 70, 70), red);
+    background-image: var(--red);
     padding: 1rem 0.25rem 1rem 0.25rem;
 }
