@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeadNavBar.module.css";
-import avatar from "../../../images/icons/user.png";
+import avatar from "../../../images/icons/default_avatar.svg";
 import bell from "../../../images/icons/bell.png";
 import setting from "../../../images/icons/setting.png";
 import { Link } from "react-router-dom";
