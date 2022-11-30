@@ -13,7 +13,7 @@ const SignUpForm = () => {
       <form className={styles["sign-up-form"]}>
         <img src={bugIcon} alt="bug icon" id={styles["logo"]} />
         <p className={styles.prompt} >Enter your name, email and password to register</p>
-        <Label title={"Name"} />
+        <Label title={"Username"} />
         <Label title={"Email"} />
         <Label title={"Password"} />
         <Label title={"Confirm Password"} />
