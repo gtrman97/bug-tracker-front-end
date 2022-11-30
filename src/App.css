@@ -4,5 +4,8 @@
   box-sizing: border-box;
 }
 :root {
-  --black: linear-gradient(195deg, #42424a 0%, #191919 100%);
+  --black: linear-gradient(to bottom, #42424a 0%, #191919 100%);
+  --red: linear-gradient(to bottom, rgb(250, 70, 70), red);
+  --green: linear-gradient(to bottom, rgb(43, 223, 43), green);
+  --blue: linear-gradient(to bottom, rgb(5, 135, 179), blue);
 }
