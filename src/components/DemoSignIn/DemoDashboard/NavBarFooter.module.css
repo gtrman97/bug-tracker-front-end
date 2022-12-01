@@ -15,7 +15,7 @@
     padding-top: 0;
     /* border: solid 2px red; */
     border-bottom: solid 2px grey;
-    font-size: small;
+    font-weight: bold;
 }
 .list {
     display: flex;
