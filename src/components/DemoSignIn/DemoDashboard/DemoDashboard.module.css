@@ -2,7 +2,7 @@
   background-color: #f0f2f5;
   /* width: 100vw; */
   height: 100vh;
-  border: solid 2px rebeccapurple;
+  /* border: solid 2px rebeccapurple; */
 
   display: grid;
   grid-template-areas:
@@ -12,17 +12,21 @@
   grid-template-rows: 1fr 5fr;
 }
 .side-nav {
-  border: solid 2px red;
+  /* border: solid 2px red; */
   grid-area: side-nav;
 }
 .head-nav {
-  border: solid 2px blue;
+  /* border: solid 2px blue; */
   grid-area: head-nav;
 }
-.dashboard {
-  border: solid 2px green;
+.card-container {
+  border: solid 2px red;
   grid-area: dashboard;
+  padding: 1.5rem;
+}
+.cards {
+  border: solid 2px green;
   display: flex;
-  padding: 0.25rem;
-  gap: 1rem;
+  gap: 1.5rem;
+
 }

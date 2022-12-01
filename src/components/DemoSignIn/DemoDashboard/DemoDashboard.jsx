@@ -13,11 +13,12 @@ const DemoDashboard = () => {
       <div className={styles["side-nav"]}>
         <SideNavBar />
       </div>
-      <div className={styles.dashboard}>
-        <Card />
-        <Card />
-        <Card />
-
+      <div className={styles["card-container"]}>
+        <div className={styles.cards}>
+          <Card />
+          <Card />
+          <Card />
+        </div>
       </div>
     </main>
   );

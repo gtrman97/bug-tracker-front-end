@@ -4,7 +4,7 @@ import styles from './Card.module.css'
 const Card = () => {
 
     return (
-        <div className={styles.container}>
+        <div className={styles.column}>
             <div className={styles.card}>
                 <div className={styles['card-header']}>
                     <div className={styles['primary-gradient']}>
