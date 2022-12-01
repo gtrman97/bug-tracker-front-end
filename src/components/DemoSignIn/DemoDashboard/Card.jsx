@@ -2,12 +2,13 @@ import React from "react";
 import styles from "./Card.module.css";
 import clock from "../../../images/icons/clock.png";
 
-const Card = () => {
+const Card = (props) => {
+
   return (
     <div className={styles.column}>
       <div className={styles.card}>
         <div className={styles["card-header"]}>
-          <div className={styles["primary-gradient"]}>
+          <div className={styles[`${props.color}-gradient`]}>
             <div className={styles.chart}>
               <canvas></canvas>
             </div>

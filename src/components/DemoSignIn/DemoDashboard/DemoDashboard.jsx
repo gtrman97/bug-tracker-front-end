@@ -15,9 +15,9 @@ const DemoDashboard = () => {
       </div>
       <div className={styles["card-container"]}>
         <div className={styles.cards}>
-          <Card />
-          <Card />
-          <Card />
+          <Card color={'red'}/>
+          <Card color={'blue'}/>
+          <Card color={'green'}/>
         </div>
       </div>
     </main>

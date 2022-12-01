@@ -23,9 +23,25 @@
   margin-right: 1rem;
   position: relative;
 }
-.primary-gradient {
+.red-gradient {
   border-radius: 0.5rem;
   background-image: var(--red);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba(233, 30, 99, 0.4);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.blue-gradient {
+  border-radius: 0.5rem;
+  background-image: var(--blue);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba(233, 30, 99, 0.4);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.green-gradient {
+  border-radius: 0.5rem;
+  background-image: var(--green);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
     0 7px 10px -5px rgba(233, 30, 99, 0.4);
   padding-top: 1rem;
