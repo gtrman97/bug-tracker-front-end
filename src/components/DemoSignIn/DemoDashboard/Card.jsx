@@ -19,7 +19,7 @@ const Card = (props) => {
           <hr />
           <div className={styles.updates}>
             <img src={clock} alt="clock" className={styles.clock} />
-            <p className={styles.update}>Updated 2 days ago</p>
+            <p className={styles.update}>Updated {props.when}</p>
           </div>
         </div>
       </div>
