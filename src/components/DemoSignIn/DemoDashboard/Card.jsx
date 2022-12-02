@@ -17,7 +17,7 @@ console.log(`${styles[`${props.color}-gradient`]}`);
           </div>
         </div>
         <div className={styles["card-body"]}>
-          <h6 className={styles["card-title"]}>Tickets by Priority</h6>
+          <h6 className={styles["card-title"]}>Tickets by {props.category}</h6>
           <hr />
           <div className={styles.update}>
             <img src={clock} alt="clock" className={styles.clock} />
