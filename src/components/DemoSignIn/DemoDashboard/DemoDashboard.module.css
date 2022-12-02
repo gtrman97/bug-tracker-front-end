@@ -14,7 +14,7 @@
 .side-nav {
   /* border: solid 2px red; */
   grid-area: side-nav;
-  padding: 1rem;
+  padding: 0.75rem;
 }
 .head-nav {
   /* border: solid 2px blue; */
