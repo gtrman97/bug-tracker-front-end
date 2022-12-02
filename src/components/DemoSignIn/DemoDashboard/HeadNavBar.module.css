@@ -47,7 +47,7 @@
     /* border: solid 2px rebeccapurple; */
     display: flex;
     /* gap: 0.5rem; */
-    width: 11rem;
+    width: 12rem;
 
 }
 .sign-in-section {
@@ -55,7 +55,7 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 100%;
+    width: 6rem;
 }
 .link {
     display: flex;
