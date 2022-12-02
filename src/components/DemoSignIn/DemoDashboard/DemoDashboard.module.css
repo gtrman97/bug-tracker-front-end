@@ -20,12 +20,12 @@
   grid-area: head-nav;
 }
 .card-container {
-  border: solid 2px red;
+  /* border: solid 2px red; */
   grid-area: dashboard;
   padding: 1.5rem;
 }
 .cards {
-  border: solid 2px green;
+  /* border: solid 2px green; */
   display: flex;
   gap: 1.5rem;
   height: 22.5rem;

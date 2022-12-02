@@ -4,8 +4,6 @@ import clock from "../../../images/icons/clock.png";
 
 const Card = (props) => {
 
-console.log(`${styles[`${props.color}-gradient`]}`);
-
   return (
     <div className={styles.column}>
       <div className={styles.card}>
@@ -19,9 +17,9 @@ console.log(`${styles[`${props.color}-gradient`]}`);
         <div className={styles["card-body"]}>
           <h6 className={styles["card-title"]}>Tickets by {props.category}</h6>
           <hr />
-          <div className={styles.update}>
+          <div className={styles.updates}>
             <img src={clock} alt="clock" className={styles.clock} />
-            <p>Updated 2 days ago</p>
+            <p className={styles.update}>Updated 2 days ago</p>
           </div>
         </div>
       </div>
