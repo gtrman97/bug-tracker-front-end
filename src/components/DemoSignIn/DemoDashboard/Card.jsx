@@ -4,11 +4,13 @@ import clock from "../../../images/icons/clock.png";
 
 const Card = (props) => {
 
+console.log(`${styles[`${props.color}-gradient`]}`);
+
   return (
     <div className={styles.column}>
       <div className={styles.card}>
         <div className={styles["card-header"]}>
-          <div className={styles[`${props.color}-gradient`]}>
+          <div className={`${styles[`${props.color}-gradient`]} ${styles.gradient}`}>
             <div className={styles.chart}>
               <canvas></canvas>
             </div>
