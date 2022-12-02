@@ -15,9 +15,9 @@ const DemoDashboard = () => {
       </div>
       <div className={styles["card-container"]}>
         <div className={styles.cards}>
-          <Card color={'red'} category={'Priority'} when={'2 days ago'}/>
-          <Card color={'blue'} category={'Type'} when={'4 minute ago'}/>
-          <Card color={'green'} category={'Status'} when={'just now'}/>
+          <Card color={'red'} category={'priority'} when={'2 days ago'}/>
+          <Card color={'blue'} category={'type'} when={'4 minute ago'}/>
+          <Card color={'green'} category={'status'} when={'just now'}/>
         </div>
       </div>
     </main>

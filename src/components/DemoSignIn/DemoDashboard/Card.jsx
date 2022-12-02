@@ -8,9 +8,13 @@ const Card = (props) => {
     <div className={styles.column}>
       <div className={styles.card}>
         <div className={styles["card-header"]}>
-          <div className={`${styles[`${props.color}-gradient`]} ${styles.gradient}`}>
+          <div
+            className={`${styles[`${props.color}-gradient`]} ${
+              styles.gradient
+            }`}
+          >
             <div className={styles.chart}>
-              <canvas></canvas>
+              <canvas id={`${props.category}-bars`}></canvas>
             </div>
           </div>
         </div>
