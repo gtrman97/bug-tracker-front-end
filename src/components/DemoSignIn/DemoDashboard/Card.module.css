@@ -44,6 +44,7 @@
 }
 .card-title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
     margin-bottom: 0.5rem;
 }
 .update {
