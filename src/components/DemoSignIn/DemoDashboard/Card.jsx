@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
 import clock from "../../../images/icons/clock.png";
-import Chart from './Chart'
 
 const Card = (props) => {
 
@@ -15,8 +14,7 @@ const Card = (props) => {
             }`}
           >
             <div className={styles.chart}>
-              {/* <canvas id={`${props.category}-bars`}></canvas> */}
-              <Chart />
+              <canvas id={`${props.category}-bars`}></canvas>
             </div>
           </div>
         </div>
