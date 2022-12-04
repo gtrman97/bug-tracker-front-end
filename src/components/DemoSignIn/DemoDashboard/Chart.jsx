@@ -5,7 +5,7 @@ import styles from "./Chart.module.css";
 const Chart = (props) => {
   let category = props.category,
     data,
-    barWidth = 45;
+    barWidth;
 
   if (category === "priority") {
     data = [
@@ -26,6 +26,7 @@ const Chart = (props) => {
         pv: 5,
       },
     ];
+    barWidth = 45;
   } else if (category === "type") {
     data = [
       {
@@ -37,13 +38,9 @@ const Chart = (props) => {
         pv: 7,
       },
     ];
-    barWidth = 75;
+    barWidth = 65;
   } else {
     data = [
-      {
-        name: "New",
-        pv: 21,
-      },
       {
         name: "Open",
         pv: 18,
@@ -57,6 +54,7 @@ const Chart = (props) => {
         pv: 21,
       },
     ];
+    barWidth = 55;
   }
 
   return (
@@ -71,7 +69,7 @@ const Chart = (props) => {
         bottom: 0,
       }}
     >
-      <CartesianGrid strokeDasharray="3 3" />
+      <CartesianGrid strokeDasharray="7 7" />
       <XAxis
         dataKey="name"
         stroke="#f0f2f5"
