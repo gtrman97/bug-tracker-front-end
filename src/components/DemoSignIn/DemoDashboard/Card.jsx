@@ -16,7 +16,7 @@ const Card = (props) => {
           >
             <div className={styles.chart}>
               {/* <canvas id={`${props.category}-bars`}></canvas> */}
-              <Chart color={props.color}/>
+              <Chart />
             </div>
           </div>
         </div>

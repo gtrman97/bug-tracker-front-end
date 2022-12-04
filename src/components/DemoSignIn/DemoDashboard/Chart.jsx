@@ -6,26 +6,22 @@ const data = [
   {
     name: "None",
     pv: 10,
-    // amt: 3000
   },
   {
     name: "Low",
     pv: 3,
-    // amt: 3000
   },
   {
     name: "Medium",
     pv: 10,
-    // amt: 3000
   },
   {
     name: "High",
     pv: 6,
-    // amt: 3000
   },
 ];
 
-const Chart = (props) => {
+const Chart = () => {
   return (
     <BarChart
       width={300}
@@ -37,7 +33,6 @@ const Chart = (props) => {
         left: -20,
         bottom: 0,
       }}
-      className={styles[`${props.color}-chart`]}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis
