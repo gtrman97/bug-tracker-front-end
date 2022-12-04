@@ -12,7 +12,7 @@ const NavList = () => {
   return (
     <div id={styles["nav-bar-list"]}>
       <ul className={styles.list}>
-        <NavLink to="../" className={styles.link}>
+        <NavLink to="/demo-dashboard" className={styles.link}>
           <img src={dashboard} className={styles.icon} alt="dashboard" />
           Dashboard
         </NavLink>
