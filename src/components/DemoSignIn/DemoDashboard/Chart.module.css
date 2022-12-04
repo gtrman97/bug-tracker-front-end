@@ -1,3 +1,6 @@
-.chart {
+.red-chart {
     background-image: linear-gradient(to bottom, rgb(250, 70, 70), red);
+    width: 10px;
+    height: 100%;
+    border: solid 2px black;
   }

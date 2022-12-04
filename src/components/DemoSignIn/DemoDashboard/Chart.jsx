@@ -28,16 +28,16 @@ const data = [
 const Chart = () => {
   return (
     <BarChart
-      width={600}
-      height={300}
+      width={350}
+      height={200}
       data={data}
       margin={{
         top: 5,
-        right: 150,
-        left: 120,
-        bottom: 5,
+        right: 50,
+        left: 5,
+        bottom: 0,
       }}
-      className={styles.chart}
+      className={styles['red-chart']}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis
