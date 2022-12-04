@@ -25,7 +25,7 @@ const data = [
   },
 ];
 
-const Chart = () => {
+const Chart = (props) => {
   return (
     <BarChart
       width={300}
@@ -33,11 +33,11 @@ const Chart = () => {
       data={data}
       margin={{
         top: 5,
-        right: 35,
+        right: 0,
         left: -20,
         bottom: 0,
       }}
-      className={styles['red-chart']}
+      className={styles[`${props.color}-chart`]}
     >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis

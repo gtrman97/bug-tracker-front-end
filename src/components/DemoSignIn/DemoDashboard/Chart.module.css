@@ -1,5 +1,9 @@
 .red-chart {
-    background-image: linear-gradient(to bottom, rgb(250, 70, 70), red);
-    width: 10px;
-    height: 100%;
+    background-image: var(--red);
+  }
+  .blue-chart {
+    background-image: var(--blue);
+  }
+  .green-chart {
+    background-image: var(--green);
   }
