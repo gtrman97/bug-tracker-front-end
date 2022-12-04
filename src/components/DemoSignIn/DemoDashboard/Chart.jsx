@@ -28,13 +28,13 @@ const data = [
 const Chart = () => {
   return (
     <BarChart
-      width={350}
+      width={300}
       height={200}
       data={data}
       margin={{
         top: 5,
-        right: 70,
-        left: 5,
+        right: 35,
+        left: -20,
         bottom: 0,
       }}
       className={styles['red-chart']}
