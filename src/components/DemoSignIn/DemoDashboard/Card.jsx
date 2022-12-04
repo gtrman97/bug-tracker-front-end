@@ -4,7 +4,6 @@ import clock from "../../../images/icons/clock.png";
 import Chart from "./Chart";
 
 const Card = (props) => {
-
   return (
     <div className={styles.column}>
       <div className={styles.card}>
@@ -15,8 +14,7 @@ const Card = (props) => {
             }`}
           >
             <div className={styles.chart}>
-              {/* <canvas id={`${props.category}-bars`}></canvas> */}
-              <Chart category={props.category}/>
+              <Chart category={props.category} data={props.data} barWidth={props.barWidth}/>
             </div>
           </div>
         </div>

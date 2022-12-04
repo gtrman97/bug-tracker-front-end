@@ -4,58 +4,8 @@ import styles from "./Chart.module.css";
 
 const Chart = (props) => {
   let category = props.category,
-    data,
-    barWidth;
-
-  if (category === "priority") {
-    data = [
-      {
-        name: "None",
-        pv: 3,
-      },
-      {
-        name: "Low",
-        pv: 5,
-      },
-      {
-        name: "Medium",
-        pv: 7,
-      },
-      {
-        name: "High",
-        pv: 5,
-      },
-    ];
-    barWidth = 45;
-  } else if (category === "type") {
-    data = [
-      {
-        name: "Bugs",
-        pv: 11,
-      },
-      {
-        name: "Features",
-        pv: 7,
-      },
-    ];
-    barWidth = 65;
-  } else {
-    data = [
-      {
-        name: "Open",
-        pv: 18,
-      },
-      {
-        name: "In Progress",
-        pv: 10,
-      },
-      {
-        name: "Resolved",
-        pv: 21,
-      },
-    ];
-    barWidth = 55;
-  }
+    data = props.data,
+    barWidth = props.barWidth;
 
   return (
     <BarChart
