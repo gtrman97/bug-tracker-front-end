@@ -22,10 +22,10 @@ export default function App(props) {
             index // <-- rendered on "/"
             element={<DemoDashboard />}
           />
-          <Route
+          {/* <Route
             path="demo-dashboard" // <-- rendered on "/demo-dashboard"
             element={<DemoDashboard />}
-          />
+          /> */}
         </Route>
       </Routes>
     </div>

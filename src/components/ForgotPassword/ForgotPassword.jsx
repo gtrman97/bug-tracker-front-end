@@ -15,7 +15,7 @@ const ForgotPassword = () => {
         <p className={styles.prompt} >Enter your email to reset your password</p>
         <Label title={"Email"} />
         <Button title={"Reset Password"} />
-        <p className={styles.option}>Already have an account? <Link to='/' className={styles.link}>Sign In</Link></p>
+        <p className={styles.option}>Already have an account? <Link to='/sign-in' className={styles.link}>Sign In</Link></p>
       </form>
     </div>
   );

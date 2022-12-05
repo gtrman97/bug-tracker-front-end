@@ -23,7 +23,7 @@ const DemoSignIn = () => {
           <Avatar title={"Submitter"} avatar={green_avatar} userId={4} path={'/demo-app'}/>
         </div>
         <p className={styles.option}>
-          Already have an account? <Link to="/" className={styles.link}>Sign In</Link>
+          Already have an account? <Link to="/sign-in" className={styles.link}>Sign In</Link>
         </p>
       </form>
     </div>

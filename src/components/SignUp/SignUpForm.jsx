@@ -18,7 +18,7 @@ const SignUpForm = () => {
         <Label title={"Password"} />
         <Label title={"Confirm Password"} />
         <Button title={"Sign Up"} />
-        <p className={styles.option}>Already have an account? <Link to='/' className={styles.link}>Sign In</Link></p>
+        <p className={styles.option}>Already have an account? <Link to='/sign-in' className={styles.link}>Sign In</Link></p>
       </form>
     </div>
   );
