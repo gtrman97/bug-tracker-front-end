@@ -1,4 +1,4 @@
-#demo-app {
+.demo-app {
     background-color: #f0f2f5;
     /* width: 100vw; */
     height: 100vh;
@@ -7,7 +7,7 @@
     display: grid;
     grid-template-areas:
       "side-nav head-nav"
-      "side-nav dashboard";
+      "side-nav main-content";
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 5fr;
   }
@@ -19,4 +19,11 @@
   .head-nav {
     /* border: solid 2px blue; */
     grid-area: head-nav;
+  }
+  .main-content {
+    grid-area: main-content;
+    padding-top: 2rem;
+  }
+  .cards {
+    display: flex;
   }
