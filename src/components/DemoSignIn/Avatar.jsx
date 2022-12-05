@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Avatar.module.css"
-import avatar from "../../images/icons/user.png";
 
 const Avatar = (props) => {
 

@@ -10,9 +10,9 @@ import clipboard from "../../../images/icons/clipboards.png";
 const NavBarFooter = () => {
   return (
     <div className={styles["nav-bar-footer"]}>
-      <heading className={styles.heading}>
+      <h4 className={styles.heading}>
         <span>Account Pages</span>
-      </heading>
+      </h4>
       <ul className={styles.list}>
         <NavLink
           to="/profile"

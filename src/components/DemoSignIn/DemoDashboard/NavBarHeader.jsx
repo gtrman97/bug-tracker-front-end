@@ -1,12 +1,12 @@
 import React from "react";
 import styles from './NavBarHeader.module.css'
 
-const NavBarHeader = () => {
+const NavBarHeader = (props) => {
   return (
     <div className={styles["nav-bar-header"]}>
-      <heading className={styles.heading}>
+      <h4 className={styles.heading}>
         <span>Dashboard</span>
-      </heading>
+      </h4>
     </div>
   );
 };
