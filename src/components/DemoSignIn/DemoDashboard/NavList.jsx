@@ -16,7 +16,7 @@ const NavList = () => {
           <img src={dashboard} className={styles.icon} alt="dashboard" />
           Dashboard
         </NavLink>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/demo-app" className={styles.link}>
           <img src={change} className={styles.icon} alt="change" />
           Manage Role Assignment
         </NavLink>

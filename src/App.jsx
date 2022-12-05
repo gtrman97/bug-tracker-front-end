@@ -8,21 +8,28 @@ import DemoApp from "./components/DemoSignIn/DemoApp/DemoApp";
 import DemoDashboard from "./components/DemoSignIn/DemoDashboard/DemoDashboard";
 import "./App.css";
 
-function App(props) {
+export default function App(props) {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<SignInForm />} />
+        <Route path="/sign-in" element={<SignInForm />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/sign-up" element={<SignUpForm />} />
         <Route path="/demo-sign-in" element={<DemoSignIn />} />
         <Route path="/demo-dashboard" element={<DemoDashboard />} />
-        <Route path="/demo-app/" element={<DemoApp permissions={props.userId}/>}>
-          <Route path="demo-dashboard" index element={<DemoDashboard />} />
+        <Route path="/" element={<DemoApp />}>
+          <Route
+            index // <-- rendered on "/"
+            element={<DemoDashboard />}
+          />
+          <Route
+            path="demo-dashboard" // <-- rendered on "/demo-dashboard"
+            element={<DemoDashboard />}
+          />
         </Route>
       </Routes>
     </div>
   );
 }
 
-export default App;
+const setPermissionsId = () => {};
