@@ -26,7 +26,7 @@ const NavBarFooter = () => {
           <img src={avatar} className={styles.icon} alt='avatar'/>
           Profile
         </NavLink>
-        <Link to="/" className={styles.link}>
+        <Link to="/sign-in" className={styles.link}>
         <img src={signIn} className={styles.icon} alt='sign-in-icon'/>
           Sign In
         </Link>

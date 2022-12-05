@@ -18,7 +18,7 @@ const HeadNavBar = () => {
           ></input>
         </div>
         <div className={styles["nav-links"]}>
-        <Link to="/" className={styles.link}>
+        <Link to="/sign-in" className={styles.link}>
 
           <div className={styles['sign-in-section']}>
             <img src={avatar} className={styles.icon} alt='avatar'></img>
