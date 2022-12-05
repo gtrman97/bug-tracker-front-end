@@ -6,14 +6,6 @@ import Card from "./Card";
 
 const DemoDashboard = () => {
   return (
-    <main id={styles["demo-app"]}>
-      <div className={styles["head-nav"]}>
-        <HeadNavBar />
-      </div>
-      <div className={styles["side-nav"]}>
-        <SideNavBar />
-      </div>
-      <div className={styles["card-container"]}>
         <div className={styles.cards}>
           <Card
             color={"red"}
@@ -73,8 +65,6 @@ const DemoDashboard = () => {
             ]} barWidth={55}
           />
         </div>
-      </div>
-    </main>
   );
 };
 
