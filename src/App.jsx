@@ -4,7 +4,7 @@ import SignInForm from "./components/SignIn/SignInForm";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import SignUpForm from "./components/SignUp/SignUpForm";
 import DemoSignIn from "./components/DemoSignIn/DemoSignIn";
-import DemoApp from "./components/DemoSignIn/DemoApp/DemoApp";
+import HomePage from "./components/DemoSignIn/HomePage/HomePage";
 import DemoDashboard from "./components/DemoSignIn/DemoDashboard/DemoDashboard";
 import "./App.css";
 
@@ -17,7 +17,7 @@ export default function App(props) {
         <Route path="/sign-up" element={<SignUpForm />} />
         <Route path="/demo-sign-in" element={<DemoSignIn />} />
         <Route path="/demo-dashboard" element={<DemoDashboard />} />
-        <Route path="/" element={<DemoApp />}>
+        <Route path="/" element={<HomePage />}>
           <Route
             index // <-- rendered on "/"
             element={<DemoDashboard />}
