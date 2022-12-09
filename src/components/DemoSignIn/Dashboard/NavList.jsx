@@ -28,7 +28,7 @@ const NavList = () => {
           <img src={box} className={styles.icon} alt="box" />
           My Projects
         </NavLink>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/tickets" className={styles.link}>
           <img src={ticket} className={styles.icon} alt="ticket" />
           My Tickets
         </NavLink>
