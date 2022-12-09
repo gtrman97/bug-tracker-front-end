@@ -1,7 +1,5 @@
 import React from "react";
-import styles from "./DemoDashboard.module.css";
-import HeadNavBar from "./HeadNavBar";
-import SideNavBar from "./SideNavBar";
+import styles from "./Dashboard.module.css";
 import Card from "./Card";
 
 const DemoDashboard = () => {

@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import styles from "./HomePage.module.css";
-import HeadNavBar from "../DemoDashboard/HeadNavBar";
-import SideNavBar from "../DemoDashboard/SideNavBar";
+import HeadNavBar from "../Dashboard/HeadNavBar";
+import SideNavBar from "../Dashboard/SideNavBar";
 
 const isLoggedIn = (userId) => {
 
