@@ -5,6 +5,7 @@ import SignUpForm from "./components/SignUp/SignUpForm";
 import DemoSignIn from "./components/DemoSignIn/DemoSignIn";
 import HomePage from "./components/DemoSignIn/HomePage/HomePage";
 import Dashboard from "./components/DemoSignIn/Dashboard/Dashboard";
+import RoleAssignment from "./components/DemoSignIn/RoleAssignment/RoleAssignment";
 import "./App.css";
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
             path="demo-dashboard" // <-- rendered on "/demo-dashboard"
             element={<DemoDashboard />}
           /> */}
+          <Route path='/role-assignment' element={<RoleAssignment />} />
         </Route>
       </Routes>
     </div>

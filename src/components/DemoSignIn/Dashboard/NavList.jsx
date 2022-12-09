@@ -12,11 +12,11 @@ const NavList = () => {
   return (
     <div id={styles["nav-bar-list"]}>
       <ul className={styles.list}>
-        <NavLink to="/demo-app/demo-dashboard" className={styles.link}>
+        <NavLink to="/" className={styles.link}>
           <img src={dashboard} className={styles.icon} alt="dashboard" />
           Dashboard
         </NavLink>
-        <NavLink to="/demo-app" className={styles.link}>
+        <NavLink to="/role-assignment" className={styles.link}>
           <img src={change} className={styles.icon} alt="change" />
           Manage Role Assignment
         </NavLink>
