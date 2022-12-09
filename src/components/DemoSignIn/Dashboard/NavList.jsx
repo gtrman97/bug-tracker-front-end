@@ -24,7 +24,7 @@ const NavList = () => {
           <img src={invoice} className={styles.icon} alt="invoice" />
           Manage Project Users
         </NavLink>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/projects" className={styles.link}>
           <img src={box} className={styles.icon} alt="box" />
           My Projects
         </NavLink>

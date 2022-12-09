@@ -6,6 +6,7 @@ import DemoSignIn from "./components/DemoSignIn/DemoSignIn";
 import HomePage from "./components/DemoSignIn/HomePage/HomePage";
 import Dashboard from "./components/DemoSignIn/Dashboard/Dashboard";
 import RoleAssignment from "./components/DemoSignIn/RoleAssignment/RoleAssignment";
+import Projects from "./components/DemoSignIn/MyProjects/Projects";
 import "./App.css";
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
             element={<DemoDashboard />}
           /> */}
           <Route path='/role-assignment' element={<RoleAssignment />} />
+          <Route path='/projects' element={<Projects />} />
         </Route>
       </Routes>
     </div>
