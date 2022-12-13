@@ -8,9 +8,7 @@ const isLoggedIn = (userId) => {
 
 }
 
-const DemoApp = (props) => {
-
-  console.log(props);
+const DemoApp = () => {
 
   return (
     <div className={styles["demo-app"]}>
