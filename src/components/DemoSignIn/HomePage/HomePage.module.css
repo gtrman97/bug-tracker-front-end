@@ -23,6 +23,7 @@
   .main-content {
     grid-area: main-content;
     padding-top: 2rem;
+    /* border: solid 2px red; */
   }
   .cards {
     display: flex;

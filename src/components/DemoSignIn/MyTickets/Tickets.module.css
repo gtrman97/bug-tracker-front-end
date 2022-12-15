@@ -1,0 +1,5 @@
+.tickets {
+    height: 100%;
+    display: flex;
+    border: solid 2px red;
+}
