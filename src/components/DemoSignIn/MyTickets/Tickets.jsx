@@ -6,9 +6,9 @@ const Tickets = () => {
 
     return (
         <div className={styles.tickets}>
-            <TicketTable />
-            <TicketTable />
-            <TicketTable />
+            <TicketTable color={'red'} header={'not started'}/>
+            <TicketTable color={'blue'} header={'in progress'}/>
+            <TicketTable color={'green'} header={'completed'}/>
         </div>
     )
 
