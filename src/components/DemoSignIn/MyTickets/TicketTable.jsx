@@ -10,12 +10,16 @@ const TicketTable = (props) => {
                 styles['card-header']
               }`}>
             {props.header}
-            <div
-              className={`${styles[`${props.color}-gradient`]} ${
-                styles.gradient
-              }`}
-            ></div>
           </div>
+          <table className={styles['ticket-table']}>
+            <thead>
+              <tr className={styles['table-header']}>
+                <th>task</th>
+                <th>assignee</th>
+                <th>time</th>
+              </tr>
+            </thead>
+          </table>
         </div>
       </div>
     </div>

@@ -1,5 +1,4 @@
 .table {
-  /* border: solid 2px black; */
   flex-grow: 1;
   margin: 1rem;
   height: 36rem;
@@ -8,6 +7,7 @@
   height: 100%;
 }
 .card {
+  /* border: solid 2px pink; */
   height: 100%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -24,7 +24,7 @@
 }
 .card-header {
   border-radius: 0.75rem;
-  height: 5rem;
+  height: 4.5rem;
   width: 20rem;
   padding: 0;
   margin-top: -2rem;
@@ -43,4 +43,20 @@
 }
 .green-gradient {
   background-image: var(--green);
+}
+.ticket-table {
+    margin: 0.5rem;
+    border-bottom: solid 2px black;
+    width: 100%;
+}
+.table-header {
+    /* border: solid 2px black; */
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    /* gap: 3rem; */
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-transform: capitalize;
+
 }
