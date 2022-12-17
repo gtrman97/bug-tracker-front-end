@@ -1,0 +1,12 @@
+.ticket {
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-transform: capitalize;
+    border: solid 2px red;
+}
+td {
+    border: solid 2px blue;
+}
