@@ -54,6 +54,7 @@
 }
 .table-header {
     border-bottom: solid 2px black;
+    padding-bottom: 0.5rem;
     width: 100%;
     display: grid;
     /* gap: 3rem; */
@@ -66,5 +67,5 @@
     width: 100%;
 }
 .header-col {
-    border: solid 2px black;
+    /* border: solid 2px black; */
 }

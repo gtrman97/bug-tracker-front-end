@@ -23,7 +23,12 @@ const TicketTable = (props) => {
               </tr>
             </thead>
             <tbody className={styles['table-list']}>
-                <Ticket />
+                <Ticket task={'task 1'} assignee={'trevor strnad'} time={'1h'}/>
+                <Ticket task={'task 2'} assignee={'brian eschbach'} time={'1h'}/>
+                <Ticket task={'task 4'} assignee={'shannon lucas'} time={'1h'}/>
+                <Ticket task={'task 5'} assignee={'ryan knight'} time={'1h'}/>
+                <Ticket task={'task 6'} assignee={'brandon ellis'} time={'1h'}/>
+
               </tbody>
           </table>
         </div>

@@ -3,9 +3,11 @@
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     text-transform: capitalize;
+    padding: 0.5rem 0;
+    border-bottom: solid 1px black;
 }
 .ticket-col{
-    border: solid 2px black;
+    /* border: solid 2px black; */
     flex-grow: 1;
     display: flex;
     justify-content: center;
