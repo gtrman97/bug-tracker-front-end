@@ -3,6 +3,9 @@ import styles from "./TicketTable.module.css";
 import Ticket from "./Ticket";
 
 const TicketTable = (props) => {
+
+  let tickets = props.tickets;
+
   return (
     <div className={styles.table}>
       <div className={styles.col}>
@@ -23,12 +26,7 @@ const TicketTable = (props) => {
               </tr>
             </thead>
             <tbody className={styles['table-list']}>
-                <Ticket task={'task 1'} assignee={'trevor strnad'} time={'1h'}/>
-                <Ticket task={'task 2'} assignee={'brian eschbach'} time={'1h'}/>
-                <Ticket task={'task 4'} assignee={'shannon lucas'} time={'1h'}/>
-                <Ticket task={'task 5'} assignee={'ryan knight'} time={'1h'}/>
-                <Ticket task={'task 6'} assignee={'brandon ellis'} time={'1h'}/>
-
+              {tickets ? tickets.map((ticket) => <Ticket ticket={ticket}/>) : null}
               </tbody>
           </table>
         </div>
