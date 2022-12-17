@@ -49,30 +49,22 @@
     margin: 0.5rem;
     /* border-bottom: solid 2px black; */
     width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
 }
 .table-header {
     border-bottom: solid 2px black;
     width: 100%;
-    display: flex;
-    /* justify-content: space-between; */
+    display: grid;
     /* gap: 3rem; */
     /* margin-left: 1rem; */
     /* margin-right: 1rem; */
     text-transform: capitalize;
-}
-.table-header:first-child{
-    /* padding-left: 2rem; */
-}
-.table-header:last-child {
-    /* padding-right: 2rem; */
+    grid-template-columns: 1fr 3fr 1fr;
 }
 .table-list {
     width: 100%;
 }
 .header-col {
     border: solid 2px black;
-    flex-grow: 1;
-}
-.header-col:nth-child(2) {
-    flex-grow: 3;
 }
