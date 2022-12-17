@@ -8,10 +8,9 @@
 }
 .ticket-col{
     /* border: solid 2px black; */
-    flex-grow: 1;
     display: flex;
     justify-content: center;
 }
-.ticket-col:nth-child(2){
-    flex-grow: 4;
+.ticket-col div {
+    overflow: hidden;
 }

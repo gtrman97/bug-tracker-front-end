@@ -7,7 +7,7 @@
   height: 100%;
 }
 .card {
-  /* border: solid 2px pink; */
+  /* border: solid 2px red; */
   height: 100%;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -47,7 +47,8 @@
 }
 .ticket-table {
     margin: 0.5rem;
-    /* border-bottom: solid 2px black; */
+    /* border: solid 2px red; */
+    overflow: hidden;
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
@@ -65,7 +66,6 @@
 }
 .table-list {
     width: 100%;
-}
-.header-col {
-    /* border: solid 2px black; */
+    display: block;
+    overflow: hidden;
 }
