@@ -17,9 +17,9 @@ const TicketTable = (props) => {
           <table className={styles["ticket-table"]}>
             <thead>
               <tr className={styles["table-header"]}>
-                <th>task</th>
-                <th>assignee</th>
-                <th>time</th>
+                <th className={styles['header-col']}>task</th>
+                <th className={styles['header-col']}>assignee</th>
+                <th className={styles['header-col']}>time</th>
               </tr>
             </thead>
             <tbody className={styles['table-list']}>

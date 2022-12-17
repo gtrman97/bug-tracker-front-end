@@ -34,6 +34,7 @@
   align-items: center;
   color: #fff;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .red-gradient {
   background-image: var(--red);
@@ -51,20 +52,27 @@
 }
 .table-header {
     border-bottom: solid 2px black;
-    /* width: 100%; */
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* gap: 3rem; */
     /* margin-left: 1rem; */
     /* margin-right: 1rem; */
     text-transform: capitalize;
 }
 .table-header:first-child{
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
 }
 .table-header:last-child {
-    padding-right: 2rem;
+    /* padding-right: 2rem; */
 }
 .table-list {
     width: 100%;
+}
+.header-col {
+    border: solid 2px black;
+    flex-grow: 1;
+}
+.header-col:nth-child(2) {
+    flex-grow: 3;
 }
