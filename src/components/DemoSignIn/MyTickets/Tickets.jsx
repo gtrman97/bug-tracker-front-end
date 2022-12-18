@@ -16,6 +16,9 @@ const Tickets = () => {
     { task: "task 10", assignee: "trevor strnad", time: "1h" },
     { task: "task 11", assignee: "n8 feet under ", time: "1h" },
     { task: "task 12", assignee: "n8 feet under", time: "1h" },
+    { task: "task 13", assignee: "n8 feet under", time: "1h" },
+    { task: "task 16", assignee: "n8 feet under", time: "1h" },
+
   ];
 
   return (
