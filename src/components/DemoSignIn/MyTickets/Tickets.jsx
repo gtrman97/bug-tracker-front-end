@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "./Tickets.module.css";
 import TicketTable from "./TicketTable";
+import Modal from "./Modal";
 
 const Tickets = () => {
   let inProgressTickets = [
@@ -44,7 +45,7 @@ const Tickets = () => {
         </select>
         <button
           onClick={toggleModal}
-          className={`${styles[`btn-modal`]} ${styles.button}`}
+          className={styles.button}
         >
           create ticket
         </button>
