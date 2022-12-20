@@ -35,14 +35,15 @@
   height: 2.5rem;
   width: 15rem;
   /* padding: 0; */
-  margin-top: -2rem;
+  /* margin-top: -2rem; */
+  top: -1.3rem;
   margin-bottom: 0;
   margin-left: 1rem;
   margin-right: 1rem;
   text-transform: capitalize;
   display: flex;
   justify-content: center;
-  position: relative;
+  position: absolute;
   align-items: center;
   color: #fff;
   font-size: 1.5rem;
@@ -66,6 +67,7 @@
 }
 .table-header {
     border-bottom: solid 2px black;
+    padding-top: 1rem;
     padding-bottom: 0.5rem;
     width: 100%;
     display: grid;
