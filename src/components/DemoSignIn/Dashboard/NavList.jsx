@@ -17,7 +17,7 @@ const NavList = () => {
           Dashboard
         </NavLink>
         <NavLink to="/role-assignment" className={styles.link}>
-          <img src={change} className={styles.icon} alt="change" />
+          <img src={change} className={styles.icon} alt="rotate" />
           Manage Role Assignment
         </NavLink>
         <NavLink to="/" className={styles.link}>
