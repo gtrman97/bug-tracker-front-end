@@ -54,17 +54,36 @@ const Tickets = () => {
           <div className={styles.modal}>
             <div onClick={toggleModal} className={styles["overlay"]}></div>
             <div className={styles["modal-content"]}>
-              <h2 className={styles['modal-header']}>create ticket</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Provident perferendis suscipit officia recusandae, eveniet
-                quaerat assumenda id fugit, dignissimos maxime non natus placeat
-                illo iusto! Sapiente dolorum id maiores dolores? Illum pariatur
-                possimus quaerat ipsum quos molestiae rem aspernatur dicta
-                tenetur. Sunt placeat tempora vitae enim incidunt porro fuga ea.
-              </p>
+              <h2 className={styles["modal-header"]}>new ticket</h2>
+              <form className={styles["ticket-form"]}>
+                <div className={styles['form-element']}>
+                  <label for="description">description</label>
+                  <textarea id="description" name="description" rows="4" cols="30">
+</textarea>
+                </div>
+                <div className={styles['form-element']}>
+                  <label for='assignee'>
+                    assignee
+                  </label>
+
+                    <select className={styles.developers}>
+                      <option value="trevor">Trevor</option>
+                      <option value="brian">Brian</option>
+                      <option value="ryan">Ryan</option>
+                    </select>
+                </div>
+                <div className={styles['form-element']}>
+                  <label for='time'>
+                    time
+                  </label>
+                    <input id="time" name="time" />
+                </div>
+              </form>
               <button className={styles["close-modal"]} onClick={toggleModal}>
                 X
+              </button>
+              <button className={styles["create-ticket"]} onClick={toggleModal}>
+                create
               </button>
             </div>
           </div>

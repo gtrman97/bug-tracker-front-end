@@ -60,8 +60,9 @@ body.active-modal {
     text-transform: capitalize;
 }
 .modal-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
-  top: 25rem;
+  top: 24rem; 
   left: 50rem;
   transform: translate(-50%, -50%);
   line-height: 2.5;
@@ -78,4 +79,33 @@ body.active-modal {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+.create-ticket {
+  border: none;
+  text-transform: capitalize;
+  color: white;
+  background-image: var(--blue);
+}
+.ticket-form {
+  /* border: solid 2px black; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+  text-transform: capitalize;
+  height: 20rem;
+  gap: 1rem;
+}
+.form-element {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  /* border: solid 2px crimson; */
+  width: 100%;
+}
+.developers {
+  width: 10rem;
+  height: 2.5rem;
+  text-align: center;
 }
