@@ -1,9 +1,9 @@
 import React from "react";
-import styles from './Modal.module.css';
+import styles from "./Modal.module.css";
 
 const Modal = (props) => {
-
-    const toggleModal = props.onToggleModal;
+    
+  const toggleModal = props.onToggleModal;
 
   return (
     <>
@@ -13,7 +13,7 @@ const Modal = (props) => {
           <h2 className={styles["modal-header"]}>new ticket</h2>
           <form className={styles["ticket-form"]}>
             <div className={styles["form-element"]}>
-              <label for="description">description</label>
+              <label htmlFor="description">description</label>
               <textarea
                 id="description"
                 name="description"
@@ -22,7 +22,7 @@ const Modal = (props) => {
               ></textarea>
             </div>
             <div className={styles["form-element"]}>
-              <label for="assignee">assignee</label>
+              <label htmlFor="assignee">assignee</label>
               <select className={styles.developers}>
                 <option value="trevor">Trevor</option>
                 <option value="brian">Brian</option>
@@ -30,7 +30,7 @@ const Modal = (props) => {
               </select>
             </div>
             <div className={styles["form-element"]}>
-              <label for="time">time</label>
+              <label htmlFor="time">time</label>
               <input id="time" name="time" />
             </div>
           </form>
