@@ -56,27 +56,26 @@ const Tickets = () => {
             <div className={styles["modal-content"]}>
               <h2 className={styles["modal-header"]}>new ticket</h2>
               <form className={styles["ticket-form"]}>
-                <div className={styles['form-element']}>
+                <div className={styles["form-element"]}>
                   <label for="description">description</label>
-                  <textarea id="description" name="description" rows="4" cols="30">
-</textarea>
+                  <textarea
+                    id="description"
+                    name="description"
+                    rows="4"
+                    cols="30"
+                  ></textarea>
                 </div>
-                <div className={styles['form-element']}>
-                  <label for='assignee'>
-                    assignee
-                  </label>
-
-                    <select className={styles.developers}>
-                      <option value="trevor">Trevor</option>
-                      <option value="brian">Brian</option>
-                      <option value="ryan">Ryan</option>
-                    </select>
+                <div className={styles["form-element"]}>
+                  <label for="assignee">assignee</label>
+                  <select className={styles.developers}>
+                    <option value="trevor">Trevor</option>
+                    <option value="brian">Brian</option>
+                    <option value="ryan">Ryan</option>
+                  </select>
                 </div>
-                <div className={styles['form-element']}>
-                  <label for='time'>
-                    time
-                  </label>
-                    <input id="time" name="time" />
+                <div className={styles["form-element"]}>
+                  <label for="time">time</label>
+                  <input id="time" name="time" />
                 </div>
               </form>
               <button className={styles["close-modal"]} onClick={toggleModal}>

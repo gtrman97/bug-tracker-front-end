@@ -108,4 +108,5 @@ body.active-modal {
   width: 10rem;
   height: 2.5rem;
   text-align: center;
+  font-size: medium;
 }
