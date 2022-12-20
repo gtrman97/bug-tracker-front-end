@@ -15,6 +15,9 @@
     position: absolute;
     top: 0;
 }
+option {
+    text-transform: capitalize;
+}
 .button {
     position: absolute;
     top: 0;
