@@ -61,7 +61,7 @@ const Tickets = () => {
                   <textarea
                     id="description"
                     name="description"
-                    rows="4"
+                    rows="3"
                     cols="30"
                   ></textarea>
                 </div>
