@@ -7,7 +7,6 @@
     position: relative;
 }
 .projects {
-    text-transform: capitalize;
     text-align: center;
     width: 10rem;
     height: 2.5rem;

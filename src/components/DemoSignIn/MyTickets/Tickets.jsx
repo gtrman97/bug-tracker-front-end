@@ -24,10 +24,10 @@ const Tickets = () => {
     <>
       <div className={styles.create}>
         <select className={styles.projects}>
-          <option value="project 1">project 1</option>
-          <option value="project 2">project 2</option>
-          <option value="project 3">project 3</option>
-          <option value="project 4">project 4</option>
+          <option value="project 1">Project 1</option>
+          <option value="project 2">Project 2</option>
+          <option value="project 3">Project 3</option>
+          <option value="project 4">Project 4</option>
         </select>
         <button className={styles.button}>create ticket</button>
       </div>
