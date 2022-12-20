@@ -3,7 +3,7 @@ import styles from './Modal.module.css';
 
 const Modal = (props) => {
 
-    const toggleModal = props.ontoggleModal;
+    const toggleModal = props.onToggleModal;
 
   return (
     <>
