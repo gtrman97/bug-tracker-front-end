@@ -18,27 +18,37 @@ const Tickets = () => {
     { task: "task 12", assignee: "n8 feet under", time: "1h" },
     { task: "task 13", assignee: "n8 feet under", time: "1h" },
     { task: "task 16", assignee: "n8 feet under", time: "1h" },
-
   ];
 
   return (
-    <div className={styles.tickets}>
-      <TicketTable
-        color={"red"}
-        header={"not started"}
-        tickets={inProgressTickets}
-      />
-      <TicketTable
-        color={"blue"}
-        header={"in progress"}
-        tickets={inProgressTickets}
-      />
-      <TicketTable
-        color={"green"}
-        header={"completed"}
-        tickets={inProgressTickets}
-      />
-    </div>
+    <>
+      <div className={styles.create}>
+        <select className={styles.projects}>
+          <option value="project 1">project 1</option>
+          <option value="project 2">project 2</option>
+          <option value="project 3">project 3</option>
+          <option value="project 4">project 4</option>
+        </select>
+        <button className={styles.button}>create ticket</button>
+      </div>
+      <div className={styles.tickets}>
+        <TicketTable
+          color={"red"}
+          header={"not started"}
+          tickets={inProgressTickets}
+        />
+        <TicketTable
+          color={"blue"}
+          header={"in progress"}
+          tickets={inProgressTickets}
+        />
+        <TicketTable
+          color={"green"}
+          header={"completed"}
+          tickets={inProgressTickets}
+        />
+      </div>
+    </>
   );
 };
 

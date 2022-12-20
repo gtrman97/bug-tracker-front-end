@@ -7,7 +7,13 @@
     border-radius: 0.75rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* background-color: red; */
-    background-image: var(--red);
     color: white;
     font-size: large;
+    text-transform: capitalize;
+}
+.red {
+    background-image: var(--red);
+}
+.blue {
+    background-image: var(--blue);
 }

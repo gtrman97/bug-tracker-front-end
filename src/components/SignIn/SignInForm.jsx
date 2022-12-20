@@ -12,9 +12,9 @@ const SignInForm = () => {
       <FormHeader title={"Sign In"} className={styles.header}/>
       <form className={styles["sign-in-form"]}>
         <img src={bugIcon} alt="bug icon" id={styles.logo} />
-        <Label title={"Username"} />
-        <Label title={"Password"} />
-        <Button title={"Sign In"} className="button" />
+        <Label title={"username"} />
+        <Label title={"password"} />
+        <Button title={"sign in"} className="button" color={'red'}/>
         <div>
           <p className={styles.option}>
             {'Forgot your '}
