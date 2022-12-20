@@ -2,8 +2,14 @@ import React from "react";
 import styles from "./Modal.module.css";
 
 const Modal = (props) => {
-    
+
+    const timeChangeHandler = (event) => {
+        console.log(event.target.value);
+    }
+
   const toggleModal = props.onToggleModal;
+
+  const createTicket = props.onCreateTicket;
 
   return (
     <>
@@ -31,7 +37,7 @@ const Modal = (props) => {
             </div>
             <div className={styles["form-element"]}>
               <label htmlFor="time">time</label>
-              <input id="time" name="time" />
+              <input id="time" name="time" onChange={timeChangeHandler}/>
             </div>
           </form>
           <button className={styles["close-modal"]} onClick={toggleModal}>

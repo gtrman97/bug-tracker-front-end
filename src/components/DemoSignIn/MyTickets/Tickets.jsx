@@ -22,7 +22,28 @@ const Tickets = () => {
     { task: "task 16", assignee: "n8 feet under", time: "1h" },
   ];
 
+  const [tickets, setTickets] = useState(inProgressTickets);
   const [modal, setModal] = useState(false);
+  let task, time, assignee;
+
+  const createTicket = (task, time, assignee) => {
+    task = task;
+    time = time;
+    assignee = assignee;
+    setTickets((oldTickets) => [
+      ...oldTickets,
+      { task: task, assignee: assignee, time: time },
+    ]);
+    toggleModal();
+
+  }
+
+  const toggleTickets = () => {
+    setTickets((oldTickets) => [
+      ...oldTickets,
+      { task: "task 1", assignee: "poopy poops", time: "1h" },
+    ]);
+  };
 
   const toggleModal = () => {
     setModal(!modal);
@@ -43,22 +64,14 @@ const Tickets = () => {
           <option value="project 3">Project 3</option>
           <option value="project 4">Project 4</option>
         </select>
-        <button
-          onClick={toggleModal}
-          className={styles.button}
-        >
+        <button onClick={toggleTickets}>pooppy poops</button>
+        <button onClick={toggleModal} className={styles.button}>
           create ticket
         </button>
       </div>
       <div className={styles.tickets}>
-        {modal && (
-          <Modal onToggleModal={toggleModal}/>
-        )}
-        <TicketTable
-          color={"red"}
-          header={"not started"}
-          tickets={inProgressTickets}
-        />
+        {modal && <Modal onToggleModal={toggleModal} onCreateTicket={createTicket}/>}
+        <TicketTable color={"red"} header={"not started"} tickets={tickets} />
         <TicketTable
           color={"blue"}
           header={"in progress"}

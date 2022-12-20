@@ -21,7 +21,7 @@ const NavList = () => {
           Manage Role Assignment
         </NavLink>
         <NavLink to="/" className={styles.link}>
-          <img src={invoice} className={styles.icon} alt="invoice" />
+          <img src={invoice} className={styles.icon} alt="invoice" aria-hidden={true}/>
           Manage Project Users
         </NavLink>
         <NavLink to="/projects" className={styles.link}>
