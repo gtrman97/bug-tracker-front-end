@@ -40,7 +40,7 @@ body.active-modal {
   overflow-y: hidden;
 }
 .modal {
-  z-index: 7;
+  z-index: 1;
 }
 .modal,
 .overlay {
@@ -56,17 +56,21 @@ body.active-modal {
 .overlay {
   background: rgba(49, 49, 49, 0.8);
 }
+.modal-header {
+    text-transform: capitalize;
+}
 .modal-content {
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 25rem;
+  left: 50rem;
   transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #f1f1f1;
-  padding: 14px 28px;
+  line-height: 2.5;
+  background: #fff;
+  padding: 5rem;
   border-radius: 3px;
   max-width: 600px;
-  min-width: 300px;
+  border: solid 2px black;
+  border-radius: 0.75rem;
 }
 
 .close-modal {

@@ -54,7 +54,7 @@ const Tickets = () => {
           <div className={styles.modal}>
             <div onClick={toggleModal} className={styles["overlay"]}></div>
             <div className={styles["modal-content"]}>
-              <h2>Hello Modal</h2>
+              <h2 className={styles['modal-header']}>create ticket</h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Provident perferendis suscipit officia recusandae, eveniet
@@ -64,7 +64,7 @@ const Tickets = () => {
                 tenetur. Sunt placeat tempora vitae enim incidunt porro fuga ea.
               </p>
               <button className={styles["close-modal"]} onClick={toggleModal}>
-                CLOSE
+                X
               </button>
             </div>
           </div>
