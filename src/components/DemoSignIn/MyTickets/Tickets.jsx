@@ -24,12 +24,11 @@ const Tickets = () => {
 
   const [tickets, setTickets] = useState(inProgressTickets);
   const [modal, setModal] = useState(false);
-  let task, time, assignee;
+  const [assignee, setAssignee] = useState();
+  const [time, setTime] = useState();
 
   const createTicket = (task, time, assignee) => {
-    task = task;
-    time = time;
-    assignee = assignee;
+    
     setTickets((oldTickets) => [
       ...oldTickets,
       { task: task, assignee: assignee, time: time },
