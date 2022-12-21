@@ -3,13 +3,21 @@ import styles from "./Modal.module.css";
 
 const Modal = (props) => {
 
-    const timeChangeHandler = (event) => {
-        console.log(event.target.value);
-    }
-
+  let newTicketTime, newAssignee;
   const toggleModal = props.onToggleModal;
-
   const createTicket = props.onCreateTicket;
+
+  const timeChangeHandler = (event) => {
+    newTicketTime = event.target.value;
+  };
+
+  const assigneeChangeHandler = (event) => {
+    newAssignee = event.target.value;
+  };
+
+  const newTicketHandler = () => {
+    createTicket(newAssignee, newTicketTime);
+  };
 
   return (
     <>
@@ -30,20 +38,29 @@ const Modal = (props) => {
             <div className={styles["form-element"]}>
               <label htmlFor="assignee">assignee</label>
               <select className={styles.developers}>
-                <option value="trevor">Trevor</option>
-                <option value="brian">Brian</option>
-                <option value="ryan">Ryan</option>
+                <option value="trevor strnad" onClick={assigneeChangeHandler}>
+                  Trevor Strnad
+                </option>
+                <option value="brian eschbach" onClick={assigneeChangeHandler}>
+                  Brian Eschbach
+                </option>
+                <option value="ryan knight" onClick={assigneeChangeHandler}>
+                  Ryan Knight
+                </option>
               </select>
             </div>
             <div className={styles["form-element"]}>
               <label htmlFor="time">time</label>
-              <input id="time" name="time" onChange={timeChangeHandler}/>
+              <input id="time" name="time" onChange={timeChangeHandler} />
             </div>
           </form>
           <button className={styles["close-modal"]} onClick={toggleModal}>
             X
           </button>
-          <button className={styles["create-ticket"]} onClick={toggleModal}>
+          <button
+            className={styles["create-ticket"]}
+            onClick={newTicketHandler}
+          >
             create
           </button>
         </div>
