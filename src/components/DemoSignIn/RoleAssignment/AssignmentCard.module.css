@@ -1,0 +1,69 @@
+.col {
+    border: solid 2px black;
+    border-radius: 0.75rem;
+}
+.card {
+    scrollbar-color: white blue;
+}
+.card-header {
+    border-radius: 0.75rem;
+    padding: 0;
+    z-index: 2;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    position: relative;
+}
+.gradient {
+    border-radius: 0.5rem;
+    background-image: var(--blue);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+}
+.title {
+    color: #fff;
+    text-transform: capitalize;
+    padding-left: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.card-body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* padding: 1rem; */
+}
+.table-responsive {
+    height: 14rem;
+    padding: 0;
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.table-body {
+    width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+}
+.user-selection {
+    width: 100%;
+    border-color: black;
+    border-style: solid;
+    border-width: 0;
+}
+.table-data {
+    width: 100%;
+    border-bottom: solid 2px black;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    padding-left: 1rem;
+}
+.user {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+}

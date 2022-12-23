@@ -12,7 +12,7 @@
 }
 .users {
   grid-area: users;
-  border: solid 2px red;
+  /* border: solid 2px red; */
 }
 .personnel {
   grid-area: personnel;
