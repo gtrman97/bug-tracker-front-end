@@ -16,7 +16,7 @@
 }
 .personnel {
   grid-area: personnel;
-  border: solid 2px blue;
+  /* border: solid 2px blue; */
 }
 .roles {
   grid-area: roles;

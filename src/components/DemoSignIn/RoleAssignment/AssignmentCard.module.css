@@ -9,7 +9,7 @@
     border-radius: 0.75rem;
     padding: 0;
     z-index: 2;
-    margin-top: -1.5rem;
+    margin-top: -1.55rem;
     margin-left: 1rem;
     margin-right: 1rem;
     position: relative;
@@ -18,10 +18,21 @@
     border-radius: 0.5rem;
     background-image: var(--blue);
     box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4);
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
+.red-gradient {
+    background-image: var(--red);
+}
+.blue-gradient {
+    background-image: var(--blue);
+}
+.green-gradient {
+    background-image: var(--green);
+}
 .title {
+    display: flex;
+    align-items: center;
     color: #fff;
     text-transform: capitalize;
     padding-left: 1rem;
