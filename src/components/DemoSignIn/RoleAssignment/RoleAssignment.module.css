@@ -2,10 +2,10 @@
   height: 100%;
   display: grid;
   grid-template-areas:
-    "users roles"
-    "personnel roles";
+    "users personnel"
+    "roles personnel";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr min-content;
+  grid-template-rows: 1fr 1fr;
   padding: 1rem;
   grid-gap: 2.5rem;
 
@@ -17,12 +17,22 @@
 .personnel {
   grid-area: personnel;
   /* border: solid 2px blue; */
+  display: grid;
+  grid-template-rows: auto min-content;
+  grid-gap: 1rem;
 }
 .roles {
   grid-area: roles;
-  border: solid 2px green;
+  /* border: solid 2px green; */
 }
 .assign {
   text-transform: capitalize;
   width: 100%;
+  background-image: var(--blue);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+}
+.assign:hover {
+  background-image: var(--green);
 }

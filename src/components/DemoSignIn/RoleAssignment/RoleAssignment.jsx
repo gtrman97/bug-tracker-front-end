@@ -27,7 +27,7 @@ const ManageRoles = () => {
           title={"select 1 or more users"}
         />
       </div>
-      <div className={styles.personnel}>
+      <div className={styles.roles}>
         <AssignmentCard
           rows={roles}
           selection={'role'}
@@ -35,7 +35,7 @@ const ManageRoles = () => {
           title={"select role to assign"}
         />
       </div>
-      <div className={styles.roles}>
+      <div className={styles.personnel}>
       <AssignmentCard
           rows={users}
           color={"green"}
