@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./HeadNavBar.module.css";
 import avatar from "../../../images/icons/default_avatar.svg";
+import menu from '../../../images/icons/menu.png';
 import bell from "../../../images/icons/bell.png";
 import setting from "../../../images/icons/setting.png";
 import { Link } from "react-router-dom";
@@ -25,7 +26,9 @@ const HeadNavBar = () => {
             <p className={styles["title"]}>Sign In</p>
           </div>
           </Link>
-
+          <Link to="/" className={styles.link} id={styles.menu}>
+            <img src={menu} className={styles.icon} alt='menu-icon'></img>
+          </Link>
           <Link to="/settings" className={styles.link}>
             <img src={setting} className={styles.icon} alt='settings-icon'></img>
           </Link>
