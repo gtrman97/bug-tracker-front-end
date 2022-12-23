@@ -4,6 +4,10 @@
 }
 .card {
     scrollbar-color: blue transparent;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.75rem;
 }
 .card-header {
     border-radius: 0.75rem;
@@ -42,6 +46,7 @@
 }
 .card-body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
     /* padding: 1rem; */
 }
 .table-responsive {
