@@ -35,7 +35,14 @@ const ManageRoles = () => {
           title={"select role to assign"}
         />
       </div>
-      <div className={styles.roles}></div>
+      <div className={styles.roles}>
+      <AssignmentCard
+          rows={users}
+          color={"green"}
+          title={"your personnel"}
+        />
+      <button className={styles.assign}>assign</button>
+      </div>
     </div>
   );
 };

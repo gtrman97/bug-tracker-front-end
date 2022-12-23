@@ -5,7 +5,7 @@
     "users roles"
     "personnel roles";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr min-content;
   padding: 1rem;
   grid-gap: 2.5rem;
 
@@ -21,4 +21,8 @@
 .roles {
   grid-area: roles;
   border: solid 2px green;
+}
+.assign {
+  text-transform: capitalize;
+  width: 100%;
 }
