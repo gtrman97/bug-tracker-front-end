@@ -20,7 +20,7 @@ const AssignmentCard = (props) => {
           <div className={styles["table-responsive"]}>
             <table className={styles.table}>
               <tbody className={styles['table-body']}>
-              {rows ? rows.map((user) => <User user={user} color={props.color}/>) : null}
+              {rows ? rows.map((user) => <User user={user} color={props.color} selection={props.selection}/>) : null}
                 {/* <tr className={styles["user-selection"]} onClick={(e) => {e.target.classList.toggle(styles['selected-user'])}}>
                   <td className={styles['table-data']}>
                     <h6 className={styles.user}>john michael</h6>

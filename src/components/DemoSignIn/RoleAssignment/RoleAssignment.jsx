@@ -13,15 +13,27 @@ const ManageRoles = () => {
     "john michael",
   ];
 
+  const roles = ["admin", "project manager", "developer", "submitter"];
+
   return (
     <div className={styles.main}>
       {/* <LoginButton /> */}
       {/* <TicketTable /> */}
       <div className={styles.users}>
-        <AssignmentCard rows={users} color={'red'} title={'select 1 or more users'}/>
+        <AssignmentCard
+          rows={users}
+          selection={'user'}
+          color={"red"}
+          title={"select 1 or more users"}
+        />
       </div>
       <div className={styles.personnel}>
-      <AssignmentCard rows={users} color={'blue'} title={'select role to assign'}/>
+        <AssignmentCard
+          rows={roles}
+          selection={'role'}
+          color={"blue"}
+          title={"select role to assign"}
+        />
       </div>
       <div className={styles.roles}></div>
     </div>

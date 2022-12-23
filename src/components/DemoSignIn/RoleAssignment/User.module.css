@@ -1,21 +1,22 @@
-.user {
-    text-transform: capitalize;
-    padding: 0.5rem 0;
-    /* border-bottom: solid 1px black; */
-    cursor: pointer;
-}
 .user-row{
+    text-transform: capitalize;
     width: 100%;
     border-bottom: solid 2px black;
     display: flex;
     align-items: center;
     height: 2.5rem;
     padding-left: 1rem;
+    cursor: pointer;
+
 }
-/* .user-col row {
-    overflow: hidden;
+/* .user-row:first-child {
+    border-top: solid 2px black;
 } */
-.toggle-blue {
+.toggle-user {
+    background-image: var(--red);
+    color: #fff;
+}
+.toggle-role {
     background-image: var(--blue);
     color: #fff;
 }
