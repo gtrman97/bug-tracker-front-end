@@ -6,11 +6,6 @@ const AssignmentCard = (props) => {
 
     const users = props.users;
 
-    const toggleUserSelection = (event) => {
-
-        event.target.classlist.toggle('selected-user');
-    }
-
   return (
     <div className={styles.col}>
       <div className={styles.card}>
