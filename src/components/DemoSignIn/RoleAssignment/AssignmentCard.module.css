@@ -47,6 +47,7 @@
 .card-body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     overflow: hidden;
+    border-top: solid 2px black;
     /* padding: 1rem; */
 }
 .table-responsive {
