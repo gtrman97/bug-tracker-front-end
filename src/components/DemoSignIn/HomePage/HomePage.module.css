@@ -1,29 +1,26 @@
 .demo-app {
-    background-color: #f0f2f5;
-    /* width: 100vw; */
-    height: 100vh;
-    /* border: solid 2px rebeccapurple; */
-  
-    display: grid;
-    grid-template-areas:
-      "side-nav head-nav"
-      "side-nav main-content";
-    grid-template-columns: 1fr 5fr;
-    grid-template-rows: 1fr 5fr;
-  }
-  .side-nav {
-    /* border: solid 2px red; */
-    grid-area: side-nav;
-    padding: 0.75rem;
-  }
-  .head-nav {
-    /* border: solid 2px blue; */
-    grid-area: head-nav;
-  }
-  .main-content {
-    grid-area: main-content;
-    /* border: solid 2px red; */
-  }
-  .cards {
-    display: flex;
-  }
+  background-color: #f0f2f5;
+  /* width: 100vw; */
+  height: 100vh;
+  /* border: solid 2px rebeccapurple; */
+
+  display: grid;
+  grid-template-areas:
+    "side-nav head-nav"
+    "side-nav main-content";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 5fr;
+}
+.side-nav {
+  /* border: solid 2px red; */
+  grid-area: side-nav;
+  padding: 0.75rem;
+}
+.head-nav {
+  /* border: solid 2px blue; */
+  grid-area: head-nav;
+}
+.main-content {
+  grid-area: main-content;
+  /* border: solid 2px red; */
+}
