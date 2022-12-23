@@ -1,6 +1,7 @@
 .col {
     border: solid 2px black;
     border-radius: 0.75rem;
+    height: 100%;
 }
 .card {
     scrollbar-color: blue transparent;
@@ -8,6 +9,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 0.75rem;
+    height: 100%;
+
 }
 .card-header {
     border-radius: 0.75rem;
@@ -46,7 +49,7 @@
 }
 .card-body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    overflow: hidden;
+    /* overflow: hidden; */
     border-top: solid 2px black;
     /* padding: 1rem; */
 }

@@ -6,6 +6,8 @@ const AssignmentCard = (props) => {
 
     const rows = props.rows;
 
+    const selection = props.selection;
+
   return (
     <div className={styles.col}>
       <div className={styles.card}>
