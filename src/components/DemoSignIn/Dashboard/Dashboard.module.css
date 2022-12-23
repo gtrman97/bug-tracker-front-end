@@ -1,4 +1,6 @@
 .cards {
   /* border: solid 2px green; */
+  height: 50%;
   display: flex;
+  align-items: center;
 }

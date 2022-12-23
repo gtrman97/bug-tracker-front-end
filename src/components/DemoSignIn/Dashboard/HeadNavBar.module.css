@@ -4,9 +4,10 @@
     height: 3.5rem;
     /* width: 70rem; */
     /* float: right; */
-    margin-left: 20rem;
+    /* margin-left: 20rem; */
     display: flex;
     margin: 1rem;
+    margin-bottom: 0;
 }
 .heading {
     /* border: solid 2px green; */

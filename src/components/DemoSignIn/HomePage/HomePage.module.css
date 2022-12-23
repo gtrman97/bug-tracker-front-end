@@ -9,7 +9,7 @@
     "side-nav head-nav"
     "side-nav main-content";
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 7fr;
 }
 .side-nav {
   /* border: solid 2px red; */
@@ -22,5 +22,7 @@
 }
 .main-content {
   grid-area: main-content;
-  /* border: solid 2px red; */
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  border: solid 2px black;
 }

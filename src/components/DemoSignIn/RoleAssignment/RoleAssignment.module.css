@@ -1,0 +1,24 @@
+.main {
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    "users roles"
+    "personnel roles";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 1rem;
+  grid-gap: 1rem;
+
+}
+.users {
+  grid-area: users;
+  border: solid 2px red;
+}
+.personnel {
+  grid-area: personnel;
+  border: solid 2px blue;
+}
+.roles {
+  grid-area: roles;
+  border: solid 2px green;
+}
