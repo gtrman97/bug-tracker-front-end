@@ -3,7 +3,7 @@
     border-radius: 0.75rem;
 }
 .card {
-    scrollbar-color: white blue;
+    scrollbar-color: blue transparent;
 }
 .card-header {
     border-radius: 0.75rem;
@@ -66,4 +66,8 @@
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.5;
+}
+.selected-user {
+    background-image: var(--blue);
+    color: #fff;
 }

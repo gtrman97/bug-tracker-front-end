@@ -2,6 +2,12 @@ import React from "react";
 import styles from './AssignmentCard.module.css';
 
 const AssignmentCard = (props) => {
+
+    const toggleUserSelection = (event) => {
+
+        event.target.classlist.toggle('selected-user');
+    }
+
   return (
     <div className={styles.col}>
       <div className={styles.card}>
@@ -14,6 +20,36 @@ const AssignmentCard = (props) => {
           <div className={styles["table-responsive"]}>
             <table className={styles.table}>
               <tbody className={styles['table-body']}>
+                <tr className={styles["user-selection"]} onClick={(e) => {e.target.classList.toggle(styles['selected-user'])}}>
+                  <td className={styles['table-data']}>
+                    <h6 className={styles.user}>john michael</h6>
+                  </td>
+                </tr>
+                <tr className={styles["user-selection"]} onClick={(e) => {e.target.classList.toggle(styles['selected-user'])}}>
+                  <td className={styles['table-data']}>
+                    <h6 className={styles.user}>john michael</h6>
+                  </td>
+                </tr>
+                <tr className={styles["user-selection"]} onClick={(e) => {e.target.classList.toggle(styles['selected-user'])}}>
+                  <td className={styles['table-data']}>
+                    <h6 className={styles.user}>john michael</h6>
+                  </td>
+                </tr>
+                <tr className={styles["user-selection"]}>
+                  <td className={styles['table-data']}>
+                    <h6 className={styles.user}>john michael</h6>
+                  </td>
+                </tr>
+                <tr className={styles["user-selection"]}>
+                  <td className={styles['table-data']}>
+                    <h6 className={styles.user}>john michael</h6>
+                  </td>
+                </tr>
+                <tr className={styles["user-selection"]}>
+                  <td className={styles['table-data']}>
+                    <h6 className={styles.user}>john michael</h6>
+                  </td>
+                </tr>
                 <tr className={styles["user-selection"]}>
                   <td className={styles['table-data']}>
                     <h6 className={styles.user}>john michael</h6>
