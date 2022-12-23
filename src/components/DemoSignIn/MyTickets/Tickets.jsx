@@ -5,7 +5,6 @@ import TicketTable from "./TicketTable";
 import Modal from "./Modal";
 
 const Tickets = () => {
-
   const notStartedTickets = [
     { task: "task 1", assignee: "trevor strnad", time: "1h" },
     { task: "task 2", assignee: "brian eschbach", time: "1h" },
@@ -34,8 +33,11 @@ const Tickets = () => {
   const [tickets, setTickets] = useState(notStartedTickets);
   const [modal, setModal] = useState(false);
 
-  const createTicket = (newAssignee, newTime) => {
-    let ticketId = tickets.length + inProgressTickets.length + completedTickets.length;
+  let devs = notStartedTickets.map((x) => x.assignee);
+
+  const createTicket = (newAssignee = devs[0], newTime) => {
+    let ticketId =
+      tickets.length + inProgressTickets.length + completedTickets.length;
     setTickets((oldTickets) => [
       ...oldTickets,
       { task: `task ${ticketId + 1}`, assignee: newAssignee, time: newTime },
@@ -70,16 +72,23 @@ const Tickets = () => {
         {modal && (
           <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} />
         )}
-        <TicketTable color={"red"} header={"not started"} tickets={tickets} />
+        <TicketTable
+          color={"red"}
+          header={"not started"}
+          tickets={tickets}
+          onToggleModal={toggleModal}
+        />
         <TicketTable
           color={"blue"}
           header={"in progress"}
           tickets={inProgressTickets}
+          onToggleModal={toggleModal}
         />
         <TicketTable
           color={"green"}
           header={"completed"}
           tickets={completedTickets}
+          onToggleModal={toggleModal}
         />
       </div>
     </>

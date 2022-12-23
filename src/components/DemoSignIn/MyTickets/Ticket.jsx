@@ -2,8 +2,11 @@ import React from "react";
 import styles from "./Ticket.module.css";
 
 const Ticket = (props) => {
+
+  let toggleModal = props.onToggleModal;
+
   return (
-    <tr className={styles.ticket}>
+    <tr className={styles.ticket} onClick={toggleModal}>
       <td className={styles["ticket-col"]}>
         <div>
         {props.ticket.task}

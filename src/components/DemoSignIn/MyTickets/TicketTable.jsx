@@ -6,6 +6,8 @@ const TicketTable = (props) => {
 
   let tickets = props.tickets;
 
+  let toggleModal = props.onToggleModal;
+
   return (
     <div className={styles.table}>
       <div className={styles.col}>
@@ -26,7 +28,7 @@ const TicketTable = (props) => {
               </tr>
             </thead>
             <tbody className={styles['table-list']}>
-              {tickets ? tickets.map((ticket) => <Ticket ticket={ticket}/>) : null}
+              {tickets ? tickets.map((ticket) => <Ticket ticket={ticket} onToggleModal={toggleModal}/>) : null}
               </tbody>
           </table>
         </div>
