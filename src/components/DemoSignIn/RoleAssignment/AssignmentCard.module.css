@@ -1,7 +1,7 @@
 .col {
   border: solid 2px black;
   border-radius: 0.75rem;
-  height: 100%;
+  /* max-height: min-content; */
 }
 .card {
   background-color: #fff;
@@ -9,6 +9,7 @@
   flex-direction: column;
   border-radius: 0.75rem;
   height: 100%;
+  /* border: solid 2px crimson; */
 }
 .user-card {
   scrollbar-color: red transparent;
@@ -56,19 +57,37 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* overflow: hidden; */
   border-top: solid 2px black;
+  height: 100%;
   /* padding: 1rem; */
 }
 .table-responsive {
-  height: 14rem;
   padding: 0;
-  overflow-x: auto;
+  height: 16rem;
+  /* overflow-x: auto; */
 }
 .table {
   width: 100%;
   border-collapse: collapse;
+  /* here lies the key */
+  height: 100%; 
+  /* height: 30rem; */
+  border: solid 2px seagreen;
+
+}
+.table-header {
+    display: grid;
+    text-transform: capitalize;
+    font-size: small;
+    grid-template-columns: 1fr 3fr 1fr;
+    border: solid 2px rebeccapurple;
+}
+.table-header > th{
+    /* border: solid 2px black; */
 }
 .table-body {
   width: 100%;
-  /* height: 10rem; */
-  border: solid 2px rebeccapurple;
+  height: 100%;
+  border: solid 2px turquoise;
+  overflow: scroll;
+  position: relative;
 }
