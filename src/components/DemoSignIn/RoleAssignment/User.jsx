@@ -20,21 +20,15 @@ const User = (props) => {
         onClick={toggle}
       >
         <td className={cols ? styles[`person-row`] : styles['user-row']}>
-          <div className={cols ? styles[`person-col`] : ''}>{props.user}</div>
+          <div className={cols ? styles[`person-col`] : ''}>{cols ? props.user.name : props.user}</div>
           {cols ? (
             <>
-            <div className={styles['person-col']}>{props.user}</div>
-            <div className={styles['person-col']}>{props.user}</div>
+            <div className={styles['person-col']}>{props.user.email}</div>
+            <div className={styles['person-col']}>{props.user.role}</div>
             </>
           ) : null}
         </td>
       </tr>
-      {/* {cols ? (
-
-      <td className={styles["user-row"]}>
-        <div>poo</div>
-      </td>
-              ) : null} */}
     </>
   );
 };
