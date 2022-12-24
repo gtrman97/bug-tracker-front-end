@@ -38,6 +38,7 @@ const ManageRoles = () => {
       <div className={styles.personnel}>
       <AssignmentCard
           rows={users}
+          selection={'person'}
           color={"green"}
           title={"your personnel"}
         />

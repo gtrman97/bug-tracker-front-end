@@ -6,11 +6,11 @@ const AssignmentCard = (props) => {
 
     const rows = props.rows;
 
-    const selection = props.selection;
-
   return (
     <div className={styles.col}>
-      <div className={styles.card}>
+      <div className={`${styles[`${props.selection}-card`]} ${
+              styles.card
+            }`}>
         <div className={styles["card-header"]}>
           <div className={`${styles[`${props.color}-gradient`]} ${
               styles.gradient
@@ -23,11 +23,6 @@ const AssignmentCard = (props) => {
             <table className={styles.table}>
               <tbody className={styles['table-body']}>
               {rows ? rows.map((user) => <User user={user} color={props.color} selection={props.selection}/>) : null}
-                {/* <tr className={styles["user-selection"]} onClick={(e) => {e.target.classList.toggle(styles['selected-user'])}}>
-                  <td className={styles['table-data']}>
-                    <h6 className={styles.user}>john michael</h6>
-                  </td>
-                </tr> */}
               </tbody>
             </table>
           </div>
