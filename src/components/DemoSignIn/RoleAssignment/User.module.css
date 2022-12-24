@@ -8,6 +8,20 @@
     padding-left: 1rem;
     cursor: pointer;
 }
+.person-row {
+    display: grid;
+    width: 100%;
+    /* padding-left: 1rem; */
+    text-transform: capitalize;
+    font-size: small;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.person-col {
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* .user-row:first-child {
     border-top: solid 2px black;
 } */

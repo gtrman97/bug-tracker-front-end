@@ -59,6 +59,7 @@
   border-top: solid 2px black;
   height: 100%;
   /* padding: 1rem; */
+  overflow: auto;
 }
 .table-responsive {
   padding: 0;
@@ -69,25 +70,23 @@
   width: 100%;
   border-collapse: collapse;
   /* here lies the key */
-  height: 100%; 
+  height: 100%;
   /* height: 30rem; */
   border: solid 2px seagreen;
-
 }
 .table-header {
-    display: grid;
-    text-transform: capitalize;
-    font-size: small;
-    grid-template-columns: 1fr 3fr 1fr;
-    border: solid 2px rebeccapurple;
+  display: grid;
+  text-transform: capitalize;
+  font-size: small;
+  grid-template-columns: 1fr 3fr 1fr;
+  border: solid 2px rebeccapurple;
 }
-.table-header > th{
-    /* border: solid 2px black; */
+.table-header > th {
+  /* border: solid 2px black; */
 }
 .table-body {
   width: 100%;
   height: 100%;
   border: solid 2px turquoise;
-  overflow: scroll;
   position: relative;
 }
