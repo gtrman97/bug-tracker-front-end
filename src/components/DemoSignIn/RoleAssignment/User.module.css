@@ -1,35 +1,35 @@
-.user-row{
-    text-transform: capitalize;
-    width: 100%;
-    border-bottom: solid 2px black;
-    display: flex;
-    align-items: center;
-    height: 2.5rem;
-    padding-left: 1rem;
-    cursor: pointer;
+.user-row {
+  text-transform: capitalize;
+  width: 100%;
+  border-bottom: solid 2px black;
+  display: flex;
+  align-items: center;
+  height: 2.5rem;
+  padding-left: 1rem;
+  cursor: pointer;
 }
 .person-row {
-    display: grid;
-    width: 100%;
-    /* padding-left: 1rem; */
-    text-transform: capitalize;
-    font-size: small;
-    grid-template-columns: 1fr 2fr 1fr;
+  display: grid;
+  width: 100%;
+  /* padding-left: 1rem; */
+  text-transform: capitalize;
+  font-size: small;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .person-col {
-    border: solid 1px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: solid 1px black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* .user-row:first-child {
     border-top: solid 2px black;
 } */
 .toggle-user {
-    background-image: var(--red);
-    color: #fff;
+  background-image: var(--red);
+  color: #fff;
 }
 .toggle-role {
-    background-image: var(--blue);
-    color: #fff;
+  background-image: var(--blue);
+  color: #fff;
 }
