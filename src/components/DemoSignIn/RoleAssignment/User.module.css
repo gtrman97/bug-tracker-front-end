@@ -2,7 +2,6 @@
   text-transform: capitalize;
   width: 100%;
   border-top: solid 2px black;
-  border-radius: 0.75rem;
   /* display: flex; */
   /* align-items: center; */
   height: 2.5rem;
@@ -33,5 +32,4 @@
 .toggle-role {
   background-image: var(--blue);
   color: #fff;
-  border-radius: 0.75rem;
 }

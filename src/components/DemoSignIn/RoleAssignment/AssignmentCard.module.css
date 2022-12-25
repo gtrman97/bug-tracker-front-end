@@ -72,7 +72,9 @@
   /* here lies the key */
   height: 100%;
   /* height: 30rem; */
-  /* border: solid 2px seagreen; */
+  border-bottom-left-radius: 0.55rem;
+  border-bottom-right-radius: 0.55rem;
+  overflow: hidden;
 }
 .table-header {
   display: grid;
