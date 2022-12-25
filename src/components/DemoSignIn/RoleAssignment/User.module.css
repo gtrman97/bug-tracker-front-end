@@ -28,6 +28,8 @@
 .toggle-user {
   background-image: var(--red);
   color: #fff;
+  border-radius: 0.75rem;
+  overflow: hidden;
 }
 .toggle-role {
   background-image: var(--blue);
