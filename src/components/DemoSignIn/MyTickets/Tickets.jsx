@@ -7,13 +7,13 @@ import Modal from "./Modal";
 const Tickets = () => {
   const notStartedTickets = [
     { task: 1, assignee: "trevor strnad", time: "1h" },
-    { task: 2, assignee: "brian eschbach", time: "1h" },
+    { task: 2, assignee: "brian eschbach", time: "45m" },
     { task: 3, assignee: "shannon lucas", time: "1h" },
     { task: 4, assignee: "ryan knight", time: "1h" },
-    { task: 5, assignee: "brandon ellis", time: "1h" },
-    { task: 6, assignee: "ryan knight", time: "1h" },
-    { task: 7, assignee: "shannon lucas", time: "1h" },
-    { task: 8, assignee: "brian eschbach", time: "1h" },
+    { task: 5, assignee: "brandon ellis", time: "30m" },
+    { task: 6, assignee: "ryan knight", time: "90m" },
+    { task: 7, assignee: "shannon lucas", time: "2d" },
+    { task: 8, assignee: "brian eschbach", time: "2d" },
     { task: 9, assignee: "trevor strnad", time: "1h" },
     { task: 10, assignee: "n8 feet under ", time: "1h" },
   ];
