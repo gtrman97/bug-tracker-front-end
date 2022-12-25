@@ -1,9 +1,10 @@
 .user-row {
   text-transform: capitalize;
   width: 100%;
-  border-bottom: solid 2px black;
-  display: flex;
-  align-items: center;
+  border-top: solid 2px black;
+  border-radius: 0.75rem;
+  /* display: flex; */
+  /* align-items: center; */
   height: 2.5rem;
   padding-left: 1rem;
   cursor: pointer;
@@ -32,4 +33,5 @@
 .toggle-role {
   background-image: var(--blue);
   color: #fff;
+  border-radius: 0.75rem;
 }
