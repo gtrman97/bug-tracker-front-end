@@ -71,6 +71,26 @@ const ManageRoles = () => {
       email: "brian@brian-eschbach.com",
       role: "project manager",
     },
+    {
+      name: "moby eric",
+      email: "moby@moby-eric.com",
+      role: "submitter",
+    },
+    {
+      name: "jimmy jones",
+      email: "jimmy@jimmy-jones.com",
+      role: "developer",
+    },
+    {
+      name: "trevor strnad",
+      email: "trevor@trevor-strnad.com",
+      role: "project manager",
+    },
+    {
+      name: "brian eschbach",
+      email: "brian@brian-eschbach.com",
+      role: "project manager",
+    },
   ];
 
   return (

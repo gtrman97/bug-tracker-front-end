@@ -2,6 +2,7 @@
   border: solid 2px black;
   border-radius: 0.75rem;
   /* max-height: min-content; */
+  /* overflow: hidden; */
 }
 .card {
   background-color: #fff;
@@ -65,6 +66,7 @@
 .table-responsive {
   padding: 0;
   height: 16rem;
+  /* overflow: hidden; */
   /* overflow-x: auto; */
 }
 .table {
@@ -77,6 +79,13 @@
   border-bottom-right-radius: 0.55rem;
   overflow: hidden;
 }
+.person-table {
+  width: 100%;
+  border-collapse: collapse;
+  /* here lies the key */
+  height: 100%;
+  overflow: hidden;
+}
 .table-header {
   display: grid;
   text-transform: capitalize;
@@ -84,10 +93,13 @@
   grid-template-columns: 1fr 2fr 1fr;
 }
 .header-col {
-  border: solid 2px black;
+  /* border: solid 2px black; */
 }
 .table-body {
   width: 100%;
   height: 100%;
+  border-bottom-left-radius: 0.55rem;
+
   /* border: solid 2px turquoise; */
+  /* overflow: hidden; */
 }

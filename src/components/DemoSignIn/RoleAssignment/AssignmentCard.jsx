@@ -8,6 +8,7 @@ const AssignmentCard = (props) => {
   const rows = props.rows;
 
   return (
+    <>
     <div className={styles.col}>
       <div className={`${styles[`${props.selection}-card`]} ${styles.card}`}>
         <div className={styles["card-header"]}>
@@ -21,7 +22,7 @@ const AssignmentCard = (props) => {
         </div>
         <div className={styles["card-body"]}>
           <div className={styles["table-responsive"]}>
-            <table className={styles.table}>
+            <table className={header ? styles[`person-table`] : styles.table}>
               {header ? (
                 <thead>
                   <tr className={styles['table-header']}>
@@ -47,6 +48,7 @@ const AssignmentCard = (props) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
