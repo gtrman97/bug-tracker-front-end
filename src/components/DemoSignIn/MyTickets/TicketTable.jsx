@@ -22,7 +22,7 @@ const TicketTable = (props) => {
           <table className={styles["ticket-table"]}>
             <thead>
               <tr className={styles["table-header"]}>
-                <th className={styles['header-col']}>task</th>
+                <th className={styles['header-col']}>ID</th>
                 <th className={styles['header-col']}>assignee</th>
                 <th className={styles['header-col']}>time</th>
               </tr>

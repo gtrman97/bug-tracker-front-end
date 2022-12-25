@@ -2,6 +2,7 @@
   /* border: solid 2px red; */
   height: 5rem;
   padding: 1rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   position: relative;
