@@ -25,9 +25,9 @@ const AssignmentCard = (props) => {
               {header ? (
                 <thead>
                   <tr className={styles['table-header']}>
-                    <th>name</th>
-                    <th>email</th>
-                    <th>role</th>
+                    <th className={styles['header-col']}>name</th>
+                    <th className={styles['header-col']}>email</th>
+                    <th className={styles['header-col']}>role</th>
                   </tr>
                 </thead>
               ) : null}

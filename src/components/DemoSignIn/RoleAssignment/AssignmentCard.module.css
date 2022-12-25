@@ -80,11 +80,10 @@
   display: grid;
   text-transform: capitalize;
   font-size: small;
-  grid-template-columns: 1fr 3fr 1fr;
-  border: solid 2px rebeccapurple;
+  grid-template-columns: 1fr 2fr 1fr;
 }
-.table-header > th {
-  /* border: solid 2px black; */
+.header-col {
+  border: solid 2px black;
 }
 .table-body {
   width: 100%;
