@@ -9,6 +9,7 @@ const User = (props) => {
   const getUser = props.getUser;
   const getRole = props.getRole;
 
+  const getIndex = props.indexChangeHandler;
 
   const cols = props.selection === "person" ? true : false;
 
@@ -16,6 +17,7 @@ const User = (props) => {
 
   const toggle = (event) => {
     let clicked = !selected;
+    getIndex((clicked) ? props.index : null);
     setSelected(clicked);
     if(props.selection === 'user') getUser((clicked) ? event.target.innerText : null);
     if(props.selection === 'role') getRole((clicked) ? event.target.innerText : null);

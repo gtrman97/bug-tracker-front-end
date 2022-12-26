@@ -5,8 +5,9 @@ import styles from "./AssignmentCard.module.css";
 const AssignmentCard = (props) => {
   const header = props.selection === "person" ? true : false;
 
-  const foo = () => {
-    console.log('poo');
+  const getIndex = (index) => {
+    if (index === null) console.log('you have not chosen a role');
+    else console.log(`you have chosen role ${index}`);
   }
 
   let selectedRoles;
@@ -53,15 +54,16 @@ const AssignmentCard = (props) => {
             <div className={styles["table-responsive"]}>
               <table className={header ? styles[`person-table`] : styles.table}>
                 <tbody className={styles["table-body"]}>
-                  {rows.map((user) => (
+                  {rows.map((user, i) => (
                     <User className={styles.foo}
                       user={user}
+                      index={i}
                       color={props.color}
                       selection={props.selection}
                       selectionChangeHandler={props.selectionChangeHandler}
                       getUser={props.getUser}
                       getRole={props.getRole}
-                      onClick={foo}
+                      indexChangeHandler={getIndex}
                     />
                   ))}
                 </tbody>
