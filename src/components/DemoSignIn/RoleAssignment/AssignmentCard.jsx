@@ -1,9 +1,21 @@
-import React from "react";
+import { React, useState } from "react";
 import User from "./User";
 import styles from "./AssignmentCard.module.css";
 
 const AssignmentCard = (props) => {
   const header = props.selection === "person" ? true : false;
+
+  let selectedRoles;
+
+  const roleHandler = (selected) => {
+    selectedRoles = new Array(4).fill(false);
+    for(let role of selectedRoles){
+
+    }
+    setRoles(selectedRoles);
+  };
+
+  const [roles, setRoles] = useState();
 
   const rows = props.rows;
 
