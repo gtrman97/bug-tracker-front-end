@@ -7,8 +7,8 @@ const AssignmentCard = (props) => {
 
   const rows = props.rows;
 
-  if(props.selection === 'person') {
-    console.log('rendering personnel');
+  if (props.selection === "person") {
+    console.log("rendering personnel");
   }
 
   return (
@@ -37,18 +37,16 @@ const AssignmentCard = (props) => {
                   </thead>
                 ) : null}
                 <tbody className={styles["table-body"]}>
-                  {rows
-                    ? rows.map((user) => (
-                        <User
-                          user={user}
-                          color={props.color}
-                          selection={props.selection}
-                          selectionChangeHandler={props.selectionChangeHandler}
-                          getUser={props.getUser}
-                          getRole={props.getRole}
-                        />
-                      ))
-                    : null}
+                  {rows.map((user) => (
+                    <User
+                      user={user}
+                      color={props.color}
+                      selection={props.selection}
+                      selectionChangeHandler={props.selectionChangeHandler}
+                      getUser={props.getUser}
+                      getRole={props.getRole}
+                    />
+                  ))}
                 </tbody>
               </table>
             </div>
