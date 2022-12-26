@@ -7,6 +7,10 @@ const AssignmentCard = (props) => {
 
   const rows = props.rows;
 
+  if(props.selection === 'person') {
+    console.log('rendering personnel');
+  }
+
   return (
     <>
       <div className={styles.col}>

@@ -143,23 +143,26 @@ const ManageRoles = () => {
   // const [role, setRole] = useState();
   let selectedUser;
   const getUser = (user) => {
-    selectedUser = user;
+    selectedUser = user.toLowerCase();
     console.log(`selected user is ${selectedUser}`);
   }
   let selectedRole;
   const getRole = (role) => {
-    selectedRole = role;
+    selectedRole = role.toLowerCase();
     console.log(`selected role is ${selectedRole}`);
   }
 
   const setRole = () => {
-    console.log(`selectedUser is ${selectedUser} and selectedRole is ${selectedRole}`);
+    // console.log(`selectedUser is ${selectedUser} and selectedRole is ${selectedRole}`);
+    // console.log(personnel);
     for(let person of personnel){
       if(person.name === selectedUser) {
         person.role = selectedRole;
         console.log(`changed ${selectedUser} to ${selectedRole}`);
       }
     }
+    setPersons(personnel)
+    console.log(personnel);
   }
 
   let selected;
@@ -192,7 +195,7 @@ const ManageRoles = () => {
       </div>
       <div className={styles.personnel}>
         <AssignmentCard
-          rows={personnel}
+          rows={persons}
           selection={"person"}
           color={"green"}
           title={"your personnel"}
