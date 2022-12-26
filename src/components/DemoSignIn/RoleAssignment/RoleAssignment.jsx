@@ -148,7 +148,7 @@ const ManageRoles = () => {
   }
   let selectedRole;
   const getRole = (role) => {
-    selectedRole = role.toLowerCase();
+    if(role) selectedRole = role.toLowerCase();
     console.log(`selected role is ${selectedRole}`);
   }
 
