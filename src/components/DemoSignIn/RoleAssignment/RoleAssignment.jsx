@@ -138,14 +138,30 @@ const ManageRoles = () => {
     },
   ];
 
-  // const [role, setRole] = useState();
+  const [persons, setPersons] = useState(personnel);
 
+  // const [role, setRole] = useState();
+  let selectedUser;
   const getUser = (user) => {
-    console.log(`selected role is ${user}`);
+    selectedUser = user;
+    console.log(`selected user is ${selectedUser}`);
   }
+  let selectedRole;
   const getRole = (role) => {
-    console.log(`selected role is ${role}`);
+    selectedRole = role;
+    console.log(`selected role is ${selectedRole}`);
   }
+
+  const setRole = () => {
+    console.log(`selectedUser is ${selectedUser} and selectedRole is ${selectedRole}`);
+    for(let person of personnel){
+      if(person.name === selectedUser) {
+        person.role = selectedRole;
+        console.log(`changed ${selectedUser} to ${selectedRole}`);
+      }
+    }
+  }
+
   let selected;
   const logSelected = (selection) => {
     selected = selection;
@@ -171,6 +187,7 @@ const ManageRoles = () => {
           color={"blue"}
           title={"select role to assign"}
           selectionChangeHandler={logSelected}
+          getRole={getRole}
         />
       </div>
       <div className={styles.personnel}>
@@ -180,7 +197,7 @@ const ManageRoles = () => {
           color={"green"}
           title={"your personnel"}
         />
-        <button className={styles.assign}>assign</button>
+        <button className={styles.assign} onClick={setRole}>assign</button>
       </div>
     </div>
   );

@@ -41,6 +41,7 @@ const AssignmentCard = (props) => {
                           selection={props.selection}
                           selectionChangeHandler={props.selectionChangeHandler}
                           getUser={props.getUser}
+                          getRole={props.getRole}
                         />
                       ))
                     : null}

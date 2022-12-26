@@ -7,6 +7,7 @@ const User = (props) => {
 
   const logSelected = props.selectionChangeHandler;
   const getUser = props.getUser;
+  const getRole = props.getRole;
 
 
   const cols = props.selection === "person" ? true : false;
@@ -15,9 +16,10 @@ const User = (props) => {
 
   const toggle = (event) => {
     let clicked = !selected;
-    // console.log(clicked);
     setSelected(clicked);
-    getUser((clicked) ? event.target.innerText : null)
+    if(props.selection === 'user') getUser((clicked) ? event.target.innerText : null);
+    if(props.selection === 'role') getRole((clicked) ? event.target.innerText : null);
+
     // logSelected((clicked) ? event.target.innerText : null);
     
   };
