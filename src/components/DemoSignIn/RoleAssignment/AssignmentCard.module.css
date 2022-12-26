@@ -100,3 +100,14 @@
   /* border: solid 2px turquoise; */
   /* overflow: hidden; */
 }
+.toggle-user {
+  background-image: var(--red);
+  color: #fff;
+}
+.toggle-role {
+  background-image: var(--blue);
+  color: #fff;
+}
+.foo {
+  color: rebeccapurple;
+}

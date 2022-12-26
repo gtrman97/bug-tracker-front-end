@@ -162,7 +162,6 @@ const ManageRoles = () => {
       }
     }
     setPersons(personnel)
-    console.log(personnel);
   }
 
   let selected;

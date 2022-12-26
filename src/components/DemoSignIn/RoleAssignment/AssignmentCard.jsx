@@ -5,11 +5,15 @@ import styles from "./AssignmentCard.module.css";
 const AssignmentCard = (props) => {
   const header = props.selection === "person" ? true : false;
 
+  const foo = () => {
+    console.log('poo');
+  }
+
   let selectedRoles;
 
   const roleHandler = (selected) => {
     selectedRoles = new Array(4).fill(false);
-    for(let role of selectedRoles){
+    for(let i=0; i<selectedRoles.length; i++){
 
     }
     setRoles(selectedRoles);
@@ -50,13 +54,14 @@ const AssignmentCard = (props) => {
               <table className={header ? styles[`person-table`] : styles.table}>
                 <tbody className={styles["table-body"]}>
                   {rows.map((user) => (
-                    <User
+                    <User className={styles.foo}
                       user={user}
                       color={props.color}
                       selection={props.selection}
                       selectionChangeHandler={props.selectionChangeHandler}
                       getUser={props.getUser}
                       getRole={props.getRole}
+                      onClick={foo}
                     />
                   ))}
                 </tbody>
