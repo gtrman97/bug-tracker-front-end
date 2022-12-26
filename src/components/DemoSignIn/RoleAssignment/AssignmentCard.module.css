@@ -92,10 +92,7 @@
   font-size: small;
   grid-template-columns: 1fr 2fr 1fr;
   border-bottom: solid 2px black;
-  position: sticky;
-}
-.header-col {
-  /* border: solid 2px black; */
+  /* position: sticky; */
 }
 .table-body {
   width: 100%;

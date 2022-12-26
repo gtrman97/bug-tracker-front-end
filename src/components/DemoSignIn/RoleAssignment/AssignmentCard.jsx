@@ -36,10 +36,7 @@ const AssignmentCard = (props) => {
               <h6 className={styles.title}>{props.title}</h6>
             </div>
           </div>
-          <div className={styles["card-body"]}>
-            <div className={styles["table-responsive"]}>
-              <table className={header ? styles[`person-table`] : styles.table}>
-                {header ? (
+          {header ? (
                   <thead>
                     <tr className={styles["table-header"]}>
                       <th className={styles["header-col"]}>name</th>
@@ -48,6 +45,9 @@ const AssignmentCard = (props) => {
                     </tr>
                   </thead>
                 ) : null}
+          <div className={styles["card-body"]}>
+            <div className={styles["table-responsive"]}>
+              <table className={header ? styles[`person-table`] : styles.table}>
                 <tbody className={styles["table-body"]}>
                   {rows.map((user) => (
                     <User
