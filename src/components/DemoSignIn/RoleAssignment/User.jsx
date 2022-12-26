@@ -5,12 +5,21 @@ import styles from "./User.module.css";
 const User = (props) => {
   const selection = props.selection;
 
+  const logSelected = props.selectionChangeHandler;
+  const getUser = props.getUser;
+
+
   const cols = props.selection === "person" ? true : false;
 
   const [selected, setSelected] = useState(false);
 
-  const toggle = () => {
-    setSelected(!selected);
+  const toggle = (event) => {
+    let clicked = !selected;
+    // console.log(clicked);
+    setSelected(clicked);
+    getUser((clicked) ? event.target.innerText : null)
+    // logSelected((clicked) ? event.target.innerText : null);
+    
   };
 
   return (

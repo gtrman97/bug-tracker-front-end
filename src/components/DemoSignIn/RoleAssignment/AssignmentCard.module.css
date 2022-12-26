@@ -84,13 +84,15 @@
   border-collapse: collapse;
   /* here lies the key */
   height: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .table-header {
   display: grid;
   text-transform: capitalize;
   font-size: small;
   grid-template-columns: 1fr 2fr 1fr;
+  border-bottom: solid 2px black;
+  position: sticky;
 }
 .header-col {
   /* border: solid 2px black; */
@@ -98,8 +100,6 @@
 .table-body {
   width: 100%;
   height: 100%;
-  border-bottom-left-radius: 0.55rem;
-
   /* border: solid 2px turquoise; */
   /* overflow: hidden; */
 }

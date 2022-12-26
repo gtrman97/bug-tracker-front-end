@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useState} from "react";
 import styles from "./RoleAssignment.module.css";
 // import LoginButton from "../../LoginButton";
 import AssignmentCard from "./AssignmentCard";
@@ -91,18 +91,77 @@ const ManageRoles = () => {
       email: "brian@brian-eschbach.com",
       role: "project manager",
     },
+    {
+      name: "richard gran",
+      email: "richard@richard-gran.com",
+      role: "project manager",
+    },
+    {
+      name: "moby eric",
+      email: "moby@moby-eric.com",
+      role: "submitter",
+    },
+    {
+      name: "jimmy jones",
+      email: "jimmy@jimmy-jones.com",
+      role: "developer",
+    },
+    {
+      name: "trevor strnad",
+      email: "trevor@trevor-strnad.com",
+      role: "project manager",
+    },
+    {
+      name: "brian eschbach",
+      email: "brian@brian-eschbach.com",
+      role: "project manager",
+    },
+    {
+      name: "moby eric",
+      email: "moby@moby-eric.com",
+      role: "submitter",
+    },
+    {
+      name: "jimmy jones",
+      email: "jimmy@jimmy-jones.com",
+      role: "developer",
+    },
+    {
+      name: "trevor strnad",
+      email: "trevor@trevor-strnad.com",
+      role: "project manager",
+    },
+    {
+      name: "brian eschbach",
+      email: "brian@brian-eschbach.com",
+      role: "project manager",
+    },
   ];
+
+  // const [role, setRole] = useState();
+
+  const getUser = (user) => {
+    console.log(`selected role is ${user}`);
+  }
+  const getRole = (role) => {
+    console.log(`selected role is ${role}`);
+  }
+  let selected;
+  const logSelected = (selection) => {
+    selected = selection;
+    console.log(selected);
+  }
 
   return (
     <div className={styles.main}>
       {/* <LoginButton /> */}
-      {/* <TicketTable /> */}
       <div className={styles.users}>
         <AssignmentCard
           rows={users}
           selection={"user"}
           color={"red"}
           title={"select 1 or more users"}
+          getUser={getUser}
         />
       </div>
       <div className={styles.roles}>
@@ -111,6 +170,7 @@ const ManageRoles = () => {
           selection={"role"}
           color={"blue"}
           title={"select role to assign"}
+          selectionChangeHandler={logSelected}
         />
       </div>
       <div className={styles.personnel}>
