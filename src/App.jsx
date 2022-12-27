@@ -24,10 +24,6 @@ export default function App() {
             index // <-- rendered on "/"
             element={<Dashboard />}
           />
-          {/* <Route
-            path="demo-dashboard" // <-- rendered on "/demo-dashboard"
-            element={<DemoDashboard />}
-          /> */}
           <Route path='/role-assignment' element={<RoleAssignment />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/tickets' element={<Tickets />} />
