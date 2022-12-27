@@ -49,7 +49,6 @@ const AssignmentCard = (props) => {
                 <tbody className={styles["table-body"]}>
                   {rows.map((user, i) => (
                     <User
-                      className={styles.foo}
                       user={user}
                       index={i}
                       color={props.color}

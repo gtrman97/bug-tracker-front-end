@@ -1,17 +1,10 @@
 #nav-bar {
   height: 46rem;
-  /* border: solid 2px grey; */
   border-radius: 0.75rem;
-  /* background-image: linear-gradient(195deg, #42424a 0%, #191919 100%); */
   background-image: var(--black);
   display: block;
-  /* position: fixed; */
   top: 0.5rem;
-  /* left: 1rem; */
   margin: 0.25rem;
-  /* position: fixed; */
-  /* top: 0;
-  bottom: 0; */
   flex-direction: column;
   justify-content: center;
   color: var(--white);

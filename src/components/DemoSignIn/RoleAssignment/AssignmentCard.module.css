@@ -1,7 +1,6 @@
 .col {
   border: solid 2px black;
   border-radius: 0.75rem;
-  /* max-height: min-content; */
   /* overflow: hidden; */
 }
 .card {
@@ -10,8 +9,6 @@
   flex-direction: column;
   border-radius: 0.75rem;
   height: 100%;
-  /* border: solid 2px crimson; */
-
 }
 .user-card {
   scrollbar-color: red transparent;
@@ -72,7 +69,6 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  /* here lies the key */
   height: 100%;
   /* height: 30rem; */
   border-bottom-left-radius: 0.55rem;
@@ -82,7 +78,6 @@
 .person-table {
   width: 100%;
   border-collapse: collapse;
-  /* here lies the key */
   height: 100%;
   /* overflow: hidden; */
 }
@@ -97,7 +92,6 @@
 .table-body {
   width: 100%;
   height: 100%;
-  /* border: solid 2px turquoise; */
   /* overflow: hidden; */
 }
 .toggle-user {
@@ -107,7 +101,4 @@
 .toggle-role {
   background-image: var(--blue);
   color: var(--white);
-}
-.foo {
-  color: rebeccapurple;
 }
