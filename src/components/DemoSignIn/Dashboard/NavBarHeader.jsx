@@ -7,6 +7,7 @@ const NavBarHeader = () => {
       <h4 className={styles.heading}>
         <span>Dashboard</span>
       </h4>
+      <button className={styles.close}>X</button>
     </div>
   );
 };

@@ -10,3 +10,18 @@
     padding: 1rem;
     font-weight: bold;
 }
+.close {
+    width: 0.5rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close:hover {
+    border: solid 1px #535bf2;
+}
+@media screen and (min-width: 375px) {
+    .close {
+        display: none;
+    }
+}
