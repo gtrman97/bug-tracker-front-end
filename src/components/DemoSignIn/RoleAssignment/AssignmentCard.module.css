@@ -5,7 +5,7 @@
   /* overflow: hidden; */
 }
 .card {
-  background-color: #fff;
+  background-color: var(--white);
   display: flex;
   flex-direction: column;
   border-radius: 0.75rem;
@@ -48,7 +48,7 @@
 .title {
   display: flex;
   align-items: center;
-  color: #fff;
+  color: var(--white);
   text-transform: capitalize;
   padding-left: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -102,11 +102,11 @@
 }
 .toggle-user {
   background-image: var(--red);
-  color: #fff;
+  color: var(--white);
 }
 .toggle-role {
   background-image: var(--blue);
-  color: #fff;
+  color: var(--white);
 }
 .foo {
   color: rebeccapurple;

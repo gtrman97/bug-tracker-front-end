@@ -39,7 +39,7 @@
     font-size: small;
 }
 .list a.active {
-    color: #fff;
+    color: var(--white);
     background: #7600dc;
 }
 .list a.inactive {

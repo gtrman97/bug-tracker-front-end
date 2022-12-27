@@ -14,7 +14,7 @@
   bottom: 0; */
   flex-direction: column;
   justify-content: center;
-  color: #fff;
+  color: var(--white);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .list {

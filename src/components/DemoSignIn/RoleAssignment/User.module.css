@@ -29,9 +29,9 @@
 } */
 .toggle-user {
   background-image: var(--red);
-  color: #fff;
+  color: var(--white);
 }
 .toggle-role {
   background-image: var(--blue);
-  color: #fff;
+  color: var(--white);
 }
