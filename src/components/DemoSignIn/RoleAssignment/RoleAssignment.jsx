@@ -154,7 +154,6 @@ const ManageRoles = () => {
 
   const setRole = () => {
     // console.log(`selectedUser is ${selectedUser} and selectedRole is ${selectedRole}`);
-    // console.log(personnel);
     for(let person of personnel){
       if(person.name === selectedUser) {
         person.role = selectedRole;

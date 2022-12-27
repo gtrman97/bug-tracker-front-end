@@ -13,31 +13,40 @@ const User = (props) => {
 
   const cols = props.selection === "person" ? true : false;
 
-  const [selected, setSelected] = useState(false);
+  const userTable = props.selection === "user" ? true : false;
+  const roleTable = props.selection === "role" ? true : false;
 
-  const toggle = (event) => {
-    let clicked = !selected;
-    getIndex((clicked) ? props.index : null);
-    setSelected(clicked);
-    if(props.selection === 'user') getUser((clicked) ? event.target.innerText : null);
-    if(props.selection === 'role') getRole((clicked) ? event.target.innerText : null);
+  const [selectedUser, setSelectedUser] = useState(false);
+  const [selectedRole, setSelectedRole] = useState(false);
+
+  const toggleUser = (event) => {
+    setSelectedUser(!selectedUser);
+    getUser(!selectedUser ? event.target.innerText : null);
 
     // logSelected((clicked) ? event.target.innerText : null);
-    
+  };
+
+  const toggleRole = (event) => {
+    // console.log(props.index);
+    setSelectedRole(!selectedRole);
+    getIndex(!selectedUser ? props.index : null);
+    getRole(clicked ? event.target.innerText : null);
   };
 
   return (
     <>
       <tr
-        className={selected ? styles[`toggle-${selection}`] : ""}
-        onClick={toggle}
+        className={selectedUser ? styles[`toggle-user`] : selectedRole ? styles['toggle-role'] : ""}
+        onClick={roleTable ? toggleRole : userTable ? toggleUser : null}
       >
-        <td className={cols ? styles[`person-row`] : styles['user-row']}>
-          <div className={cols ? styles[`person-col`] : ''}>{cols ? props.user.name : props.user}</div>
+        <td className={cols ? styles[`person-row`] : styles["user-row"]}>
+          <div className={cols ? styles[`person-col`] : ""}>
+            {cols ? props.user.name : props.user}
+          </div>
           {cols ? (
             <>
-            <div className={styles['person-col']}>{props.user.email}</div>
-            <div className={styles['person-col']}>{props.user.role}</div>
+              <div className={styles["person-col"]}>{props.user.email}</div>
+              <div className={styles["person-col"]}>{props.user.role}</div>
             </>
           ) : null}
         </td>
