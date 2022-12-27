@@ -8,22 +8,12 @@ const AssignmentCard = (props) => {
   const [selectedRole, setSelectedRoles] = useState(-1);
 
   const getIndex = (index) => {
-    if (index === null) console.log('you have not chosen a role');
+    if (index === null) console.log("you have not chosen a role");
     else {
       console.log(`you have chosen role ${index}`);
       setSelectedRoles(index);
     }
-  }
-
-  // let selectedRoles;
-
-  // const roleHandler = (selected) => {
-  //   selectedRoles = new Array(4).fill(false);
-  //   for(let i=0; i<selectedRoles.length; i++){
-
-  //   }
-  //   setRoles(selectedRoles);
-  // };
+  };
 
   const rows = props.rows;
 
@@ -45,20 +35,21 @@ const AssignmentCard = (props) => {
             </div>
           </div>
           {header ? (
-                  <thead>
-                    <tr className={styles["table-header"]}>
-                      <th className={styles["header-col"]}>name</th>
-                      <th className={styles["header-col"]}>email</th>
-                      <th className={styles["header-col"]}>role</th>
-                    </tr>
-                  </thead>
-                ) : null}
+            <thead>
+              <tr className={styles["table-header"]}>
+                <th className={styles["header-col"]}>name</th>
+                <th className={styles["header-col"]}>email</th>
+                <th className={styles["header-col"]}>role</th>
+              </tr>
+            </thead>
+          ) : null}
           <div className={styles["card-body"]}>
             <div className={styles["table-responsive"]}>
               <table className={header ? styles[`person-table`] : styles.table}>
                 <tbody className={styles["table-body"]}>
                   {rows.map((user, i) => (
-                    <User className={styles.foo}
+                    <User
+                      className={styles.foo}
                       user={user}
                       index={i}
                       color={props.color}
