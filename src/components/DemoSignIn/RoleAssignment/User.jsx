@@ -29,14 +29,20 @@ const User = (props) => {
   const toggleRole = (event) => {
     // console.log(props.index);
     setSelectedRole(!selectedRole);
-    getIndex(!selectedUser ? props.index : null);
-    getRole(clicked ? event.target.innerText : null);
+    getIndex(!selectedRole ? props.index : null);
+    getRole(!selectedRole ? event.target.innerText : null);
   };
 
   return (
     <>
       <tr
-        className={selectedUser ? styles[`toggle-user`] : selectedRole ? styles['toggle-role'] : ""}
+        className={
+          selectedUser
+            ? styles[`toggle-user`]
+            : selectedRole
+            ? styles["toggle-role"]
+            : ""
+        }
         onClick={roleTable ? toggleRole : userTable ? toggleUser : null}
       >
         <td className={cols ? styles[`person-row`] : styles["user-row"]}>

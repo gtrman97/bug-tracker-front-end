@@ -148,8 +148,10 @@ const ManageRoles = () => {
   }
   let selectedRole;
   const getRole = (role) => {
-    if(role) selectedRole = role.toLowerCase();
-    console.log(`selected role is ${selectedRole}`);
+    if (role === null) console.log('you have not chosen a role');
+    else {
+      console.log(`you have chosen role ${role}`);
+    }
   }
 
   const setRole = () => {

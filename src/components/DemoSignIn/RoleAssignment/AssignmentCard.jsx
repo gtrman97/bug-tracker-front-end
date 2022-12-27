@@ -5,13 +5,13 @@ import styles from "./AssignmentCard.module.css";
 const AssignmentCard = (props) => {
   const header = props.selection === "person" ? true : false;
 
-  const [selectedRole, setSelectedRoles] = useState();
+  const [selectedRole, setSelectedRoles] = useState(-1);
 
   const getIndex = (index) => {
     if (index === null) console.log('you have not chosen a role');
     else {
       console.log(`you have chosen role ${index}`);
-      setSelectedRoles(index);
+      // setSelectedRoles(index);
     }
   }
 
@@ -67,7 +67,7 @@ const AssignmentCard = (props) => {
                       getUser={props.getUser}
                       getRole={props.getRole}
                       indexChangeHandler={getIndex}
-                      selectedRole={selectedRole}
+                      selectedIndex={selectedRole}
                     />
                   ))}
                 </tbody>
