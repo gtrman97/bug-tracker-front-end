@@ -11,7 +11,7 @@ const AssignmentCard = (props) => {
     if (index === null) console.log('you have not chosen a role');
     else {
       console.log(`you have chosen role ${index}`);
-      // setSelectedRoles(index);
+      setSelectedRoles(index);
     }
   }
 

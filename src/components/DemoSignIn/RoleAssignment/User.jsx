@@ -3,6 +3,11 @@ import { useState } from "react";
 import styles from "./User.module.css";
 
 const User = (props) => {
+
+  if(props.selection === "role"){
+    console.log(`index is ${props.index} and sI is ${props.selectedIndex}`);
+  }
+
   const selection = props.selection;
 
   const logSelected = props.selectionChangeHandler;
@@ -39,7 +44,7 @@ const User = (props) => {
         className={
           selectedUser
             ? styles[`toggle-user`]
-            : selectedRole
+            : (props.selectedIndex === props.index)
             ? styles["toggle-role"]
             : ""
         }
