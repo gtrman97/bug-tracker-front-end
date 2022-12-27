@@ -1,5 +1,16 @@
 .cards {
   height: 50%;
   display: flex;
+  flex-direction: column;
+  gap: 12rem;
   align-items: center;
+}
+@media screen and (min-width: 400px) {
+  .cards {
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    align-items: center;
+  }
 }

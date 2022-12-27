@@ -2,8 +2,6 @@
   background-color: #f0f2f5;
   width: 100vw;
   height: 100vh;
-  /* border: solid 2px rebeccapurple; */
-
   display: flex;
   flex-direction: column;
 }
@@ -12,7 +10,7 @@
   display: none;
 }
 .head-nav {
-  border: solid 2px blue;
+  /* border: solid 2px blue; */
   /* grid-area: head-nav; */
 }
 .main-content {
