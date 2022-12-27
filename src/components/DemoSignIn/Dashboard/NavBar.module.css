@@ -10,11 +10,3 @@
   color: var(--white);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.list {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-.link {
-  width: 100%;
-}

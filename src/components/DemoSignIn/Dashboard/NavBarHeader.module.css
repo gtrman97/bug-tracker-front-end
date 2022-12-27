@@ -4,7 +4,7 @@
     justify-content: center;
     width: 100%;
     border-bottom: solid 2px grey;
-
+    position: relative;
 }
 .heading {
     padding: 1rem;
@@ -17,10 +17,16 @@
     align-items: center;
     justify-content: center;
 }
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 0.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .close:hover {
     border: solid 1px #535bf2;
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 1200px) {
     .close {
         display: none;
     }

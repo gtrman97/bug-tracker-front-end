@@ -4,7 +4,7 @@ import NavList from "./NavList";
 import NavBarFooter from "./NavBarFooter";
 import styles from "./NavBar.module.css";
 
-const SideNavBar = (props) => {
+const SideNavBar = () => {
   return (
     <aside id={styles["nav-bar"]}>
       <NavBarHeader />
