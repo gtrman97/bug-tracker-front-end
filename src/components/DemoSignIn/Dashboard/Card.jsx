@@ -14,7 +14,11 @@ const Card = (props) => {
             }`}
           >
             <div className={styles.chart}>
-              <Chart category={props.category} data={props.data} barWidth={props.barWidth}/>
+              <Chart
+                category={props.category}
+                data={props.data}
+                barWidth={props.barWidth}
+              />
             </div>
           </div>
         </div>

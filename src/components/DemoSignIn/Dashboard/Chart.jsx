@@ -30,7 +30,12 @@ const Chart = (props) => {
         tick={{ fill: "#f0f2f5", fontFamily: "Verdana" }}
       />
       <Tooltip />
-      <Bar dataKey="pv" fill="#f0f2f5" barSize={barWidth} radius={[5, 5, 0, 0]} />
+      <Bar
+        dataKey="pv"
+        fill="#f0f2f5"
+        barSize={barWidth}
+        radius={[5, 5, 0, 0]}
+      />
     </BarChart>
   );
 };
