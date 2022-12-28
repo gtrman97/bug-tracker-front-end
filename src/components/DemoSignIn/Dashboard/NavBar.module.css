@@ -9,4 +9,12 @@
   justify-content: center;
   color: var(--white);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* position: relative; */
+  animation-name: moveRight;
+  animation-duration: 2s;
 }
+@keyframes moveRight {
+  0% {
+    right: 500px; }
+  100% {
+    right: 0px; } }

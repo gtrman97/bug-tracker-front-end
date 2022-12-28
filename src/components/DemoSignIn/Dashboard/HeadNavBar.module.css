@@ -26,7 +26,7 @@
 .search-bar {
   border: solid 1px gray;
   height: 2.5rem;
-  width: 10rem;
+  width: 9rem;
 }
 .icon {
   height: 1.5rem;
@@ -79,7 +79,7 @@
   gap: 1rem;
   width: 100rem;
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 401px) {
   .head-nav-bar {
     border: solid 2px gray;
     border-radius: 15px;
@@ -157,5 +157,8 @@
   }
   #menu {
     display: none;
+  }
+  #bell {
+    display: inherit;
   }
 }
