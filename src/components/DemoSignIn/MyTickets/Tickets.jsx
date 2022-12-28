@@ -40,7 +40,7 @@ const Tickets = () => {
       tickets.length + inProgressTickets.length + completedTickets.length;
     setTickets((oldTickets) => [
       ...oldTickets,
-      { task: `task ${ticketId + 1}`, assignee: newAssignee, time: newTime },
+      { task: ticketId, assignee: newAssignee, time: newTime },
     ]);
     toggleModal();
   };
