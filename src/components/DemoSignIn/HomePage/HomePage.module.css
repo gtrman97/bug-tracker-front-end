@@ -3,11 +3,19 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 .side-nav {
   /* border: solid 2px red; */
   display: none;
+}
+.side-nav-slide {
+  display: initial;
+  position: relative;
+  animation-name: moveRight;
+  animation-duration: 1s;
+  top: 1.5rem;
 }
 .head-nav {
   /* border: solid 2px blue; */
@@ -23,6 +31,14 @@
   display: flex;
   flex-direction: column;
 }
+@keyframes moveRight {
+  0% {
+    right: 500px;
+  }
+  100% {
+    right: 0px;
+  }
+}
 @media screen and (min-width: 415px) {
   .demo-app {
     background-color: #f0f2f5;
@@ -33,6 +49,7 @@
       "side-nav main-content";
     grid-template-columns: 1fr 5fr;
     grid-template-rows: 1fr 7fr;
+    align-items: initial;
   }
   .side-nav {
     grid-area: side-nav;

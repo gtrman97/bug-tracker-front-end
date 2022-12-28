@@ -1,21 +1,35 @@
-import React from "react";
+import { React, useState } from "react";
 import { Outlet } from "react-router-dom";
 import styles from "./HomePage.module.css";
 import HeadNavBar from "../Dashboard/HeadNavBar";
 import SideNavBar from "../Dashboard/SideNavBar";
 
-const isLoggedIn = (userId) => {
+const isLoggedIn = (userId) => {};
 
-}
+// className={!sidenavVisibility ? styles['head-nav'] : `${styles['head-nav']} ${
+//   styles['side-nav-slide']
+// }`}
 
 const DemoApp = () => {
+  const [sidenavVisibility, SetSidenavVisibility] = useState(false);
 
+  const animateNavbar = () => {
+    console.log('poo');
+    SetSidenavVisibility(!sidenavVisibility);
+  };
   return (
     <div className={styles["demo-app"]}>
-      <div className={styles["head-nav"]}>
-        <HeadNavBar />
+      <div
+        className={
+          styles['head-nav']}
+      >
+        <HeadNavBar animateHandler={animateNavbar} />
       </div>
-      <div className={styles["side-nav"]}>
+      <div className={
+          !sidenavVisibility
+            ? styles["side-nav"]
+            : `${styles["side-nav"]} ${styles["side-nav-slide"]}`
+        }>
         <SideNavBar />
       </div>
       <main className={styles["main-content"]}>

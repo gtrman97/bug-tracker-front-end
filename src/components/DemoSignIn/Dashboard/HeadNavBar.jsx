@@ -6,7 +6,10 @@ import bell from "../../../images/icons/bell.png";
 import setting from "../../../images/icons/setting.png";
 import { Link } from "react-router-dom";
 
-const HeadNavBar = () => {
+const HeadNavBar = (props) => {
+
+  const animateNavbar = props.animateHandler;
+
   return (
     <>
     <nav className={styles["head-nav-bar"]}>
@@ -26,9 +29,9 @@ const HeadNavBar = () => {
               <p className={styles["title"]}>Sign In</p>
             </div>
           </Link>
-          <Link to="/" className={styles.link} id={styles.menu}>
+          <button className={styles.link} id={styles.menu} onClick={animateNavbar}>
             <img src={menu} className={styles.icon} alt="menu-icon"></img>
-          </Link>
+          </button>
           <Link to="/settings" className={styles.link}>
             <img
               src={setting}
