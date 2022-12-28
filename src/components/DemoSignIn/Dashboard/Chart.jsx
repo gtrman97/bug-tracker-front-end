@@ -14,7 +14,7 @@ const Chart = (props) => {
       data={data}
       margin={{
         top: 5,
-        right: 0,
+        right: 15,
         left: -20,
         bottom: 0,
       }}
