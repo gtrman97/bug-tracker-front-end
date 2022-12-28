@@ -79,6 +79,9 @@
   gap: 1rem;
   width: 100rem;
 }
+#menu {
+  background-color: #f0f2f5;
+}
 @media screen and (min-width: 415px) {
   .head-nav-bar {
     border: solid 2px gray;
