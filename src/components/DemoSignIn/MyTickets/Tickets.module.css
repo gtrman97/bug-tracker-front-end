@@ -1,29 +1,26 @@
 .create {
   /* border: solid 2px red; */
-  height: 5rem;
-  padding: 1rem;
-  margin-top: 1.5rem;
+  height: 7.5rem;
+  /* padding: 1rem; */
+  /* margin-top: 0; */
   display: flex;
-  justify-content: space-between;
-  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 .projects {
   text-align: center;
   width: 10rem;
   height: 2.5rem;
   font-size: x-large;
-  position: absolute;
-  top: 0;
 }
 option {
   text-transform: capitalize;
 }
 .button {
-  position: absolute;
-  top: 0;
-  right: 1rem;
   width: 12.5rem;
-  padding: 0.5em;
   border: none;
   border-radius: 0.75rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -35,5 +32,50 @@ option {
 .tickets {
   height: 38rem;
   display: flex;
+  flex-direction: column;
   /* border: solid 2px red; */
+}
+@media screen and (min-width: 415px) {
+  .create {
+    /* border: solid 2px red; */
+    height: 5rem;
+    padding: 1rem;
+    /* margin-top: 1.5rem; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+  .projects {
+    text-align: center;
+    width: 10rem;
+    height: 2.5rem;
+    font-size: x-large;
+    position: absolute;
+    top: 1rem;
+  }
+  option {
+    text-transform: capitalize;
+  }
+  .button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 12.5rem;
+    padding: 0.5em;
+    border: none;
+    border-radius: 0.75rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: large;
+    text-transform: capitalize;
+    background-image: var(--blue);
+  }
+  .tickets {
+    height: 38rem;
+    display: flex;
+    flex-direction: row;
+    /* border: solid 2px red; */
+  }
+  
 }
