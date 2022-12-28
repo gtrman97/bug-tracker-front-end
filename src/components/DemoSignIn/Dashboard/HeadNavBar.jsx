@@ -36,7 +36,7 @@ const HeadNavBar = () => {
               alt="settings-icon"
             ></img>
           </Link>
-          <Link to="/notifications" className={styles.link}>
+          <Link to="/notifications" className={styles.link} id={styles.bell}>
             <img
               src={bell}
               className={styles.icon}

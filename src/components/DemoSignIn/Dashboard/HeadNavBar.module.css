@@ -33,6 +33,9 @@
   width: 1.5rem;
   /* border: solid 2px red; */
 }
+#bell {
+  display: none;
+}
 .nav-options {
   display: flex;
   align-items: center;
@@ -75,9 +78,6 @@
   display: flex;
   gap: 1rem;
   width: 100rem;
-}
-#menu {
-  display: none;
 }
 @media screen and (min-width: 400px) {
   .head-nav-bar {
