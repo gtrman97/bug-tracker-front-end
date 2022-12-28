@@ -1,8 +1,9 @@
 .head-nav-bar {
-  border: solid 2px gray;
+  /* border: solid 2px gray; */
   border-radius: 15px;
   height: 3.5rem;
   display: flex;
+  flex-direction: column;
   margin: 1rem;
   margin-bottom: 2rem;
 }
@@ -10,8 +11,10 @@
   /* border: solid 2px green; */
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
   padding: 1rem;
+  padding-left: 0;
   margin-left: 2rem;
   font-size: large;
 }
@@ -23,6 +26,7 @@
 .search-bar {
   border: solid 1px gray;
   height: 2.5rem;
+  width: 10rem;
 }
 .icon {
   height: 1.5rem;
@@ -81,6 +85,7 @@
     border-radius: 15px;
     height: 3.5rem;
     display: flex;
+    flex-direction: row;
     margin: 1rem;
     margin-bottom: 0;
   }

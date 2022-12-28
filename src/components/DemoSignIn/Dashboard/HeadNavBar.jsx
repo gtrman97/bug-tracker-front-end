@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const HeadNavBar = () => {
   return (
+    <>
     <nav className={styles["head-nav-bar"]}>
       <h6 className={styles.heading}>Welcome, Demo User</h6>
       <div className={styles["nav-options"]}>
@@ -45,6 +46,7 @@ const HeadNavBar = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 
