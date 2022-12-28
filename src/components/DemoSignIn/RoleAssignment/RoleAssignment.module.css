@@ -13,8 +13,8 @@
 .personnel {
   /* border: solid 2px blue; */
   width: 20rem;
-  display: grid;
-  grid-template-rows: auto min-content;
+  display: flex;
+  flex-direction: column;
   grid-gap: 1rem;
   padding-bottom: 0.7rem;
 }
