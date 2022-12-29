@@ -44,8 +44,14 @@ const Tickets = () => {
     ]);
     toggleModal();
   };
-
-  const toggleModal = () => {
+  let title;
+  const toggleModal = (event) => {
+    if(event.target.tagName !== 'BUTTON'){
+      title = 'edit ticket';
+    }
+    else {
+      title = 'create ticket';
+    }
     setModal(!modal);
   };
 
@@ -70,7 +76,7 @@ const Tickets = () => {
       </div>
       <div className={styles.tickets}>
         {modal && (
-          <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} />
+          <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} title={title}/>
         )}
         <TicketTable
           color={"red"}

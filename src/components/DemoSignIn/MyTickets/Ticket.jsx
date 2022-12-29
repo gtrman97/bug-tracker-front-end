@@ -5,8 +5,13 @@ const Ticket = (props) => {
 
   let toggleModal = props.onToggleModal;
 
+  const eventToggle = (event) => {
+    // console.log(event.target.innerText);
+    toggleModal(event);
+  }
+
   return (
-    <tr className={styles.ticket} onClick={toggleModal}>
+    <tr className={styles.ticket} onClick={eventToggle}>
       <td className={styles["ticket-col"]}>
         <div>
         {props.ticket.task}
