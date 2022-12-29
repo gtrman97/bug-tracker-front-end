@@ -170,7 +170,7 @@ const ManageRoles = () => {
   };
 
   const setRole = () => {
-    console.log(`selectedUsers is ${selectedUsers.length} and selectedRole is ${selectedRole}`);
+    console.log(`selectedUsers is ${selectedUsers} and selectedRole is ${selectedRole}`);
     if (selectedRole) {
       // console.log(`receiving users: ${selectedUsers}`);
       for (let user of selectedUsers) {
