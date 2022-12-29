@@ -48,7 +48,7 @@ const User = (props) => {
           </div>
           {cols ? (
             <>
-              <div className={styles["person-col"]}>{props.user.email}</div>
+              <div className={styles["email-col"]}>{props.user.email}</div>
               <div className={styles["person-col"]}>{props.user.role}</div>
             </>
           ) : null}

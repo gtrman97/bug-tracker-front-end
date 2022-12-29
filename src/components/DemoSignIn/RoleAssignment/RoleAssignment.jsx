@@ -5,21 +5,18 @@ import AssignmentCard from "./AssignmentCard";
 
 const ManageRoles = () => {
   const users = [
-    "john michael",
     "trevor strnad",
-    "michael levi",
+    "brandon ellis",
     "ryan knight",
     "brian eschbach",
-    "john michael",
-    "john michael",
-    "brian eschbach",
-    "john michael",
-    "john michael",
-    "brian eschbach",
-    "john michael",
+    "shannon lucas",
+    "napoleon hill",
+    "jose silva",
+    "vinnie moore",
     "john michael",
     "brian eschbach",
     "john michael",
+    "brian eschbach",
     "john michael",
   ];
 
@@ -28,7 +25,7 @@ const ManageRoles = () => {
   const personnel = [
     {
       name: "john michael",
-      email: "john@john-michael.com",
+      email: "john@michael.com",
       role: "developer",
     },
     {

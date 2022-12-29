@@ -18,11 +18,15 @@
   grid-template-columns: 1fr 2fr 1fr;
   border-bottom: solid 2px black;
 }
-.person-col {
+.person-col, .email-col {
   /* border: solid 1px black; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.email-col {
+  text-transform: lowercase;
+
 }
 /* .user-row:first-child {
     border-top: solid 2px black;
