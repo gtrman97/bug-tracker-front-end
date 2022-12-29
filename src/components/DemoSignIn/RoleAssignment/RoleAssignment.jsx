@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React from "react";
 import styles from "./RoleAssignment.module.css";
 // import LoginButton from "../../LoginButton";
 import AssignmentCard from "./AssignmentCard";
@@ -148,10 +148,12 @@ const ManageRoles = () => {
     personMap[person.name] = person.role;
   }
 
-  const [persons, setPersons] = useState(personnel);
+  const getPersonMap = () => {
+    return personMap;
+  }
 
   const selectedUsers = [];
-  const getUser = (user) => {
+  const toggleUser = (user) => {
     user = user.toLowerCase();
     if (!selectedUsers.includes(user)) {
       selectedUsers.push(user);
@@ -160,14 +162,20 @@ const ManageRoles = () => {
     }
     console.log(selectedUsers);
   };
+  const getUsers = () => {
+    return selectedUsers;
+  }
   let selectedRole;
-  const getRole = (role) => {
+  const toggleRole = (role) => {
     if (role === null) console.log("you have not chosen a role");
     else {
       selectedRole = role;
       console.log(`you have chosen role ${role}`);
     }
   };
+  const getRole = () => {
+    return selectedRole;
+  }
 
   const setRole = () => {
     console.log(`selectedUsers is ${selectedUsers} and selectedRole is ${selectedRole}`);
@@ -184,13 +192,6 @@ const ManageRoles = () => {
         }
       }
     }
-    setPersons(Array.from(personnel));
-  };
-
-  let selected;
-  const logSelected = (selection) => {
-    selected = selection;
-    console.log(selected);
   };
 
   return (
@@ -202,7 +203,7 @@ const ManageRoles = () => {
           selection={"user"}
           color={"red"}
           title={"select 1 or more users"}
-          getUser={getUser}
+          toggleUser={toggleUser}
         />
       </div>
       <div className={styles.roles}>
@@ -211,20 +212,19 @@ const ManageRoles = () => {
           selection={"role"}
           color={"blue"}
           title={"select role to assign"}
-          selectionChangeHandler={logSelected}
-          getRole={getRole}
+          toggleRole={toggleRole}
         />
       </div>
       <div className={styles.personnel}>
         <AssignmentCard
-          rows={persons}
+          rows={personnel}
+          getPersonMap={getPersonMap}
           selection={"person"}
           color={"green"}
           title={"your personnel"}
+          getUsers={getUsers}
+          getRole={getRole}
         />
-        <button className={styles.assign} onClick={setRole}>
-          assign
-        </button>
       </div>
     </div>
   );

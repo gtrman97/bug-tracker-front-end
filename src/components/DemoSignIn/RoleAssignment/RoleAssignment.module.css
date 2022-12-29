@@ -22,17 +22,6 @@
   width: 20rem;
   height: 5rem;
 }
-.assign {
-  text-transform: capitalize;
-  width: 100%;
-  background-image: var(--blue);
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  border: none;
-}
-.assign:hover {
-  background-image: var(--medium-blue);
-}
 @media screen and (min-width: 415px) {
   .main {
     /* height: 100%; */

@@ -102,3 +102,14 @@
   background-image: var(--blue);
   color: var(--white);
 }
+.assign {
+  text-transform: capitalize;
+  width: 100%;
+  background-image: var(--blue);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
+}
+.assign:hover {
+  background-image: var(--medium-blue);
+}

@@ -4,10 +4,8 @@ import styles from "./User.module.css";
 
 const User = (props) => {
 
-  const selection = props.selection;
-
-  const getUser = props.getUser;
-  const getRole = props.getRole;
+  const toggleUser = props.toggleUser;
+  const toggleRole = props.toggleRole;
 
   const getIndex = props.indexChangeHandler;
 
@@ -19,15 +17,15 @@ const User = (props) => {
   const [selectedUser, setSelectedUser] = useState(false);
   const [selectedRole, setSelectedRole] = useState(false);
 
-  const toggleUser = (event) => {
+  const toggleUserGradient = (event) => {
     setSelectedUser(!selectedUser);
-    getUser(event.target.innerText);
+    toggleUser(event.target.innerText);
   };
 
-  const toggleRole = (event) => {
+  const toggleRoleGradient = (event) => {
     setSelectedRole(!selectedRole);
     getIndex(!selectedRole ? props.index : null);
-    getRole(!selectedRole ? event.target.innerText : null);
+    toggleRole(!selectedRole ? event.target.innerText : null);
   };
 
   return (
@@ -40,7 +38,7 @@ const User = (props) => {
             ? styles["toggle-role"]
             : ""
         }
-        onClick={roleTable ? toggleRole : userTable ? toggleUser : null}
+        onClick={roleTable ? toggleRoleGradient : userTable ? toggleUserGradient : null}
       >
         <td className={cols ? styles[`person-row`] : styles["user-row"]}>
           <div className={cols ? styles[`person-col`] : ""}>

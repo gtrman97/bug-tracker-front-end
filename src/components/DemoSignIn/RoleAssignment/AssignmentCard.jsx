@@ -5,6 +5,10 @@ import styles from "./AssignmentCard.module.css";
 const AssignmentCard = (props) => {
   const header = props.selection === "person" ? true : false;
 
+  const getPersonMap = props.getPersonMap;
+  const getUsers = props.getUsers;
+  const getRole = props.getRole;
+
   const [selectedRole, setSelectedRoles] = useState(-1);
 
   const getIndex = (index) => {
@@ -15,7 +19,27 @@ const AssignmentCard = (props) => {
     }
   };
 
-  const rows = props.rows;
+  // const rows = props.rows;
+
+  const [rows, setRows] = useState(props.rows)
+
+  const changeRoles = () => {
+    const personMap = getPersonMap();
+    const users = getUsers();
+    const role = getRole();
+    if (role) {
+      for (let user of users) {
+        console.log(`user is ${user}`);
+        personMap[user] = role;
+        for (let person of rows) {
+          if (person.name === user) {
+            person.role = role;
+          }
+        }
+      }
+    }
+    setRows(Array.from(rows));
+  };
 
   return (
     <>
@@ -50,8 +74,8 @@ const AssignmentCard = (props) => {
                       color={props.color}
                       selection={props.selection}
                       selectionChangeHandler={props.selectionChangeHandler}
-                      getUser={props.getUser}
-                      getRole={props.getRole}
+                      toggleUser={props.toggleUser}
+                      toggleRole={props.toggleRole}
                       indexChangeHandler={getIndex}
                       selectedIndex={selectedRole}
                     />
@@ -62,6 +86,7 @@ const AssignmentCard = (props) => {
           </div>
         </div>
       </div>
+      {header ? <button className={styles.assign} onClick={changeRoles}>assign</button> : null}
     </>
   );
 };
