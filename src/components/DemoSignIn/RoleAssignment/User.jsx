@@ -4,13 +4,8 @@ import styles from "./User.module.css";
 
 const User = (props) => {
 
-  if(props.selection === "role"){
-    console.log(`index is ${props.index} and sI is ${props.selectedIndex}`);
-  }
-
   const selection = props.selection;
 
-  const logSelected = props.selectionChangeHandler;
   const getUser = props.getUser;
   const getRole = props.getRole;
 
@@ -26,13 +21,10 @@ const User = (props) => {
 
   const toggleUser = (event) => {
     setSelectedUser(!selectedUser);
-    getUser(!selectedUser ? event.target.innerText : null);
-
-    // logSelected((clicked) ? event.target.innerText : null);
+    getUser(event.target.innerText);
   };
 
   const toggleRole = (event) => {
-    // console.log(props.index);
     setSelectedRole(!selectedRole);
     getIndex(!selectedRole ? props.index : null);
     getRole(!selectedRole ? event.target.innerText : null);

@@ -140,29 +140,34 @@ const ManageRoles = () => {
 
   const [persons, setPersons] = useState(personnel);
 
-  // const [role, setRole] = useState();
-  let selectedUser;
+  const selectedUsers = [];
   const getUser = (user) => {
-    selectedUser = user.toLowerCase();
-    console.log(`selected user is ${selectedUser}`);
+    user = user.toLowerCase();
+    if(!selectedUsers.includes(user)){
+      selectedUsers.push(user);
+    }
+    else {
+      selectedUsers.splice(selectedUsers.indexOf(user), 1);
+    }
+    console.log(selectedUsers);
   }
   let selectedRole;
   const getRole = (role) => {
     if (role === null) console.log('you have not chosen a role');
     else {
+      selectedRole = role;
       console.log(`you have chosen role ${role}`);
     }
   }
 
   const setRole = () => {
-    // console.log(`selectedUser is ${selectedUser} and selectedRole is ${selectedRole}`);
     for(let person of personnel){
-      if(person.name === selectedUser) {
+      if(person.name === selectedUsers) {
         person.role = selectedRole;
-        console.log(`changed ${selectedUser} to ${selectedRole}`);
+        console.log(`changed ${selectedUsers} to ${selectedRole}`);
       }
     }
-    setPersons(personnel)
+    setPersons(Array.from(personnel))
   }
 
   let selected;
