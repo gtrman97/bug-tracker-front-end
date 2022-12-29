@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 import styles from "./RoleAssignment.module.css";
 // import LoginButton from "../../LoginButton";
 import AssignmentCard from "./AssignmentCard";
@@ -138,43 +138,54 @@ const ManageRoles = () => {
     },
   ];
 
+  const personMap = {};
+  for (let person of personnel) {
+    personMap[person.name] = person.role;
+  }
+
+  for(let key in personMap){
+    console.log(`name is ${key} and role is ${personMap[key]}`);
+  }
+
   const [persons, setPersons] = useState(personnel);
 
   const selectedUsers = [];
   const getUser = (user) => {
     user = user.toLowerCase();
-    if(!selectedUsers.includes(user)){
+    if (!selectedUsers.includes(user)) {
       selectedUsers.push(user);
-    }
-    else {
+    } else {
       selectedUsers.splice(selectedUsers.indexOf(user), 1);
     }
     console.log(selectedUsers);
-  }
+  };
   let selectedRole;
   const getRole = (role) => {
-    if (role === null) console.log('you have not chosen a role');
+    if (role === null) console.log("you have not chosen a role");
     else {
       selectedRole = role;
       console.log(`you have chosen role ${role}`);
     }
-  }
+  };
 
   const setRole = () => {
-    for(let person of personnel){
-      if(person.name === selectedUsers) {
-        person.role = selectedRole;
-        console.log(`changed ${selectedUsers} to ${selectedRole}`);
+    for (let user of selectedUsers) {
+      personMap[user] = selectedRole;
+      for (let person of personnel) {
+        if (person.name === user) {
+          person.role = selectedRole;
+          console.log(`changed ${selectedUsers} to ${selectedRole}`);
+        }
       }
     }
-    setPersons(Array.from(personnel))
-  }
+    setPersons(Array.from(personnel));
+  };
 
   let selected;
   const logSelected = (selection) => {
     selected = selection;
     console.log(selected);
-  }
+  };
 
   return (
     <div className={styles.main}>
@@ -205,7 +216,9 @@ const ManageRoles = () => {
           color={"green"}
           title={"your personnel"}
         />
-        <button className={styles.assign} onClick={setRole}>assign</button>
+        <button className={styles.assign} onClick={setRole}>
+          assign
+        </button>
       </div>
     </div>
   );
