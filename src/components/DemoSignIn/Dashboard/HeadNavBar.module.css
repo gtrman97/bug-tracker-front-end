@@ -42,7 +42,7 @@
   justify-content: flex-end;
   /* border: solid 2px blue; */
   height: 100%;
-  gap: 1rem;
+  /* gap: 1rem; */
   flex-grow: 2;
 }
 .nav-links {
