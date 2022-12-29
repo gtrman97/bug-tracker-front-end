@@ -72,3 +72,6 @@ body.active-modal {
   text-align: center;
   font-size: medium;
 }
+.form-label {
+  font-weight: bold;
+}

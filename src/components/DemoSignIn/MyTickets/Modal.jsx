@@ -27,7 +27,7 @@ const Modal = (props) => {
           <h2 className={styles["modal-header"]}>new ticket</h2>
           <form className={styles["ticket-form"]}>
             <div className={styles["form-element"]}>
-              <label htmlFor="description">description</label>
+              <label className={styles['form-label']} htmlFor="description">description</label>
               <textarea
                 id="description"
                 name="description"
@@ -36,7 +36,15 @@ const Modal = (props) => {
               ></textarea>
             </div>
             <div className={styles["form-element"]}>
-              <label htmlFor="assignee">assignee</label>
+              <label className={styles['form-label']} htmlFor="type">ticket type</label>
+              bug
+              <input id="type" name="type" type={'radio'}/>
+              feature
+              <input id="type" name="type" type={'radio'}/>
+
+            </div>
+            <div className={styles["form-element"]}>
+              <label className={styles['form-label']} htmlFor="assignee">assignee</label>
               <select className={styles.developers}>
                 <option value="trevor strnad" onClick={assigneeChangeHandler}>
                   Trevor Strnad
@@ -50,7 +58,7 @@ const Modal = (props) => {
               </select>
             </div>
             <div className={styles["form-element"]}>
-              <label htmlFor="time">time</label>
+              <label className={styles['form-label']} htmlFor="time">time</label>
               <input id="time" name="time" onChange={timeChangeHandler} />
             </div>
           </form>
