@@ -48,6 +48,9 @@ body.active-modal {
   color: white;
   background-image: var(--blue);
 }
+.create-ticket:hover{
+  background-image: var(--medium-blue);
+}
 .ticket-form {
   /* border: solid 2px black; */
   display: flex;
@@ -66,7 +69,7 @@ body.active-modal {
   /* border: solid 2px crimson; */
   width: 100%;
 }
-.developers {
+.developers, .priorities {
   width: 10rem;
   height: 2.5rem;
   text-align: center;

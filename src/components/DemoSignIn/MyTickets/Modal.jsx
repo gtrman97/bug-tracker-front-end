@@ -36,6 +36,23 @@ const Modal = (props) => {
               ></textarea>
             </div>
             <div className={styles["form-element"]}>
+              <label className={styles['form-label']} htmlFor="assignee">priority</label>
+              <select className={styles.priorities}>
+                <option value="none" >
+                  None
+                </option>
+                <option value="low" >
+                  Low
+                </option>
+                <option value="medium" >
+                  Medium
+                </option>
+                <option value="high" >
+                  High
+                </option>
+              </select>
+            </div>
+            <div className={styles["form-element"]}>
               <label className={styles['form-label']} htmlFor="type">ticket type</label>
               bug
               <input id="type" name="type" type={'radio'}/>
