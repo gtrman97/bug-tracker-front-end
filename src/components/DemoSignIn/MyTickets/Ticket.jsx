@@ -5,9 +5,9 @@ const Ticket = (props) => {
 
   let toggleModal = props.onToggleModal;
 
-  const eventToggle = (event) => {
+  const eventToggle = () => {
     // console.log(event.target.innerText);
-    toggleModal(event);
+    toggleModal(props);
   }
 
   return (

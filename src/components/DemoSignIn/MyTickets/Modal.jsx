@@ -24,7 +24,7 @@ const Modal = (props) => {
       <div className={styles.modal}>
         <div onClick={toggleModal} className={styles["overlay"]}></div>
         <div className={styles["modal-content"]}>
-          <h2 className={styles["modal-header"]}>new ticket</h2>
+          <h2 className={styles["modal-header"]}>{props.title}</h2>
           <form className={styles["ticket-form"]}>
             <div className={styles["form-element"]}>
               <label className={styles['form-label']} htmlFor="description">description</label>

@@ -31,7 +31,9 @@ const Tickets = () => {
   ];
 
   const [tickets, setTickets] = useState(notStartedTickets);
-  const [modal, setModal] = useState(false);
+  const [editTicketModal, setEditTicketModal] = useState(false);
+  const [createTicketModal, setCreateTicketModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
   let devs = notStartedTickets.map((x) => x.assignee);
 
@@ -44,18 +46,18 @@ const Tickets = () => {
     ]);
     toggleModal();
   };
-  let title;
-  const toggleModal = (event) => {
-    if(event.target.tagName !== 'BUTTON'){
-      title = 'edit ticket';
+  const toggleModal = (props) => {
+    // console.log(`id: ${props.ticket.task}, dev: ${props.ticket.assignee}, time: ${props.ticket.time}`);
+    if(props.ticket){
+      setEditTicketModal(!editTicketModal);
     }
     else {
-      title = 'create ticket';
+      setCreateTicketModal(!createTicketModal);
     }
-    setModal(!modal);
+    // setModal(!modal);
   };
 
-  if (modal) {
+  if (editTicketModal || createTicketModal) {
     document.body.classList.add("active-modal");
   } else {
     document.body.classList.remove("active-modal");
@@ -75,9 +77,15 @@ const Tickets = () => {
         </button>
       </div>
       <div className={styles.tickets}>
-        {modal && (
+        {editTicketModal ? 
+          <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} title={'edit ticket'}/>
+        : createTicketModal ? 
+        <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} title={'new ticket'} />
+        : null
+        }
+        {/* {modal && (
           <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} title={title}/>
-        )}
+        )} */}
         <TicketTable
           color={"red"}
           header={"not started"}
