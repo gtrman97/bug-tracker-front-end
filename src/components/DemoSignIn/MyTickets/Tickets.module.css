@@ -33,6 +33,7 @@ option {
   height: 38rem;
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   /* border: solid 2px red; */
 }
 @media screen and (min-width: 415px) {
