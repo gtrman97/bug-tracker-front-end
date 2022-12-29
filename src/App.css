@@ -6,6 +6,7 @@
 :root {
   --black: linear-gradient(to bottom, #42424a 0%, #191919 100%);
   --red: linear-gradient(to bottom, rgb(250, 70, 70), red);
+  --medium-blue: linear-gradient(to bottom, rgb(5, 135, 179), mediumblue);
   --blue: linear-gradient(to bottom, rgb(5, 135, 179), blue);
   --green: linear-gradient(to bottom, rgb(43, 223, 43), green);
   --white: #fff;

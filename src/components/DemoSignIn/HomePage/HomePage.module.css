@@ -62,7 +62,7 @@
     grid-area: head-nav;
   }
   .main-content {
-    border: solid 2px red;
+    /* border: solid 2px red; */
     grid-area: main-content;
     margin-top: 0;
     margin-right: 1rem;

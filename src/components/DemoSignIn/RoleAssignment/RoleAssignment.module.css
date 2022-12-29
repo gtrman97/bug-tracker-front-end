@@ -31,7 +31,7 @@
   border: none;
 }
 .assign:hover {
-  background-image: var(--green);
+  background-image: var(--medium-blue);
 }
 @media screen and (min-width: 415px){
 
@@ -77,9 +77,6 @@
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
-  }
-  .assign:hover {
-    background-image: var(--green);
   }
   
 }
