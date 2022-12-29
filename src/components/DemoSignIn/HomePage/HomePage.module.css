@@ -32,9 +32,12 @@
   flex-direction: column;
   /* height: 100%; */
 }
+.hidden {
+  display: none;
+}
 @keyframes moveRight {
   0% {
-    right: 500px;
+    right: 250px;
   }
   100% {
     right: 0px;

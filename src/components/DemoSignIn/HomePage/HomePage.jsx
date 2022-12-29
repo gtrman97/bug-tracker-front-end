@@ -14,7 +14,6 @@ const DemoApp = () => {
   const [sidenavVisibility, SetSidenavVisibility] = useState(false);
 
   const animateNavbar = () => {
-    console.log('poo');
     SetSidenavVisibility(!sidenavVisibility);
   };
   return (
@@ -32,7 +31,7 @@ const DemoApp = () => {
         }>
         <SideNavBar />
       </div>
-      <main className={styles["main-content"]}>
+      <main className={sidenavVisibility ? styles.hidden : styles["main-content"]}>
         <Outlet />
       </main>
     </div>
