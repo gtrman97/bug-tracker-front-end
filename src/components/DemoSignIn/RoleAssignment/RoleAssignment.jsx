@@ -10,10 +10,13 @@ const ManageRoles = () => {
     "ryan knight",
     "brian eschbach",
     "shannon lucas",
+    "lawrence perry",
     "napoleon hill",
     "jose silva",
     "vinnie moore",
+    "jimmy jones",
     "john michael",
+    "shad helmstetter",
     "brian eschbach",
     "john michael",
     "brian eschbach",
@@ -24,13 +27,28 @@ const ManageRoles = () => {
 
   const personnel = [
     {
-      name: "john michael",
-      email: "john@michael.com",
+      name: "trevor strnad",
+      email: "trevor@strnad.com",
+      role: "project manager",
+    },
+    {
+      name: "brandon ellis",
+      email: "brandon@ellis.com",
+      role: "project manager",
+    },
+    {
+      name: "ryan knight",
+      email: "ryan@knight.com",
       role: "developer",
     },
     {
-      name: "alex liras",
-      email: "alex@liras.com",
+      name: "brian eschbach",
+      email: "brian@eschbach.com",
+      role: "project manager",
+    },
+    {
+      name: "shannon lucas",
+      email: "shannon@lucas.com",
       role: "submitter",
     },
     {
@@ -39,18 +57,18 @@ const ManageRoles = () => {
       role: "submitter",
     },
     {
-      name: "michael levi",
-      email: "michael@levi.com",
+      name: "napoleon hill",
+      email: "napoleon@hill.com",
       role: "project manager",
     },
     {
-      name: "richard gran",
-      email: "richard@gran.com",
+      name: "jose silva",
+      email: "jose@silva.com",
       role: "project manager",
     },
     {
-      name: "moby eric",
-      email: "moby@eric.com",
+      name: "vinnie moore",
+      email: "vinnie@moore.com",
       role: "submitter",
     },
     {
@@ -59,23 +77,13 @@ const ManageRoles = () => {
       role: "developer",
     },
     {
-      name: "trevor strnad",
-      email: "trevor@strnad.com",
-      role: "project manager",
-    },
-    {
-      name: "brian eschbach",
-      email: "brian@eschbach.com",
-      role: "project manager",
-    },
-    {
-      name: "moby eric",
-      email: "moby@eric.com",
+      name: "john michael",
+      email: "john@michael.com",
       role: "submitter",
     },
     {
-      name: "jimmy jones",
-      email: "jimmy@jones.com",
+      name: "shad helmstetter",
+      email: "shad@helmstetter.com",
       role: "developer",
     },
     {
@@ -140,10 +148,6 @@ const ManageRoles = () => {
     personMap[person.name] = person.role;
   }
 
-  for(let key in personMap){
-    console.log(`name is ${key} and role is ${personMap[key]}`);
-  }
-
   const [persons, setPersons] = useState(personnel);
 
   const selectedUsers = [];
@@ -166,12 +170,16 @@ const ManageRoles = () => {
   };
 
   const setRole = () => {
-    for (let user of selectedUsers) {
-      personMap[user] = selectedRole;
-      for (let person of personnel) {
-        if (person.name === user) {
-          person.role = selectedRole;
-          console.log(`changed ${selectedUsers} to ${selectedRole}`);
+    console.log(`selectedUsers is ${selectedUsers.length} and selectedRole is ${selectedRole}`);
+    if (selectedRole) {
+      // console.log(`receiving users: ${selectedUsers}`);
+      for (let user of selectedUsers) {
+        personMap[user] = selectedRole;
+        for (let person of personnel) {
+          if (person.name === user) {
+            person.role = selectedRole;
+            console.log(`changed ${selectedUsers} to ${selectedRole}`);
+          }
         }
       }
     }

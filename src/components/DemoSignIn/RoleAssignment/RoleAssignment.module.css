@@ -33,8 +33,7 @@
 .assign:hover {
   background-image: var(--medium-blue);
 }
-@media screen and (min-width: 415px){
-
+@media screen and (min-width: 415px) {
   .main {
     /* height: 100%; */
     display: grid;
@@ -78,5 +77,4 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: none;
   }
-  
 }
