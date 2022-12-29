@@ -174,6 +174,7 @@ const ManageRoles = () => {
     if (selectedRole) {
       // console.log(`receiving users: ${selectedUsers}`);
       for (let user of selectedUsers) {
+        console.log(`user is ${user}`);
         personMap[user] = selectedRole;
         for (let person of personnel) {
           if (person.name === user) {
