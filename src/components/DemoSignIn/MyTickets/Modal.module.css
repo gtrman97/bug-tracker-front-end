@@ -31,7 +31,8 @@ body.active-modal {
   background: var(--white);
   padding: 5rem;
   border-radius: 3px;
-  max-width: 600px;
+  /* max-width: 600px; */
+  width: 20rem;
   border: solid 2px black;
   border-radius: 0.75rem;
 }
@@ -114,6 +115,7 @@ body.active-modal {
     padding: 5rem;
     border-radius: 3px;
     max-width: 600px;
+    width: initial;
     border: solid 2px black;
     border-radius: 0.75rem;
   }
