@@ -58,7 +58,6 @@ const Modal = (props) => {
               <input id="type" name="type" type={'radio'}/>
               feature
               <input id="type" name="type" type={'radio'}/>
-
             </div>
             <div className={styles["form-element"]}>
               <label className={styles['form-label']} htmlFor="assignee">assignee</label>

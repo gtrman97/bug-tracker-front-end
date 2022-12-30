@@ -58,6 +58,7 @@ body.active-modal {
 .ticket-form {
   border: solid 2px black;
   width: 15rem;
+  /* height: 20rem; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -65,12 +66,12 @@ body.active-modal {
   padding: 1rem;
   text-transform: capitalize;
   height: 20rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 .form-element {
   display: flex;
-  /* flex-direction: column; */
-  /* height: 3.5rem; */
+  flex-direction: column;
+  height: 3.5rem;
   justify-content: space-between;
   gap: 1rem;
   /* border: solid 2px crimson; */
@@ -156,8 +157,10 @@ body.active-modal {
   }
   .form-element {
     display: flex;
+    flex-direction: row;
+    /* height: 3.5rem; */
     justify-content: space-between;
-    gap: 1rem;
+    /* gap: 1rem; */
     /* border: solid 2px crimson; */
     width: 100%;
   }
