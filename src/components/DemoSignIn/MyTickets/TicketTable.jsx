@@ -1,12 +1,14 @@
-import React from "react";
+import { React, useState } from "react";
 import styles from "./TicketTable.module.css";
 import Ticket from "./Ticket";
 
 const TicketTable = (props) => {
 
-  let tickets = props.tickets;
+  const [tickets, setTickets] = useState(props.tickets);
 
   let toggleModal = props.onToggleModal;
+
+  const createTicket = props.createTicket;
 
   return (
     <div className={styles.table}>
@@ -22,14 +24,18 @@ const TicketTable = (props) => {
           <table className={styles["ticket-table"]}>
             <thead>
               <tr className={styles["table-header"]}>
-                <th className={styles['header-col']}>ID</th>
-                <th className={styles['header-col']}>assignee</th>
-                <th className={styles['header-col']}>time</th>
+                <th className={styles["header-col"]}>ID</th>
+                <th className={styles["header-col"]}>assignee</th>
+                <th className={styles["header-col"]}>time</th>
               </tr>
             </thead>
-            <tbody className={styles['table-list']}>
-              {tickets ? tickets.map((ticket) => <Ticket ticket={ticket} onToggleModal={toggleModal}/>) : null}
-              </tbody>
+            <tbody className={styles["table-list"]}>
+              {tickets
+                ? tickets.map((ticket) => (
+                    <Ticket ticket={ticket} onToggleModal={toggleModal} />
+                  ))
+                : null}
+            </tbody>
           </table>
         </div>
       </div>
