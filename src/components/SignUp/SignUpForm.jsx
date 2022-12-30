@@ -9,7 +9,7 @@ import Button from "../SignIn/Button";
 const SignUpForm = () => {
   return (
     <div className={styles["sign-up"]}>
-      <FormHeader title={"Sign Up"} className={styles.header} />
+      <FormHeader title={"sign up"} className={styles.header} />
       <form className={styles["sign-up-form"]}>
         <img src={bugIcon} alt="bug icon" id={styles["logo"]} />
         <p className={styles.prompt}>
@@ -19,7 +19,7 @@ const SignUpForm = () => {
         <Label title={"Email"} />
         <Label title={"Password"} />
         <Label title={"Confirm Password"} />
-        <Button title={"Sign Up"} color={"red"} />
+        <Button title={"sign up"} color={"red"} />
         <p className={styles.option}>
           Already have an account?{" "}
           <Link to="/sign-in" className={styles.link}>

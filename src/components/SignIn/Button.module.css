@@ -1,4 +1,5 @@
 .button {
+    text-transform: capitalize;
     width: 12.5rem;
     /* height: 3rem; */
     /* position: inherit; */
