@@ -151,12 +151,14 @@ const Tickets = () => {
             onToggleModal={toggleEditTicketModal}
             onCreateTicket={createTicket}
             title={"edit ticket"}
+            buttonText={'save'}
           />
         ) : createTicketModal ? (
           <Modal
             onToggleModal={toggleNewTicketModal}
             onCreateTicket={createTicket}
             title={"new ticket"}
+            buttonText={'create'}
           />
         ) : null}
         {/* {modal && (

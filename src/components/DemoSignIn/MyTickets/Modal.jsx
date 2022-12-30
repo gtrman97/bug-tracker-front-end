@@ -85,7 +85,7 @@ const Modal = (props) => {
             className={styles["create-ticket"]}
             onClick={newTicketHandler}
           >
-            create
+            {props.buttonText}
           </button>
         </div>
       </div>
