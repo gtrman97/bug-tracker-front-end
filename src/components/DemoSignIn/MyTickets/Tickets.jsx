@@ -11,23 +11,64 @@ const Tickets = () => {
     { id: 3, assignee: "shannon lucas", time: "1h" },
     { id: 4, assignee: "ryan knight", time: "1h" },
     { id: 5, assignee: "brandon ellis", time: "30m" },
-    { id: 6, assignee: "ryan knight", time: "90m" },
-    { id: 7, assignee: "shannon lucas", time: "2d" },
-    { id: 8, assignee: "brian eschbach", time: "2d" },
-    { id: 9, assignee: "trevor strnad", time: "1h" },
-    { id: 10, assignee: "n8 feet under ", time: "1h" },
+    { id: 6, assignee: "vinnie moore", time: "90m" },
+    { id: 7, assignee: "jose silva", time: "2d" },
+    { id: 8, assignee: "napoleon hill", time: "2d" },
+    { id: 9, assignee: "lawrence perry", time: "1h" },
+    { id: 10, assignee: "john mcDougall ", time: "1h" },
   ];
   const inProgressTickets = [
-    { id: 11, assignee: "n8 feet under ", time: "1h" },
+    { id: 11, assignee: "mark morton", time: "1h" },
     { id: 12, assignee: "ryan knight", time: "1h" },
-    { id: 13, assignee: "shannon lucas", time: "1h" },
-    { id: 14, assignee: "brian eschbach", time: "1h" },
-    { id: 15, assignee: "trevor strnad", time: "1h" },
+    { id: 13, assignee: "john michael", time: "1h" },
+    { id: 14, assignee: "jimmy jones", time: "1h" },
+    { id: 15, assignee: "jack allen", time: "1h" },
   ];
   const completedTickets = [
-    { id: 16, assignee: "n8 feet under ", time: "1h" },
-    { id: 17, assignee: "ryan knight", time: "1h" },
-    { id: 18, assignee: "trevor strnad", time: "1h" },
+    { id: 16, assignee: "nathan thunderstone ", time: "1h" },
+    { id: 17, assignee: "marcus aurelius", time: "1h" },
+    { id: 18, assignee: "john smith", time: "1h" },
+    { id: 19, assignee: "brian holt", time: "50m" },
+    { id: 20, assignee: "shad helmstetter", time: "30m" },
+    { id: 18, assignee: "david schwartz", time: "2h" },
+  ];
+
+  const globalTickets = {
+    'not started': [
+      { id: 1, assignee: "trevor strnad", time: "1h" },
+      { id: 2, assignee: "brian eschbach", time: "45m" },
+      { id: 3, assignee: "shannon lucas", time: "1h" },
+      { id: 4, assignee: "ryan knight", time: "1h" },
+      { id: 5, assignee: "brandon ellis", time: "30m" },
+      { id: 6, assignee: "vinnie moore", time: "90m" },
+      { id: 7, assignee: "jose silva", time: "2d" },
+      { id: 8, assignee: "napoleon hill", time: "2d" },
+      { id: 9, assignee: "lawrence perry", time: "1h" },
+      { id: 10, assignee: "john mcDougall ", time: "1h" },
+    ],
+    'in progress': [
+      { id: 11, assignee: "mark morton", time: "1h" },
+      { id: 12, assignee: "ryan knight", time: "1h" },
+      { id: 13, assignee: "john michael", time: "1h" },
+      { id: 14, assignee: "jimmy jones", time: "1h" },
+      { id: 15, assignee: "jack allen", time: "1h" },
+    ],
+    'completed': [
+      { id: 16, assignee: "nathan thunderstone ", time: "1h" },
+      { id: 17, assignee: "marcus aurelius", time: "1h" },
+      { id: 18, assignee: "john smith", time: "1h" },
+      { id: 19, assignee: "brian holt", time: "50m" },
+      { id: 20, assignee: "shad helmstetter", time: "30m" },
+      { id: 18, assignee: "david schwartz", time: "2h" },
+    ]
+  }
+
+  // since I am using the spread operator here which makes a shallow copy,
+  // I don't need to use the slice() method in the shuffleTickets method
+  const allTickets = [
+    [...notStartedTickets],
+    [...inProgressTickets],
+    [...completedTickets],
   ];
 
   const [tickets, setTickets] = useState(notStartedTickets);
@@ -35,10 +76,10 @@ const Tickets = () => {
   const [createTicketModal, setCreateTicketModal] = useState(false);
   // const [modal, setModal] = useState(false);
 
-  let devs = notStartedTickets.map((x) => x.assignee);
+  const devs = notStartedTickets.map((x) => x.assignee);
 
   const createTicket = (newAssignee = devs[0], newTime) => {
-    let ticketId =
+    const ticketId =
       tickets.length + inProgressTickets.length + completedTickets.length;
     setTickets((oldTickets) => [
       ...oldTickets,
@@ -49,14 +90,16 @@ const Tickets = () => {
 
   const toggleNewTicketModal = () => {
     setCreateTicketModal(!createTicketModal);
-  }
+  };
 
   const toggleEditTicketModal = (props) => {
-    if(props.ticket){
-      console.log(`id: ${props.ticket.id}, dev: ${props.ticket.assignee}, time: ${props.ticket.time}`);
+    if (props.ticket) {
+      console.log(
+        `id: ${props.ticket.id}, dev: ${props.ticket.assignee}, time: ${props.ticket.time}`
+      );
     }
     setEditTicketModal(!editTicketModal);
-  }
+  };
 
   if (editTicketModal || createTicketModal) {
     document.body.classList.add("active-modal");
@@ -64,40 +107,58 @@ const Tickets = () => {
     document.body.classList.remove("active-modal");
   }
 
-  const [shuffledNewTickets, setShuffledNewTickets] = useState(notStartedTickets);
-  const [shuffledStartedTickets, setShuffledStartedTickets] = useState(inProgressTickets);
-  const [shuffledDoneTickets, setShuffledDoneTickets] = useState(completedTickets);
+  const [shuffledNewTickets, setShuffledNewTickets] =
+    useState(notStartedTickets);
+  const [shuffledStartedTickets, setShuffledStartedTickets] =
+    useState(inProgressTickets);
+  const [shuffledDoneTickets, setShuffledDoneTickets] =
+    useState(completedTickets);
 
   const shuffleTickets = () => {
+    allTickets.sort((a, b) => Math.random() - 0.5);
 
-    // using slice here so it only mutates a coppy of the array not the original
-    setShuffledNewTickets(shuffledNewTickets.slice().sort((a, b) => Math.random() - 0.5));
-    setShuffledStartedTickets(shuffledStartedTickets.slice().sort((a, b) => Math.random() - 0.5));
-    setShuffledDoneTickets(shuffledDoneTickets.slice().sort((a, b) => Math.random() - 0.5));
-
-  }
-  // notStartedTickets.sort((a, b) => Math.random() - 0.5);
+    setShuffledNewTickets(allTickets[0].sort((a, b) => Math.random() - 0.5));
+    setShuffledStartedTickets(
+      allTickets[1].sort((a, b) => Math.random() - 0.5)
+    );
+    setShuffledDoneTickets(allTickets[2].sort((a, b) => Math.random() - 0.5));
+  };
 
   return (
     <>
       <div className={styles.create}>
         <select className={styles.projects}>
-          <option value="project 1" onClick={shuffleTickets}>Project 1</option>
-          <option value="project 2" onClick={shuffleTickets}>Project 2</option>
-          <option value="project 3" onClick={shuffleTickets}>Project 3</option>
-          <option value="project 4" onClick={shuffleTickets}>Project 4</option>
+          <option value="project 1" onClick={shuffleTickets}>
+            Project 1
+          </option>
+          <option value="project 2" onClick={shuffleTickets}>
+            Project 2
+          </option>
+          <option value="project 3" onClick={shuffleTickets}>
+            Project 3
+          </option>
+          <option value="project 4" onClick={shuffleTickets}>
+            Project 4
+          </option>
         </select>
         <button onClick={toggleNewTicketModal} className={styles.button}>
           create ticket
         </button>
       </div>
       <div className={styles.tickets}>
-        {editTicketModal ? 
-          <Modal onToggleModal={toggleEditTicketModal} onCreateTicket={createTicket} title={'edit ticket'}/>
-        : createTicketModal ? 
-        <Modal onToggleModal={toggleNewTicketModal} onCreateTicket={createTicket} title={'new ticket'} />
-        : null
-        }
+        {editTicketModal ? (
+          <Modal
+            onToggleModal={toggleEditTicketModal}
+            onCreateTicket={createTicket}
+            title={"edit ticket"}
+          />
+        ) : createTicketModal ? (
+          <Modal
+            onToggleModal={toggleNewTicketModal}
+            onCreateTicket={createTicket}
+            title={"new ticket"}
+          />
+        ) : null}
         {/* {modal && (
           <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} title={title}/>
         )} */}
