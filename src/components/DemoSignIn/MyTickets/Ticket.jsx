@@ -6,7 +6,6 @@ const Ticket = (props) => {
   let toggleModal = props.onToggleModal;
 
   const eventToggle = () => {
-    // console.log(event.target.innerText);
     toggleModal(props);
   }
 
@@ -14,7 +13,7 @@ const Ticket = (props) => {
     <tr className={styles.ticket} onClick={eventToggle}>
       <td className={styles["ticket-col"]}>
         <div>
-        {props.ticket.task}
+        {props.ticket.id}
         </div>
         </td>
       <td className={styles["ticket-col"]}>
