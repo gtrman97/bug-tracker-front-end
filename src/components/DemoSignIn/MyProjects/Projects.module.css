@@ -1,5 +1,5 @@
 .row {
-  margin-top: 1rem;
+  margin-top: 3rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -60,20 +60,22 @@
   flex-direction: column;
 }
 .table-heading {
+    text-transform: capitalize;
     border: solid 2px black;
     margin-top: 2rem;
 }
 .table-heading-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
+    grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
     /* grid-gap: 3rem; */
 }
 .table-heading-row > * {
     border: solid 2px black;
 }
 .table-body-row {
+    text-transform: capitalize;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
+    grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
     /* grid-gap: 3rem; */
     border: solid 2px black;
     text-align: center;

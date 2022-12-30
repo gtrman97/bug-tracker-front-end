@@ -43,6 +43,40 @@ const Projects = () => {
                                             <img src={dots} alt="dots" className={styles.dots}/>
                                         </td>
                                     </tr>
+                                    <tr className={styles['table-body-row']}>
+                                        <td>
+                                            <span>demo project 1</span>
+                                        </td>
+                                        <td>
+                                            <span>john michael</span>
+                                        </td>
+                                        <td>
+                                            <span>demo project 1</span>
+                                        </td>
+                                        <td>
+                                            <span>in progress</span>
+                                        </td>
+                                        <td className={styles.actions}>
+                                            <img src={dots} alt="dots" className={styles.dots}/>
+                                        </td>
+                                    </tr>
+                                    <tr className={styles['table-body-row']}>
+                                        <td>
+                                            <span>demo project 1</span>
+                                        </td>
+                                        <td>
+                                            <span>john michael</span>
+                                        </td>
+                                        <td>
+                                            <span>demo project 1</span>
+                                        </td>
+                                        <td>
+                                            <span>in progress</span>
+                                        </td>
+                                        <td className={styles.actions}>
+                                            <img src={dots} alt="dots" className={styles.dots}/>
+                                        </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
