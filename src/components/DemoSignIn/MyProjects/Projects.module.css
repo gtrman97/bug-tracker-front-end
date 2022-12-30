@@ -1,3 +1,18 @@
+.button {
+    width: 12.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: large;
+    text-transform: capitalize;
+    background-image: var(--blue);
+    float: right;
+    margin-right: 2rem;
+}
+.button:hover{
+    background-image: var(--medium-blue);
+}
 .row {
   margin-top: 3rem;
   margin-left: 1rem;
@@ -38,7 +53,7 @@
   text-transform: capitalize;
   color: var(--white);
   padding-left: 1rem;
-  font-size: 1rem;
+  font-size: 1.25rem;
   /* margin-top: 0;
     margin-bottom: 0; */
 }
@@ -61,27 +76,28 @@
 }
 .table-heading {
     text-transform: capitalize;
-    border: solid 2px black;
+    /* border: solid 2px black; */
     margin-top: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 .table-heading-row {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
     /* grid-gap: 3rem; */
 }
-.table-heading-row > * {
-    border: solid 2px black;
-}
 .table-body-row {
     text-transform: capitalize;
     display: grid;
     grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
     /* grid-gap: 3rem; */
-    border: solid 2px black;
+    border-top: solid 2px #f0f2f5;
     text-align: center;
     align-items: center;
+    height: 3.5rem;
 }
 .actions {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
