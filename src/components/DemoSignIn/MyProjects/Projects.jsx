@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './Projects.module.css';
+import dots from '../../../images/icons/three-dots.png';
 
 const Projects = () => {
 
@@ -38,8 +39,8 @@ const Projects = () => {
                                         <td>
                                             <span>in progress</span>
                                         </td>
-                                        <td>
-                                            <span></span>
+                                        <td className={styles.actions}>
+                                            <img src={dots} alt="dots" className={styles.dots}/>
                                         </td>
                                     </tr>
                                 </tbody>

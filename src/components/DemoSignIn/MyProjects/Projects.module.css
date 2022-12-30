@@ -65,7 +65,7 @@
 }
 .table-heading-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
     /* grid-gap: 3rem; */
 }
 .table-heading-row > * {
@@ -73,7 +73,19 @@
 }
 .table-body-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
     /* grid-gap: 3rem; */
+    border: solid 2px black;
     text-align: center;
+    align-items: center;
+}
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dots {
+    /* margin-bottom: 0; */
+    width: 2rem;
+    height: 2rem;
 }
