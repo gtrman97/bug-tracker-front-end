@@ -22,12 +22,6 @@
   justify-content: center;
   gap: 3.5%;
 }
-.header {
-  /* bottom: 75px; */
-  top: 5rem;
-  border: solid 2px white;
-  position: absolute;
-}
 #logo {
   width: 3.5rem;
   height: 3.5rem;

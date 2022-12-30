@@ -9,7 +9,7 @@ import Button from "../SignIn/Button";
 const SignInForm = () => {
   return (
     <div className={styles["sign-in"]}>
-      <FormHeader title={"Sign In"} className={styles.header}/>
+      <FormHeader title={"sign in"}/>
       <form className={styles["sign-in-form"]}>
         <img src={bugIcon} alt="bug icon" id={styles.logo} />
         <Label title={"username"} />

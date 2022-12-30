@@ -1,10 +1,11 @@
 .header {
+    text-transform: capitalize;
     border-radius: 0.75rem 0.75rem 0 0;
     width: 15rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     position: absolute;
-    top: 4.75rem;
+    top: 6.25rem;
 }
 .gradient {
     border-radius: 0.5rem;
