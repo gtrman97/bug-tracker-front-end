@@ -1,20 +1,22 @@
-.button {
-    width: 12.5rem;
-    border: none;
-    border-radius: 0.75rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    font-size: large;
-    text-transform: capitalize;
-    background-image: var(--blue);
-    float: right;
-    margin-right: 2rem;
+.create {
+  display: flex;
+  justify-content: center;
 }
-.button:hover{
-    background-image: var(--medium-blue);
+.button {
+  width: 12.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-size: large;
+  text-transform: capitalize;
+  background-image: var(--blue);
+}
+.button:hover {
+  background-image: var(--medium-blue);
 }
 .row {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -61,7 +63,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
   width: 100%;
-
 }
 .table-responsive {
   width: 100%;
@@ -75,35 +76,43 @@
   flex-direction: column;
 }
 .table-heading {
-    text-transform: capitalize;
-    /* border: solid 2px black; */
-    margin-top: 2rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+  text-transform: capitalize;
+  /* border: solid 2px black; */
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .table-heading-row {
-    display: grid;
-    grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
-    /* grid-gap: 3rem; */
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
+  /* grid-gap: 3rem; */
 }
 .table-body-row {
-    text-transform: capitalize;
-    display: grid;
-    grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
-    /* grid-gap: 3rem; */
-    border-top: solid 2px #f0f2f5;
-    text-align: center;
-    align-items: center;
-    height: 3.5rem;
+  text-transform: capitalize;
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr 2fr 1fr;
+  /* grid-gap: 3rem; */
+  border-top: solid 2px #f0f2f5;
+  text-align: center;
+  align-items: center;
+  height: 3.5rem;
 }
 .actions {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dots {
-    /* margin-bottom: 0; */
-    width: 2rem;
-    height: 2rem;
+  /* margin-bottom: 0; */
+  width: 2rem;
+  height: 2rem;
+}
+@media screen and (min-width: 415px) {
+  .create {
+    justify-content: flex-end;
+  }
+  .button {
+    margin-right: 2rem;
+  }
 }

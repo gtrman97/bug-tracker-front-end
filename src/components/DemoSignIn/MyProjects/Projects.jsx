@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Projects.module.css";
 import dots from "../../../images/icons/three-dots.png";
 
 const Projects = () => {
-  const projects = [
+  const myProjects = [
     {
       name: "demo project 1",
       manager: "john michael",
@@ -45,8 +45,17 @@ const Projects = () => {
         manager: "michael scott",
         description: "demo project 7",
         status: "in progress",
+      },
+      {
+        name: "demo project 8",
+        manager: "michael scott",
+        description: "demo project 8",
+        status: "in progress",
       }
   ];
+
+  const [projects, setProjects] = useState(myProjects);
+
 
   return (
     <>
