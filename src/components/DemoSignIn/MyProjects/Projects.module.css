@@ -111,6 +111,7 @@
 .edit-option, .delete-option {
   text-align: center;
   text-transform: capitalize;
+  cursor: pointer;
 }
 .edit-option {
   color: green;
