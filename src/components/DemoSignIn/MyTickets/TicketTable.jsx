@@ -1,10 +1,10 @@
-import { React, useState } from "react";
+import React from "react";
 import styles from "./TicketTable.module.css";
 import Ticket from "./Ticket";
 
 const TicketTable = (props) => {
 
-  let tickets = props.tickets;
+  const tickets = props.tickets;
 
   let toggleModal = props.onToggleModal;
 
