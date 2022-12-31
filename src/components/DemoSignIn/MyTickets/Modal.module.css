@@ -19,17 +19,18 @@ body.active-modal {
   background: rgba(49, 49, 49, 0.8);
 }
 .modal-header {
-  text-transform: capitalize;
+  border: solid 2px black;
+  padding-top: 0;
 }
 .modal-content {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
   top: 27.5rem;
-  left: 11.75rem;
+  left: 12.75rem;
   transform: translate(-50%, -50%);
   line-height: 2.5;
   background: var(--white);
-  padding: 5rem;
+  padding: 2.5rem;
   border-radius: 3px;
   /* max-width: 600px; */
   width: 20rem;
