@@ -28,6 +28,9 @@ option {
   text-transform: capitalize;
   background-image: var(--blue);
 }
+.button:hover {
+  background-image: var(--medium-blue);
+}
 .tickets {
   height: 38rem;
   display: flex;
