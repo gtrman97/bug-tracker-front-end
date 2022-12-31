@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { React, useState } from "react";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import styles from "./Projects.module.css";
 import dots from "../../../images/icons/three-dots.png";
 
@@ -23,39 +25,38 @@ const Projects = () => {
       status: "in progress",
     },
     {
-        name: "demo project 4",
-        manager: "john michael",
-        description: "demo project 4",
-        status: "not started",
-      },
-      {
-        name: "demo project 5",
-        manager: "jimmy jones",
-        description: "demo project 5",
-        status: "completed",
-      },
-      {
-        name: "demo project 6",
-        manager: "michael scott",
-        description: "demo project 6",
-        status: "in progress",
-      },
-      {
-        name: "demo project 7",
-        manager: "michael scott",
-        description: "demo project 7",
-        status: "in progress",
-      },
-      {
-        name: "demo project 8",
-        manager: "michael scott",
-        description: "demo project 8",
-        status: "in progress",
-      }
+      name: "demo project 4",
+      manager: "john michael",
+      description: "demo project 4",
+      status: "not started",
+    },
+    {
+      name: "demo project 5",
+      manager: "jimmy jones",
+      description: "demo project 5",
+      status: "completed",
+    },
+    {
+      name: "demo project 6",
+      manager: "michael scott",
+      description: "demo project 6",
+      status: "in progress",
+    },
+    {
+      name: "demo project 7",
+      manager: "michael scott",
+      description: "demo project 7",
+      status: "in progress",
+    },
+    {
+      name: "demo project 8",
+      manager: "michael scott",
+      description: "demo project 8",
+      status: "in progress",
+    },
   ];
 
   const [projects, setProjects] = useState(myProjects);
-
 
   return (
     <>
@@ -98,7 +99,13 @@ const Projects = () => {
                           <span>{project.status}</span>
                         </td>
                         <td className={styles.actions}>
-                          <img src={dots} alt="dots" className={styles.dots} />
+                          <Popup className="actions"
+                            trigger={<img src={dots} alt="dots" className={styles.dots} />}
+                            position="left center"
+                          >
+                            <div className={styles['edit-option']}>edit project</div>
+                            <div className={styles['delete-option']}>delete project</div>
+                          </Popup>
                         </td>
                       </tr>
                     ))}
