@@ -1,14 +1,19 @@
 .header {
-    text-transform: capitalize;
-    border-radius: 0.75rem 0.75rem 0 0;
-    width: 15rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    position: absolute;
-    top: 6.25rem;
+  text-transform: capitalize;
+  border-radius: 0.75rem 0.75rem 0 0;
+  width: 15rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  position: absolute;
+  top: 6.25rem;
 }
 .gradient {
-    border-radius: 0.5rem;
-    background-image: var(--red);
-    padding: 1rem 0.25rem 1rem 0.25rem;
+  border-radius: 0.5rem;
+  background-image: var(--red);
+  padding: 1rem 0.25rem 1rem 0.25rem;
+}
+@media screen and (min-width: 415px) {
+  .header {
+    top: 4.75rem;
+  }
 }

@@ -11,7 +11,7 @@ const Tickets = () => {
     { id: 3, assignee: "shannon lucas", time: "1h" },
     { id: 4, assignee: "ryan knight", time: "1h" },
     { id: 5, assignee: "brandon ellis", time: "30m" },
-    { id: 6, assignee: "vinnie moore", time: "90m" },
+    { id: 6, assignee: "vinnie moore", time: "1.5h" },
     { id: 7, assignee: "jose silva", time: "2d" },
     { id: 8, assignee: "napoleon hill", time: "2d" },
     { id: 9, assignee: "lawrence perry", time: "1h" },
