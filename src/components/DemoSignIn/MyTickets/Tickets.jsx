@@ -115,6 +115,7 @@ const Tickets = () => {
     useState(completedTickets);
 
   const shuffleTickets = () => {
+    console.log('entered shuffle');
     allTickets.sort((a, b) => Math.random() - 0.5);
 
     setShuffledNewTickets(allTickets[0].sort((a, b) => Math.random() - 0.5));
@@ -122,22 +123,37 @@ const Tickets = () => {
       allTickets[1].sort((a, b) => Math.random() - 0.5)
     );
     setShuffledDoneTickets(allTickets[2].sort((a, b) => Math.random() - 0.5));
+    console.log('got to here');
   };
+
+  const [project, setProject] = useState('project 1');
+
+  const changeTickets = (event) => {
+    console.log(event.target.value);
+
+    console.log(project === event.target.value);
+
+    if(project !== event.target.value){
+      setProject(event.target.value);
+      console.log('entered condition');
+      shuffleTickets();
+    }
+  }
 
   return (
     <>
       <div className={styles.create}>
-        <select className={styles.projects}>
-          <option value="project 1" onClick={shuffleTickets}>
+        <select className={styles.projects} onChange={shuffleTickets}>
+          <option value="project 1">
             Project 1
           </option>
-          <option value="project 2" onClick={shuffleTickets}>
+          <option value="project 2">
             Project 2
           </option>
-          <option value="project 3" onClick={shuffleTickets}>
+          <option value="project 3">
             Project 3
           </option>
-          <option value="project 4" onClick={shuffleTickets}>
+          <option value="project 4">
             Project 4
           </option>
         </select>
