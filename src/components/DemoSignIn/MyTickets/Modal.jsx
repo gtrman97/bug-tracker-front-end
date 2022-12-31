@@ -32,7 +32,7 @@ const Modal = (props) => {
                 id="description"
                 name="description"
                 rows="3"
-                cols="30"
+                cols="26"
               ></textarea>
             </div>
             <div className={styles["form-element"]}>
@@ -54,10 +54,12 @@ const Modal = (props) => {
             </div>
             <div className={styles["form-element"]}>
               <label className={styles['form-label']} htmlFor="type">ticket type</label>
+              <div className={styles['radio-buttons']}>
               bug
               <input id="type" name="type" type={'radio'}/>
               feature
               <input id="type" name="type" type={'radio'}/>
+              </div>
             </div>
             <div className={styles["form-element"]}>
               <label className={styles['form-label']} htmlFor="assignee">assignee</label>
