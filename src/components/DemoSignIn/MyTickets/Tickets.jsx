@@ -127,17 +127,17 @@ const Tickets = () => {
   return (
     <>
       <div className={styles.create}>
-        <select className={styles.projects} onChange={shuffleTickets}>
-          <option value="project 1">
+        <select className={styles.projects}>
+          <option value="project 1" onClick={shuffleTickets}>
             Project 1
           </option>
-          <option value="project 2">
+          <option value="project 2" onClick={shuffleTickets}>
             Project 2
           </option>
-          <option value="project 3">
+          <option value="project 3" onClick={shuffleTickets}>
             Project 3
           </option>
-          <option value="project 4">
+          <option value="project 4" onClick={shuffleTickets}>
             Project 4
           </option>
         </select>
