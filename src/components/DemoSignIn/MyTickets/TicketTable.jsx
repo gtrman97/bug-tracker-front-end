@@ -4,7 +4,7 @@ import Ticket from "./Ticket";
 
 const TicketTable = (props) => {
 
-  const [tickets, setTickets] = useState(props.tickets);
+  let tickets = props.tickets;
 
   let toggleModal = props.onToggleModal;
 
