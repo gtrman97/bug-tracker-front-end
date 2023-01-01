@@ -1,19 +1,21 @@
-import React from "react";
+import {React, useState} from "react";
 import styles from "./Notifications.module.css";
 
 const Notifications = () => {
+  const alerts = [
+    { read: false, subject: "project status changed", date: "12/31/22" },
+    { read: true, subject: "ticket added", date: "01/01/22" },
+    { read: false, subject: "project manager changed", date: "01/02/22" },
+    { read: false, subject: "project status changed", date: "12/31/22" },
+    { read: true, subject: "ticket added", date: "01/01/22" },
+    { read: false, subject: "project manager changed", date: "01/02/22" },
+    { read: false, subject: "project status changed", date: "12/31/22" },
+    { read: true, subject: "ticket added", date: "01/01/22" },
+    { read: true, subject: "ticket added", date: "01/01/22" },
+  ];
 
-    const alerts = [
-        {read: false, subject: 'project status changed', date: '12/31/22'},
-        {read: true, subject: 'ticket added', date: '01/01/22'},
-        {read: false, subject: 'project manager changed', date: '01/02/22'},
-        {read: false, subject: 'project status changed', date: '12/31/22'},
-        {read: true, subject: 'ticket added', date: '01/01/22'},
-        {read: false, subject: 'project manager changed', date: '01/02/22'},
-        {read: false, subject: 'project status changed', date: '12/31/22'},
-        {read: true, subject: 'ticket added', date: '01/01/22'},
-        {read: true, subject: 'ticket added', date: '01/01/22'},
-    ]
+    const [checked, setChecked] = useState(false);
+    const handleClick = () => setChecked(!checked);
 
   return (
     <>
@@ -33,7 +35,10 @@ const Notifications = () => {
                 <table className={styles.table}>
                   <thead className={styles["table-heading"]}>
                     <tr className={styles["table-heading-row"]}>
-                      <th></th>
+                      <th>
+                        {" "}
+                        <input onClick={handleClick} type="checkbox" />
+                      </th>
                       <th>status</th>
                       <th>subject</th>
                       <th>date</th>
@@ -43,13 +48,17 @@ const Notifications = () => {
                     {alerts.map((alert) => (
                       <tr className={styles["table-body-row"]}>
                         <td>
-                        <input type="checkbox" />
+                          <input type="checkbox" checked={checked}/>
                         </td>
                         <td>
-                          <span className={!alert.read ? styles.new : null}></span>
+                          <span
+                            className={!alert.read ? styles.new : null}
+                          ></span>
                         </td>
                         <td>
-                          <span className={!alert.read ? styles.unread : null}>{alert.subject}</span>
+                          <span className={!alert.read ? styles.unread : null}>
+                            {alert.subject}
+                          </span>
                         </td>
                         <td>
                           <span>{alert.date}</span>
