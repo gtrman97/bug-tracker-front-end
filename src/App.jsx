@@ -9,6 +9,7 @@ import RoleAssignment from "./components/DemoSignIn/RoleAssignment/RoleAssignmen
 import Projects from "./components/DemoSignIn/MyProjects/Projects";
 import Tickets from "./components/DemoSignIn/MyTickets/Tickets";
 import Notifications from "./components/DemoSignIn/Notifications/Notifications";
+import Settings from "./components/DemoSignIn/MySettings/Settings";
 import "./App.css";
 
 export default function App() {
@@ -28,6 +29,7 @@ export default function App() {
           <Route path='/projects' element={<Projects />} />
           <Route path='/tickets' element={<Tickets />} />
           <Route path='/notifications' element={<Notifications />} />
+          <Route path='/settings' element={<Settings />} />
         </Route>
       </Routes>
     </div>
