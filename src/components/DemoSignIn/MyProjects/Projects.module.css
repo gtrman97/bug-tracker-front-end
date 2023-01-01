@@ -119,6 +119,9 @@
 .delete-option {
   color: red;
 }
+/* .popup {
+  border: solid1 1px black;
+} */
 @media screen and (min-width: 415px) {
   .create {
     justify-content: flex-end;
