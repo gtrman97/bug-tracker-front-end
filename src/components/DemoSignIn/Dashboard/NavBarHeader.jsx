@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./NavBarHeader.module.css";
 
-const NavBarHeader = () => {
+const NavBarHeader = (props) => {
   return (
     <div className={styles["nav-bar-header"]}>
       <h4 className={styles.heading}>
-        <span>Dashboard</span>
+        <span>{props.title}</span>
       </h4>
       {/* <button className={styles.close}>X</button> */}
     </div>

@@ -8,19 +8,19 @@ import box from "../../../images/icons/box.png";
 import ticket from "../../../images/icons/ticket.png";
 import bell from "../../../images/icons/bell.png";
 
-const NavList = () => {
+const NavList = (props) => {
   return (
     <div id={styles["nav-bar-list"]}>
       <ul className={styles.list}>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/" className={styles.link} onClick={props.onNavHeaderHandler}>
           <img src={dashboard} className={styles.icon} alt="dashboard" />
           Dashboard
         </NavLink>
-        <NavLink to="/role-assignment" className={styles.link}>
+        <NavLink to="/role-assignment" className={styles.link} onClick={props.onNavHeaderHandler}>
           <img src={change} className={styles.icon} alt="rotate" />
           Manage Role Assignment
         </NavLink>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/" className={styles.link} onClick={props.onNavHeaderHandler}>
           <img
             src={invoice}
             className={styles.icon}
@@ -29,15 +29,15 @@ const NavList = () => {
           />
           Manage Project Users
         </NavLink>
-        <NavLink to="/projects" className={styles.link}>
+        <NavLink to="/projects" className={styles.link} onClick={props.onNavHeaderHandler}>
           <img src={box} className={styles.icon} alt="box" />
           My Projects
         </NavLink>
-        <NavLink to="/tickets" className={styles.link}>
+        <NavLink to="/tickets" className={styles.link} onClick={props.onNavHeaderHandler}>
           <img src={ticket} className={styles.icon} alt="ticket" />
           My Tickets
         </NavLink>
-        <NavLink to="/notifications" className={styles.link}>
+        <NavLink to="/notifications" className={styles.link} onClick={props.onNavHeaderHandler}>
           <img src={bell} className={styles.icon} alt="bell" />
           Notifications
         </NavLink>
