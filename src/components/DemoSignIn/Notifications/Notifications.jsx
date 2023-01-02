@@ -1,5 +1,7 @@
 import {React, useState} from "react";
 import styles from "./Notifications.module.css";
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+import {Table, Thead, Tbody, Tr, Th, Td} from 'react-super-responsive-table';
 
 const Notifications = () => {
   const alerts = [
@@ -19,10 +21,7 @@ const Notifications = () => {
 
   return (
     <>
-      {/* <div className={styles.create}>
-        <button className={styles.button}>create project</button>
-      </div> */}
-      <div className={styles.row}>
+     <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.card}>
             <div className={styles["card-header"]}>
@@ -32,41 +31,41 @@ const Notifications = () => {
             </div>
             <div className={styles["card-body"]}>
               <div className={styles["table-responsive"]}>
-                <table className={styles.table}>
-                  <thead className={styles["table-heading"]}>
-                    <tr className={styles["table-heading-row"]}>
-                      <th>
+                <Table className={styles.table}>
+                  <Thead className={styles["table-heading"]}>
+                    <Tr className={styles["table-heading-row"]}>
+                      <Th className={styles['table-col']}>
                         {" "}
-                        <input onClick={handleClick} type="checkbox" />
-                      </th>
-                      <th>status</th>
-                      <th>subject</th>
-                      <th>date</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                        <input type="checkbox" onClick={handleClick}/>
+                      </Th>
+                      <Th className={styles['table-col']}>status</Th>
+                      <Th className={styles['table-col']}>subject</Th>
+                      <Th className={styles['table-col']}>date</Th>
+                    </Tr>
+                  </Thead>
+                  <Tbody>
                     {alerts.map((alert) => (
-                      <tr className={styles["table-body-row"]}>
-                        <td>
+                      <Tr className={styles["table-body-row"]}>
+                        <Td>
                           <input type="checkbox" checked={checked}/>
-                        </td>
-                        <td>
+                        </Td>
+                        <Td>
                           <span
-                            className={!alert.read ? styles.new : null}
+                            className={!alert.read ? styles.new : styles.read}
                           ></span>
-                        </td>
-                        <td>
+                        </Td>
+                        <Td>
                           <span className={!alert.read ? styles.unread : null}>
                             {alert.subject}
                           </span>
-                        </td>
-                        <td>
+                        </Td>
+                        <Td>
                           <span>{alert.date}</span>
-                        </td>
-                      </tr>
+                        </Td>
+                      </Tr>
                     ))}
-                  </tbody>
-                </table>
+                  </Tbody>
+                </Table>
               </div>
             </div>
           </div>
