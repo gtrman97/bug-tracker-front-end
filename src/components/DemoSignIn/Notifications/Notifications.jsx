@@ -36,7 +36,7 @@ const Notifications = () => {
                     <Tr className={styles["table-heading-row"]}>
                       <Th className={styles['table-col']}>
                         {" "}
-                        <input type="checkbox" onClick={handleClick}/>
+                        <input type="checkbox" onClick={handleClick} className={styles['check-col']}/>
                       </Th>
                       <Th className={styles['table-col']}>status</Th>
                       <Th className={styles['table-col']}>subject</Th>

@@ -81,6 +81,9 @@
 .read {
   visibility: hidden;
 }
+.check-col {
+  visibility: hidden;
+}
   @media screen and (min-width: 415px) {
     .create {
       display: flex;
