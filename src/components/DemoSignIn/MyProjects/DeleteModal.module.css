@@ -2,7 +2,7 @@ body.active-modal {
   overflow-y: hidden;
 }
 .modal {
-  z-index: 100;
+  z-index: 1;
 }
 .modal,
 .overlay {
@@ -40,6 +40,7 @@ body.active-modal {
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 100;
 }
 .close-modal {
   position: absolute;
@@ -111,7 +112,7 @@ body.active-modal {
     overflow-y: hidden;
   }
   .modal {
-    z-index: 100;
+    z-index: 1;
   }
   .modal,
   .overlay {
@@ -147,6 +148,7 @@ body.active-modal {
     border: solid 2px black;
     border-radius: 0.75rem;
     display: initial;
+  z-index: 100;
   }
 
   .close-modal {
