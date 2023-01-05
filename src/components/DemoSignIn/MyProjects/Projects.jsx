@@ -59,10 +59,6 @@ const Projects = () => {
 
   const [projects, setProjects] = useState(myProjects);
 
-  const edit = () => {
-    alert('edit');
-  }
-
   const [deleteProjectModal, setDeleteProjectModal] = useState(false);
 
   const toggleDeleteModal = () => {
@@ -115,8 +111,9 @@ const Projects = () => {
                           <Popup className="actions"
                             trigger={<img src={dots} alt="dots" className={styles.dots} />}
                             position="left center"
+                            closeOnDocumentClick
                           >
-                            <div className={styles['edit-option']} onClick={edit}>edit project</div>
+                            <div className={styles['edit-option']} >edit project</div>
                             <div className={styles['delete-option']} onClick={toggleDeleteModal}>delete project</div>
                           </Popup>
                         </td>
