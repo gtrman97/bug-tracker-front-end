@@ -136,7 +136,7 @@ body.active-modal {
     border-radius: 3px;
     /* max-width: 600px; */
     height: 15rem;
-    width: 30rem;
+    width: 35rem;
     border: solid 2px black;
     border-radius: 0.75rem;
     display: initial;
@@ -152,7 +152,7 @@ body.active-modal {
     /* border: solid 2px black; */
     display: flex;
     justify-content: space-between;
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
   .yes-button {
     border: none;
