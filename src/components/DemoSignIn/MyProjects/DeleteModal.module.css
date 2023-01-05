@@ -27,7 +27,7 @@ body.active-modal {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
   top: 25rem;
-  left: 11.5rem;
+  left: 13rem;
   transform: translate(-50%, -50%);
   line-height: 2.5;
   background: var(--white);

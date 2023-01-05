@@ -47,7 +47,7 @@ const Notifications = () => {
                     {alerts.map((alert) => (
                       <Tr className={styles["table-body-row"]}>
                         <Td>
-                          <input type="checkbox" checked={checked}/>
+                          <input type="checkbox" checked={checked} className={styles.selection}/>
                         </Td>
                         <Td>
                           <span
