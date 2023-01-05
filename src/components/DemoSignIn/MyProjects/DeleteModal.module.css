@@ -27,7 +27,7 @@ body.active-modal {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   position: absolute;
   top: 25rem;
-  left: 12.75rem;
+  left: 11.5rem;
   transform: translate(-50%, -50%);
   line-height: 2.5;
   background: var(--white);
@@ -47,14 +47,30 @@ body.active-modal {
   right: 10px;
   padding: 5px 7px;
 }
-.create-ticket {
-  border: solid 2px blue;
-  border: none;
-  text-transform: capitalize;
-  color: white;
-  background-image: var(--blue);
-  margin-top: 1rem;
-}
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+  .yes-button {
+    border: none;
+    text-transform: capitalize;
+    color: white;
+    background-image: var(--green);
+  }
+  .yes-button:hover {
+    background-image: var(--medium-green);
+  }
+  .no-button {
+    border: none;
+    text-transform: capitalize;
+    color: white;
+    background-image: var(--red);
+  }
+  .no-button:hover {
+    background-image: var(--medium-red);
+  }
 .create-ticket:hover {
   background-image: var(--medium-blue);
 }
@@ -128,7 +144,7 @@ body.active-modal {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: absolute;
     top: 24rem;
-    left: 50rem;
+    left: 52rem;
     transform: translate(-50%, -50%);
     line-height: 2.5;
     background: var(--white);
@@ -171,9 +187,6 @@ body.active-modal {
   }
   .no-button:hover {
     background-image: var(--medium-red);
-  }
-  .create-ticket:hover {
-    background-image: var(--medium-blue);
   }
   .ticket-form {
     /* border: solid 2px black; */
