@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import Popup from "reactjs-popup";
+import DeleteModal from "./DeleteModal";
 import "reactjs-popup/dist/index.css";
 import styles from "./Projects.module.css";
 import dots from "../../../images/icons/three-dots.png";
@@ -58,8 +59,20 @@ const Projects = () => {
 
   const [projects, setProjects] = useState(myProjects);
 
+  const edit = () => {
+    alert('edit');
+  }
+
+  const [deleteProjectModal, setDeleteProjectModal] = useState(false);
+
+  const toggleDeleteModal = () => {
+    setDeleteProjectModal(!deleteProjectModal);
+  }
+
+
   return (
     <>
+    {deleteProjectModal ? <DeleteModal onToggleModal={toggleDeleteModal}/> : null}
       <div className={styles.create}>
         <button className={styles.button}>create project</button>
       </div>
@@ -103,8 +116,8 @@ const Projects = () => {
                             trigger={<img src={dots} alt="dots" className={styles.dots} />}
                             position="left center"
                           >
-                            <div className={styles['edit-option']}>edit project</div>
-                            <div className={styles['delete-option']}>delete project</div>
+                            <div className={styles['edit-option']} onClick={edit}>edit project</div>
+                            <div className={styles['delete-option']} onClick={toggleDeleteModal}>delete project</div>
                           </Popup>
                         </td>
                       </tr>
