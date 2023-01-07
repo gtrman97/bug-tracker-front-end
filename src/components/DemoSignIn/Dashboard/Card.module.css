@@ -1,8 +1,8 @@
 .column {
-  /* border: solid 2px red; */
   height: 10rem;
   flex-grow: 1;
   margin: 0.75rem;
+  /* height: 1px; */
 }
 .card {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
