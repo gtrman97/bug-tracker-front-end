@@ -30,7 +30,6 @@ const Tickets = () => {
     { id: 18, assignee: "john smith", time: "1h" },
     { id: 19, assignee: "brian holt", time: "50m" },
     { id: 20, assignee: "shad helmstetter", time: "30m" },
-    { id: 18, assignee: "david schwartz", time: "2h" },
   ];
 
   const globalTickets = {
@@ -59,7 +58,6 @@ const Tickets = () => {
       { id: 18, assignee: "john smith", time: "1h" },
       { id: 19, assignee: "brian holt", time: "50m" },
       { id: 20, assignee: "shad helmstetter", time: "30m" },
-      { id: 18, assignee: "david schwartz", time: "2h" },
     ]
   }
 
@@ -76,12 +74,12 @@ const Tickets = () => {
   const [createTicketModal, setCreateTicketModal] = useState(false);
   // const [modal, setModal] = useState(false);
 
-  const devs = notStartedTickets.map((x) => x.assignee);
+  const devs = notStartedTickets.map((ticket) => ticket.assignee);
 
   const createTicket = (newAssignee = devs[0], newTime) => {
     const ticketId =
-      tickets.length + inProgressTickets.length + completedTickets.length;
-    setTickets((oldTickets) => [
+    notStartedTickets.length + inProgressTickets.length + completedTickets.length + 1;
+    setShuffledNewTickets((oldTickets) => [
       ...oldTickets,
       { id: ticketId, assignee: newAssignee, time: newTime },
     ]);

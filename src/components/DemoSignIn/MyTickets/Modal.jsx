@@ -9,10 +9,12 @@ const Modal = (props) => {
 
   const timeChangeHandler = (event) => {
     newTicketTime = event.target.value;
+    console.log(`new time is ${newTicketTime}`);
   };
 
   const assigneeChangeHandler = (event) => {
     newAssignee = event.target.value;
+    console.log(newAssignee);
   };
 
   const newTicketHandler = () => {
