@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Modal.module.css";
 
 const Modal = (props) => {
-
   let newTicketTime, newAssignee;
   const toggleModal = props.onToggleModal;
   const createTicket = props.onCreateTicket;
@@ -21,7 +20,7 @@ const Modal = (props) => {
     createTicket(newAssignee, newTicketTime);
   };
 
-  const edit = props.title.startsWith('e');
+  const edit = props.title.startsWith("e");
 
   return (
     <>
@@ -31,7 +30,9 @@ const Modal = (props) => {
           <h2 className={styles["modal-header"]}>{props.title}</h2>
           <form className={styles["ticket-form"]}>
             <div className={styles["form-element"]}>
-              <label className={styles['form-label']} htmlFor="description">description</label>
+              <label className={styles["form-label"]} htmlFor="description">
+                description
+              </label>
               <textarea
                 id="description"
                 name="description"
@@ -40,33 +41,31 @@ const Modal = (props) => {
               ></textarea>
             </div>
             <div className={styles["form-element"]}>
-              <label className={styles['form-label']} htmlFor="assignee">priority</label>
+              <label className={styles["form-label"]} htmlFor="assignee">
+                priority
+              </label>
               <select className={styles.priorities}>
-                <option value="none" >
-                  None
-                </option>
-                <option value="low" >
-                  Low
-                </option>
-                <option value="medium" >
-                  Medium
-                </option>
-                <option value="high" >
-                  High
-                </option>
+                <option value="none">None</option>
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
               </select>
             </div>
             <div className={styles["form-element"]}>
-              <label className={styles['form-label']} htmlFor="type">ticket type</label>
-              <div className={styles['radio-buttons']}>
-              bug
-              <input id="type" name="type" type={'radio'}/>
-              feature
-              <input id="type" name="type" type={'radio'}/>
+              <label className={styles["form-label"]} htmlFor="type">
+                ticket type
+              </label>
+              <div className={styles["radio-buttons"]}>
+                bug
+                <input id="type" name="type" type={"radio"} />
+                feature
+                <input id="type" name="type" type={"radio"} />
               </div>
             </div>
             <div className={styles["form-element"]}>
-              <label className={styles['form-label']} htmlFor="assignee">assignee</label>
+              <label className={styles["form-label"]} htmlFor="assignee">
+                assignee
+              </label>
               <select className={styles.developers}>
                 <option value="trevor strnad" onClick={assigneeChangeHandler}>
                   Trevor Strnad
@@ -80,7 +79,9 @@ const Modal = (props) => {
               </select>
             </div>
             <div className={styles["form-element"]}>
-              <label className={styles['form-label']} htmlFor="time">time</label>
+              <label className={styles["form-label"]} htmlFor="time">
+                time
+              </label>
               <input id="time" name="time" onChange={timeChangeHandler} />
             </div>
           </form>
@@ -88,18 +89,27 @@ const Modal = (props) => {
             X
           </button>
           <div className={styles.buttons}>
-          <button
-            className={styles["save-ticket"]}
-            onClick={newTicketHandler}
-          >
-            {props.buttonText}
-          </button>
-          {edit ? <button
-            className={styles["delete-ticket"]}
-            onClick={newTicketHandler}
-          >
-            delete
-          </button> : null}
+            {!edit ? (
+              <button
+              className={styles["save-ticket"]}
+              onClick={newTicketHandler}
+            >
+              {props.buttonText}
+            </button>
+            ) : (
+              <>
+                <button
+                  className={styles["save-ticket"]}
+                >
+                  {props.buttonText}
+                </button>
+                <button
+                  className={styles["delete-ticket"]}
+                >
+                  delete
+                </button>
+              </>
+            )}
           </div>
         </div>
       </div>
