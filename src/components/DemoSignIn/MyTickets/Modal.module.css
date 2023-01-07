@@ -202,4 +202,8 @@ body.active-modal {
   .form-label {
     font-weight: bold;
   }
+  .buttons {
+    /* border: solid 2px black; */
+    width: 25rem;
+  }
 }
