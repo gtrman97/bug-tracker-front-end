@@ -19,6 +19,8 @@ const Modal = (props) => {
     createTicket(newAssignee, newTicketTime);
   };
 
+  const edit = props.title.startsWith('e');
+
   return (
     <>
       <div className={styles.modal}>
@@ -83,12 +85,20 @@ const Modal = (props) => {
           <button className={styles["close-modal"]} onClick={toggleModal}>
             X
           </button>
+          <div className={styles.buttons}>
           <button
-            className={styles["create-ticket"]}
+            className={styles["save-ticket"]}
             onClick={newTicketHandler}
           >
             {props.buttonText}
           </button>
+          {edit ? <button
+            className={styles["delete-ticket"]}
+            onClick={newTicketHandler}
+          >
+            delete
+          </button> : null}
+          </div>
         </div>
       </div>
     </>
