@@ -7,10 +7,14 @@ const Chart = (props) => {
     data = props.data,
     barWidth = props.barWidth;
 
+  const isMobile = window.screen.width < 897;
+
+  console.log(isMobile);
+
   return (
     <BarChart
       width={300}
-      height={200}
+      height={isMobile ? 150 : 200}
       data={data}
       margin={{
         top: 5,

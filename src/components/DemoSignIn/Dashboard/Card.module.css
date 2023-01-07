@@ -2,7 +2,7 @@
   height: 10rem;
   flex-grow: 1;
   margin: 0.75rem;
-  /* height: 1px; */
+  /* height: 10rem; */
 }
 .card {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
@@ -38,7 +38,7 @@
   padding-bottom: 1rem;
 }
 .card-body {
-  padding: 1.5rem;
+  padding: 1rem;
 }
 .card-title {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -65,4 +65,9 @@
 }
 .chart {
   /* border: solid 2px black; */
+}
+@media screen and (min-width: 415px) {
+  .card-body {
+    padding: 1.5rem;
+  }
 }
