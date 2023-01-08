@@ -9,8 +9,6 @@ const Chart = (props) => {
 
   const isMobile = window.screen.width < 897;
 
-  console.log(isMobile);
-
   return (
     <BarChart
       width={300}

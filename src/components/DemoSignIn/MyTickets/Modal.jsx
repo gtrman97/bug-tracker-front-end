@@ -24,8 +24,8 @@ const Modal = (props) => {
 
   let devs = props.devs;
 
-  devs = devs.map((dev) => {
-    dev = dev.assignee.split(" ");
+  const capitalize = (dev) => {
+    dev = dev.split(" ");
     let [first, last] = dev;
     dev =
       first.charAt(0).toUpperCase() +
@@ -34,7 +34,15 @@ const Modal = (props) => {
       last.charAt(0).toUpperCase() +
       last.slice(1);
     return dev;
-  });
+  }
+
+  devs = devs.map((dev) => capitalize(dev.assignee));
+
+  // I have to assign it to a new variable here
+  // to capitalize because the incoming props.dev is read only
+  let assignee = props.dev;
+
+  assignee = capitalize(assignee);
 
   return (
     <>
@@ -90,23 +98,18 @@ const Modal = (props) => {
                   <option
                     value={`${dev.assignee}`}
                     onClick={assigneeChangeHandler}
+                    selected={(assignee === dev) ? 'selected' : null}
                   >
                     {dev}
                   </option>
                 ))}
-                {/* <option value="brian eschbach" onClick={assigneeChangeHandler}>
-                  Brian Eschbach
-                </option>
-                <option value="ryan knight" onClick={assigneeChangeHandler}>
-                  Ryan Knight
-                </option> */}
               </select>
             </div>
             <div className={styles["form-element"]}>
               <label className={styles["form-label"]} htmlFor="time">
                 time
               </label>
-              <input id="time" name="time" onChange={timeChangeHandler} />
+              <input id="time" name="time" value={props.time} onChange={timeChangeHandler} />
             </div>
           </form>
           <button className={styles["close-modal"]} onClick={toggleModal}>

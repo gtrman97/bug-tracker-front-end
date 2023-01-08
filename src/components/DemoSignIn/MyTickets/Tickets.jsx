@@ -86,6 +86,9 @@ const Tickets = () => {
     setCreateTicketModal(!createTicketModal);
   };
 
+  const [dev, setDev] = useState();
+  const [time, setTime] = useState();
+
   const toggleNewTicketModal = () => {
     setCreateTicketModal(!createTicketModal);
   };
@@ -95,6 +98,8 @@ const Tickets = () => {
       console.log(
         `id: ${props.ticket.id}, dev: ${props.ticket.assignee}, time: ${props.ticket.time}`
       );
+      setDev(props.ticket.assignee);
+      setTime(props.ticket.time);
     }
     setEditTicketModal(!editTicketModal);
   };
@@ -151,6 +156,8 @@ const Tickets = () => {
             title={"edit ticket"}
             buttonText={'save'}
             devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
+            dev={dev}
+            time={time}
           />
         ) : createTicketModal ? (
           <Modal
