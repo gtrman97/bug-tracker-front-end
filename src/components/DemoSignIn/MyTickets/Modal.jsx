@@ -22,6 +22,8 @@ const Modal = (props) => {
 
   const edit = props.title.startsWith("e");
 
+  const devs = props.devs;
+
   return (
     <>
       <div className={styles.modal}>
@@ -57,9 +59,9 @@ const Modal = (props) => {
               </label>
               <div className={styles["radio-buttons"]}>
                 bug
-                <input id="type" name="type" type={"radio"} />
+                <input id="type" name="type" type="radio" checked={ edit ? "checked" : null}/>
                 feature
-                <input id="type" name="type" type={"radio"} />
+                <input id="type" name="type" type="radio" />
               </div>
             </div>
             <div className={styles["form-element"]}>
@@ -67,15 +69,15 @@ const Modal = (props) => {
                 assignee
               </label>
               <select className={styles.developers}>
-                <option value="trevor strnad" onClick={assigneeChangeHandler}>
-                  Trevor Strnad
-                </option>
-                <option value="brian eschbach" onClick={assigneeChangeHandler}>
+                {devs.map((dev) => <option value={`${dev.assignee}`} onClick={assigneeChangeHandler}>
+                  {dev.assignee}
+                </option>)}
+                {/* <option value="brian eschbach" onClick={assigneeChangeHandler}>
                   Brian Eschbach
                 </option>
                 <option value="ryan knight" onClick={assigneeChangeHandler}>
                   Ryan Knight
-                </option>
+                </option> */}
               </select>
             </div>
             <div className={styles["form-element"]}>

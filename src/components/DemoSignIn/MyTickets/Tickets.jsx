@@ -74,7 +74,7 @@ const Tickets = () => {
   const [createTicketModal, setCreateTicketModal] = useState(false);
   // const [modal, setModal] = useState(false);
 
-  const devs = notStartedTickets.map((ticket) => ticket.assignee);
+  const devs = [...notStartedTickets.map((ticket) => ticket.assignee)];
 
   const createTicket = (newAssignee = devs[0], newTime) => {
     const ticketId =
@@ -150,6 +150,7 @@ const Tickets = () => {
             onCreateTicket={createTicket}
             title={"edit ticket"}
             buttonText={'save'}
+            devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
           />
         ) : createTicketModal ? (
           <Modal
