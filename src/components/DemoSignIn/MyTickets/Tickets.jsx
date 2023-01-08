@@ -61,6 +61,8 @@ const Tickets = () => {
     ]
   }
 
+  const statuses = ['none', 'low', 'medium', 'high'];
+
   // since I am using the spread operator here which makes a shallow copy,
   // I don't need to use the slice() method in the shuffleTickets method
   const allTickets = [
@@ -155,6 +157,7 @@ const Tickets = () => {
             onCreateTicket={createTicket}
             title={"edit ticket"}
             buttonText={'save'}
+            statuses={statuses}
             devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
             dev={dev}
             time={time}

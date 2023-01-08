@@ -22,6 +22,8 @@ const Modal = (props) => {
 
   const edit = props.title.startsWith("e");
 
+  const statuses = props.statuses;
+
   let devs = props.devs;
 
   const capitalize = (dev) => {
@@ -34,7 +36,7 @@ const Modal = (props) => {
       last.charAt(0).toUpperCase() +
       last.slice(1);
     return dev;
-  }
+  };
 
   devs = devs.map((dev) => capitalize(dev.assignee));
 
@@ -67,10 +69,15 @@ const Modal = (props) => {
                 priority
               </label>
               <select className={styles.priorities}>
-                <option value="none">None</option>
+                {statuses.map((priority) => (
+                  <option value={priority}>
+                    {priority.charAt(0).toUpperCase() + priority.slice(1)}
+                  </option>
+                ))}
+                {/* <option value="none">None</option>
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
-                <option value="high">High</option>
+                <option value="high">High</option> */}
               </select>
             </div>
             <div className={styles["form-element"]}>
@@ -98,7 +105,7 @@ const Modal = (props) => {
                   <option
                     value={`${dev.assignee}`}
                     onClick={assigneeChangeHandler}
-                    selected={(assignee === dev) ? 'selected' : null}
+                    selected={assignee === dev ? "selected" : null}
                   >
                     {dev}
                   </option>
@@ -109,7 +116,12 @@ const Modal = (props) => {
               <label className={styles["form-label"]} htmlFor="time">
                 time
               </label>
-              <input id="time" name="time" value={props.time} onChange={timeChangeHandler} />
+              <input
+                id="time"
+                name="time"
+                value={props.time}
+                onChange={timeChangeHandler}
+              />
             </div>
           </form>
           <button className={styles["close-modal"]} onClick={toggleModal}>
