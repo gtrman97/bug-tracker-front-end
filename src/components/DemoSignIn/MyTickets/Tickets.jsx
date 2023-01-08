@@ -168,6 +168,7 @@ const Tickets = () => {
             onCreateTicket={createTicket}
             title={"new ticket"}
             buttonText={'create'}
+            statuses={statuses}
             devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
           />
         ) : null}

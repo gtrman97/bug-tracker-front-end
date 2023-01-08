@@ -42,9 +42,12 @@ const Modal = (props) => {
 
   // I have to assign it to a new variable here
   // to capitalize because the incoming props.dev is read only
-  let assignee = props.dev;
+  let assignee;
 
-  assignee = capitalize(assignee);
+  if (edit) {
+    assignee = props.dev;
+    assignee = capitalize(assignee);
+  }
 
   return (
     <>
