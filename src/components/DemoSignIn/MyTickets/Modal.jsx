@@ -22,7 +22,19 @@ const Modal = (props) => {
 
   const edit = props.title.startsWith("e");
 
-  const devs = props.devs;
+  let devs = props.devs;
+
+  devs = devs.map((dev) => {
+    dev = dev.assignee.split(" ");
+    let [first, last] = dev;
+    dev =
+      first.charAt(0).toUpperCase() +
+      first.slice(1) +
+      " " +
+      last.charAt(0).toUpperCase() +
+      last.slice(1);
+    return dev;
+  });
 
   return (
     <>
@@ -59,7 +71,12 @@ const Modal = (props) => {
               </label>
               <div className={styles["radio-buttons"]}>
                 bug
-                <input id="type" name="type" type="radio" checked={ edit ? "checked" : null}/>
+                <input
+                  id="type"
+                  name="type"
+                  type="radio"
+                  defaultChecked={edit ? "checked" : null}
+                />
                 feature
                 <input id="type" name="type" type="radio" />
               </div>
@@ -69,9 +86,14 @@ const Modal = (props) => {
                 assignee
               </label>
               <select className={styles.developers}>
-                {devs.map((dev) => <option value={`${dev.assignee}`} onClick={assigneeChangeHandler}>
-                  {dev.assignee}
-                </option>)}
+                {devs.map((dev) => (
+                  <option
+                    value={`${dev.assignee}`}
+                    onClick={assigneeChangeHandler}
+                  >
+                    {dev}
+                  </option>
+                ))}
                 {/* <option value="brian eschbach" onClick={assigneeChangeHandler}>
                   Brian Eschbach
                 </option>
@@ -93,23 +115,17 @@ const Modal = (props) => {
           <div className={styles.buttons}>
             {!edit ? (
               <button
-              className={styles["save-ticket"]}
-              onClick={newTicketHandler}
-            >
-              {props.buttonText}
-            </button>
+                className={styles["save-ticket"]}
+                onClick={newTicketHandler}
+              >
+                {props.buttonText}
+              </button>
             ) : (
               <>
-                <button
-                  className={styles["save-ticket"]}
-                >
+                <button className={styles["save-ticket"]}>
                   {props.buttonText}
                 </button>
-                <button
-                  className={styles["delete-ticket"]}
-                >
-                  delete
-                </button>
+                <button className={styles["delete-ticket"]}>delete</button>
               </>
             )}
           </div>

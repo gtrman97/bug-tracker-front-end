@@ -158,6 +158,7 @@ const Tickets = () => {
             onCreateTicket={createTicket}
             title={"new ticket"}
             buttonText={'create'}
+            devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
           />
         ) : null}
         {/* {modal && (
