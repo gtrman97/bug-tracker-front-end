@@ -65,7 +65,9 @@ const Modal = (props) => {
                 name="description"
                 rows="3"
                 cols="26"
-              ></textarea>
+              >
+                {`desciption for ticket number `}
+              </textarea>
             </div>
             <div className={styles["form-element"]}>
               <label className={styles["form-label"]} htmlFor="assignee">
