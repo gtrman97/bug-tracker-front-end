@@ -88,6 +88,7 @@ const Tickets = () => {
     setCreateTicketModal(!createTicketModal);
   };
 
+  const [id, setId] = useState();
   const [dev, setDev] = useState();
   const [time, setTime] = useState();
 
@@ -100,6 +101,7 @@ const Tickets = () => {
       console.log(
         `id: ${props.ticket.id}, dev: ${props.ticket.assignee}, time: ${props.ticket.time}`
       );
+      setId(props.ticket.id);
       setDev(props.ticket.assignee);
       setTime(props.ticket.time);
     }
@@ -157,8 +159,9 @@ const Tickets = () => {
             onCreateTicket={createTicket}
             title={"edit ticket"}
             buttonText={'save'}
-            statuses={statuses}
+            id={id}
             devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
+            statuses={statuses}
             dev={dev}
             time={time}
           />
@@ -168,8 +171,8 @@ const Tickets = () => {
             onCreateTicket={createTicket}
             title={"new ticket"}
             buttonText={'create'}
-            statuses={statuses}
             devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
+            statuses={statuses}
           />
         ) : null}
         {/* {modal && (
