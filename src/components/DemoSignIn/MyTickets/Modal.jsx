@@ -79,10 +79,6 @@ const Modal = (props) => {
                     {priority.charAt(0).toUpperCase() + priority.slice(1)}
                   </option>
                 ))}
-                {/* <option value="none">None</option>
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option> */}
               </select>
             </div>
             <div className={styles["form-element"]}>
