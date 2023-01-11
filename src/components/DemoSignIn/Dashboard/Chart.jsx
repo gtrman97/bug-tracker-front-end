@@ -3,8 +3,8 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip } from "recharts";
 import styles from "./Chart.module.css";
 
 const Chart = (props) => {
-  let category = props.category,
-    data = props.data,
+  
+    let data = props.data,
     barWidth = props.barWidth;
 
   const isMobile = window.screen.width < 897;
