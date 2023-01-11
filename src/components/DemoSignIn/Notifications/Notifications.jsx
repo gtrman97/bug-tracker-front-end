@@ -46,20 +46,20 @@ const Notifications = () => {
                   <Tbody>
                     {alerts.map((alert) => (
                       <Tr className={styles["table-body-row"]}>
-                        <Td>
+                        <Td className={styles['table-col']}>
                           <input type="checkbox" checked={checked} className={styles.selection}/>
                         </Td>
-                        <Td>
+                        <Td className={styles['table-col']}>
                           <span
                             className={!alert.read ? styles.new : styles.read}
                           ></span>
                         </Td>
-                        <Td>
+                        <Td className={styles['table-col']}>
                           <span className={!alert.read ? styles.unread : null}>
                             {alert.subject}
                           </span>
                         </Td>
-                        <Td>
+                        <Td className={styles['table-col']}>
                           <span>{alert.date}</span>
                         </Td>
                       </Tr>
