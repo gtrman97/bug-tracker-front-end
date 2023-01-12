@@ -1,12 +1,12 @@
 .demo-app {
   /* border: solid 2px red; */
-  /* background-color: #f0f2f5; */
-  background-color: lightblue;
+  background-color: #f0f2f5;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   align-items: center;
   flex-direction: column;
+  overflow-y: auto;
 }
 .side-nav {
   /* border: solid 2px red; */
@@ -44,6 +44,9 @@
   }
 }
 @media screen and (min-width: 415px) {
+  .demo-app {
+    overflow-y: auto;
+  }
   .main-content {
     margin-top: 5.5rem;
   }
@@ -60,6 +63,7 @@
     grid-template-rows: 1fr 7fr;
     align-items: initial;
     /* margin-bottom: 1rem; */
+    overflow-y: auto;
   }
   .side-nav {
     grid-area: side-nav;
