@@ -5,6 +5,7 @@ const Modal = (props) => {
   let newTicketTime, newAssignee;
   const toggleModal = props.onToggleModal;
   const createTicket = props.onCreateTicket;
+  const deleteTicket = props.onDeleteTicket;
 
   const timeChangeHandler = (event) => {
     newTicketTime = event.target.value;
@@ -66,7 +67,7 @@ const Modal = (props) => {
                 rows="3"
                 cols="26"
               >
-                {`This is a desciption for ticket number ${props.id}`}
+                {edit ? `This is a desciption for ticket number ${props.id}` : null}
               </textarea>
             </div>
             <div className={styles["form-element"]}>
@@ -141,7 +142,7 @@ const Modal = (props) => {
                 <button className={styles["save-ticket"]}>
                   {props.buttonText}
                 </button>
-                <button className={styles["delete-ticket"]}>delete</button>
+                <button className={styles["delete-ticket"]} onClick={deleteTicket}>delete</button>
               </>
             )}
           </div>

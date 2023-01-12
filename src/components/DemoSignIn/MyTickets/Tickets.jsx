@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./Tickets.module.css";
 import TicketTable from "./TicketTable";
 import Modal from "./Modal";
+import DeleteModal from "../MyProjects/DeleteModal";
 
 const Tickets = () => {
   const notStartedTickets = [
@@ -33,7 +34,7 @@ const Tickets = () => {
   ];
 
   const globalTickets = {
-    'not started': [
+    "not started": [
       { id: 1, assignee: "trevor strnad", time: "1h" },
       { id: 2, assignee: "brian eschbach", time: "45m" },
       { id: 3, assignee: "shannon lucas", time: "1h" },
@@ -45,23 +46,23 @@ const Tickets = () => {
       { id: 9, assignee: "lawrence perry", time: "1h" },
       { id: 10, assignee: "john mcDougall ", time: "1h" },
     ],
-    'in progress': [
+    "in progress": [
       { id: 11, assignee: "mark morton", time: "1h" },
       { id: 12, assignee: "ryan knight", time: "1h" },
       { id: 13, assignee: "john michael", time: "1h" },
       { id: 14, assignee: "jimmy jones", time: "1h" },
       { id: 15, assignee: "jack allen", time: "1h" },
     ],
-    'completed': [
+    completed: [
       { id: 16, assignee: "nathan thunderstone ", time: "1h" },
       { id: 17, assignee: "marcus aurelius", time: "1h" },
       { id: 18, assignee: "john smith", time: "1h" },
       { id: 19, assignee: "brian holt", time: "50m" },
       { id: 20, assignee: "shad helmstetter", time: "30m" },
-    ]
-  }
+    ],
+  };
 
-  const statuses = ['none', 'low', 'medium', 'high'];
+  const statuses = ["none", "low", "medium", "high"];
 
   // since I am using the spread operator here which makes a shallow copy,
   // I don't need to use the slice() method in the shuffleTickets method
@@ -72,21 +73,31 @@ const Tickets = () => {
   ];
 
   const [tickets, setTickets] = useState(notStartedTickets);
-  const [editTicketModal, setEditTicketModal] = useState(false);
   const [createTicketModal, setCreateTicketModal] = useState(false);
+  const [editTicketModal, setEditTicketModal] = useState(false);
+  const [deleteProjectModal, setDeleteProjectModal] = useState(false);
+
   // const [modal, setModal] = useState(false);
 
   const devs = [...notStartedTickets.map((ticket) => ticket.assignee)];
 
   const createTicket = (newAssignee = devs[0], newTime) => {
     const ticketId =
-    notStartedTickets.length + inProgressTickets.length + completedTickets.length + 1;
+      notStartedTickets.length +
+      inProgressTickets.length +
+      completedTickets.length +
+      1;
     setShuffledNewTickets((oldTickets) => [
       ...oldTickets,
       { id: ticketId, assignee: newAssignee, time: newTime },
     ]);
     setCreateTicketModal(!createTicketModal);
   };
+
+  const deleteTicket = () => {
+    setDeleteProjectModal(!deleteProjectModal);
+    setEditTicketModal(!editTicketModal);
+  }
 
   const [id, setId] = useState();
   const [dev, setDev] = useState();
@@ -135,18 +146,10 @@ const Tickets = () => {
     <>
       <div className={styles.create}>
         <select className={styles.projects} onChange={shuffleTickets}>
-          <option value="project 1">
-            Project 1
-          </option>
-          <option value="project 2">
-            Project 2
-          </option>
-          <option value="project 3">
-            Project 3
-          </option>
-          <option value="project 4">
-            Project 4
-          </option>
+          <option value="project 1">Project 1</option>
+          <option value="project 2">Project 2</option>
+          <option value="project 3">Project 3</option>
+          <option value="project 4">Project 4</option>
         </select>
         <button onClick={toggleNewTicketModal} className={styles.button}>
           create ticket
@@ -156,11 +159,15 @@ const Tickets = () => {
         {editTicketModal ? (
           <Modal
             onToggleModal={toggleEditTicketModal}
-            onCreateTicket={createTicket}
+            onDeleteTicket={deleteTicket}
             title={"edit ticket"}
-            buttonText={'save'}
+            buttonText={"save"}
             id={id}
-            devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
+            devs={[
+              ...notStartedTickets,
+              ...inProgressTickets,
+              ...completedTickets,
+            ]}
             statuses={statuses}
             dev={dev}
             time={time}
@@ -170,14 +177,17 @@ const Tickets = () => {
             onToggleModal={toggleNewTicketModal}
             onCreateTicket={createTicket}
             title={"new ticket"}
-            buttonText={'create'}
-            devs={[...notStartedTickets, ...inProgressTickets, ...completedTickets]}
+            buttonText={"create"}
+            devs={[
+              ...notStartedTickets,
+              ...inProgressTickets,
+              ...completedTickets,
+            ]}
             statuses={statuses}
           />
+        ) : deleteProjectModal ? (
+          <DeleteModal onToggleModal={deleteTicket}/>
         ) : null}
-        {/* {modal && (
-          <Modal onToggleModal={toggleModal} onCreateTicket={createTicket} title={title}/>
-        )} */}
         <TicketTable
           color={"red"}
           header={"not started"}
