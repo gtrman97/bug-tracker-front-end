@@ -6,10 +6,6 @@ import SideNavBar from "../Dashboard/SideNavBar";
 
 const isLoggedIn = (userId) => {};
 
-// className={!sidenavVisibility ? styles['head-nav'] : `${styles['head-nav']} ${
-//   styles['side-nav-slide']
-// }`}
-
 const DemoApp = () => {
   const [sidenavVisibility, SetSidenavVisibility] = useState(false);
 
