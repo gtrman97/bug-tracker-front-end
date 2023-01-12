@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./Modal.module.css";
 
 const Modal = (props) => {
+
+  console.log(`status is index ${props.status}`);
+
   let newTicketTime, newAssignee;
   const toggleModal = props.onToggleModal;
   const createTicket = props.onCreateTicket;
@@ -75,8 +78,8 @@ const Modal = (props) => {
                 priority
               </label>
               <select className={styles.priorities}>
-                {statuses.map((priority) => (
-                  <option value={priority}>
+                {statuses.map((priority, i) => (
+                  <option value={priority} selected={edit && props.status === i ? "selected" : null}>
                     {priority.charAt(0).toUpperCase() + priority.slice(1)}
                   </option>
                 ))}

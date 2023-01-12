@@ -100,6 +100,7 @@ const Tickets = () => {
   }
 
   const [id, setId] = useState();
+  const [status, setStatus] = useState();
   const [dev, setDev] = useState();
   const [time, setTime] = useState();
 
@@ -113,6 +114,7 @@ const Tickets = () => {
         `id: ${props.ticket.id}, dev: ${props.ticket.assignee}, time: ${props.ticket.time}`
       );
       setId(props.ticket.id);
+      setStatus(Math.floor(Math.random() * 4));
       setDev(props.ticket.assignee);
       setTime(props.ticket.time);
     }
@@ -169,6 +171,7 @@ const Tickets = () => {
               ...completedTickets,
             ]}
             statuses={statuses}
+            status={status}
             dev={dev}
             time={time}
           />
