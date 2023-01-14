@@ -65,6 +65,7 @@ const Projects = () => {
     setDeleteProjectModal(!deleteProjectModal);
   }
 
+  const isMobile = window.screen.width < 897;
 
   return (
     <>
@@ -85,11 +86,11 @@ const Projects = () => {
                 <table className={styles.table}>
                   <thead className={styles["table-heading"]}>
                     <tr className={styles["table-heading-row"]}>
-                      <th>project name</th>
-                      <th>project manager</th>
+                      <th>{isMobile ? "project": "project name"}</th>
+                      <th>{isMobile ? "manager": "project manager"}</th>
                       <th>description</th>
                       <th>status</th>
-                      <th></th>
+                      <th className={styles['actions-col']}></th>
                     </tr>
                   </thead>
                   <tbody>

@@ -66,12 +66,11 @@
 }
 .table-responsive {
   width: 100%;
-
   padding: 0;
 }
 .table {
   margin-bottom: 0;
-  width: 100%;
+  width: 21rem;
   display: flex;
   flex-direction: column;
 }
@@ -123,6 +122,9 @@
   border: solid1 1px black;
 } */
 @media screen and (min-width: 415px) {
+  .table {
+    width: initial;
+  }
   .create {
     justify-content: flex-end;
   }
