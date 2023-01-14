@@ -20,14 +20,14 @@ const Tickets = () => {
   ];
   const inProgressTickets = [
     { id: 11, assignee: "mark morton", time: "1h" },
-    { id: 12, assignee: "ryan knight", time: "1h" },
-    { id: 13, assignee: "john michael", time: "1h" },
+    { id: 12, assignee: "ryan knight", time: "40m" },
+    { id: 13, assignee: "john michael", time: "50m" },
     { id: 14, assignee: "jimmy jones", time: "1h" },
     { id: 15, assignee: "jack allen", time: "1h" },
   ];
   const completedTickets = [
     { id: 16, assignee: "nathan thunderstone ", time: "1h" },
-    { id: 17, assignee: "marcus aurelius", time: "1h" },
+    { id: 17, assignee: "marcus aurelius", time: "2h" },
     { id: 18, assignee: "john smith", time: "1h" },
     { id: 19, assignee: "brian holt", time: "50m" },
     { id: 20, assignee: "shad helmstetter", time: "30m" },
