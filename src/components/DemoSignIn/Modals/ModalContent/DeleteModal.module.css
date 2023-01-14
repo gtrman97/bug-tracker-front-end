@@ -1,0 +1,18 @@
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+  .yes-button {
+    border: none;
+    text-transform: capitalize;
+    color: white;
+    background-image: var(--green);
+  }
+  .no-button {
+    border: none;
+    text-transform: capitalize;
+    color: white;
+    background-image: var(--red);
+  }
