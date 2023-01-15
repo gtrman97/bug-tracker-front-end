@@ -8,7 +8,7 @@ const Settings = () => {
   const [modal, setModal] = useState(false);
 
   const toggleModal = () => {
-    console.log("poo");
+    console.log("working");
     setModal(!modal);
   };
 
