@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./DeleteModal.module.css";
+import styles from "./Delete.module.css";
 
 const DeleteModal = (props) => {
 

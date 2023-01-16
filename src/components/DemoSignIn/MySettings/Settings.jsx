@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import styles from "./Settings.module.css";
 // import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
 import ModalTemplate from "../Modals/ModalTemplate";
-import DeleteModal from "../Modals/ModalContent/DeleteModal";
+import Delete from "../Modals/ModalContent/Delete";
 
 const Settings = () => {
   const [modal, setModal] = useState(false);
@@ -25,7 +25,7 @@ const Settings = () => {
         <ModalTemplate
           onToggleModalHandler={toggleModal}
           title={'are you sure you want to delete?'}
-          content={<DeleteModal onToggleModalHandler={toggleModal} />}
+          content={<Delete onToggleModalHandler={toggleModal} />}
         />
       ) : null}
     </>
