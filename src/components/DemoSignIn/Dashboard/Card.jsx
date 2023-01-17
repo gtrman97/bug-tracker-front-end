@@ -4,20 +4,23 @@ import clock from "../../../images/icons/clock.png";
 import Chart from "./Chart";
 
 const Card = (props) => {
+
+  const { color, category, when, data, barWidth } = props;
+
   return (
     <div className={styles.column}>
       <div className={styles.card}>
         <div className={styles["card-header"]}>
           <div
-            className={`${styles[`${props.color}-gradient`]} ${
+            className={`${styles[`${color}-gradient`]} ${
               styles.gradient
             }`}
           >
             <div className={styles.chart}>
               <Chart
-                category={props.category}
-                data={props.data}
-                barWidth={props.barWidth}
+                category={category}
+                data={data}
+                barWidth={barWidth}
               />
             </div>
           </div>
@@ -27,7 +30,7 @@ const Card = (props) => {
           <hr />
           <div className={styles.updates}>
             <img src={clock} alt="clock" className={styles.clock} />
-            <p className={styles.update}>Updated {props.when}</p>
+            <p className={styles.update}>Updated {when}</p>
           </div>
         </div>
       </div>

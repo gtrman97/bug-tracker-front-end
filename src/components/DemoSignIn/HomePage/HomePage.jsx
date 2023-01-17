@@ -4,8 +4,6 @@ import styles from "./HomePage.module.css";
 import HeadNavBar from "../Dashboard/HeadNavBar";
 import SideNavBar from "../Dashboard/SideNavBar";
 
-const isLoggedIn = (userId) => {};
-
 const DemoApp = () => {
   const [sidenavVisibility, SetSidenavVisibility] = useState(false);
 
