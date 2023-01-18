@@ -24,9 +24,11 @@
   /* width: 100%; */
 }
 .search-bar {
-  border: solid 1px gray;
+  border: solid 1px black;
+  border-radius: 25px;
   height: 2.5rem;
-  width: 9rem;
+  /* width: 9rem; */
+  padding-left: 1rem;
 }
 .icon {
   height: 1.5rem;
@@ -109,7 +111,7 @@
     /* width: 100%; */
   }
   .search-bar {
-    border: solid 1px gray;
+    /* border: solid 1px gray; */
     height: 2.5rem;
   }
   .icon {
