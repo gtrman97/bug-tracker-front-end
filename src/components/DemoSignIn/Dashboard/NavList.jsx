@@ -9,18 +9,33 @@ import ticket from "../../../images/icons/ticket.png";
 import bell from "../../../images/icons/bell.png";
 
 const NavList = (props) => {
+
+  const { onNavHeaderHandler } = props;
+
   return (
     <div id={styles["nav-bar-list"]}>
       <ul className={styles.list}>
-        <NavLink to="/" className={styles.link} onClick={props.onNavHeaderHandler}>
+        <NavLink
+          to="/"
+          className={styles.link}
+          onClick={onNavHeaderHandler}
+        >
           <img src={dashboard} className={styles.icon} alt="dashboard" />
           Dashboard
         </NavLink>
-        <NavLink to="/role-assignment" className={styles.link} onClick={props.onNavHeaderHandler}>
+        <NavLink
+          to="/role-assignment"
+          className={styles.link}
+          onClick={onNavHeaderHandler}
+        >
           <img src={change} className={styles.icon} alt="rotate" />
           Manage Role Assignment
         </NavLink>
-        <NavLink to="/" className={styles.link} onClick={props.onNavHeaderHandler}>
+        <NavLink
+          to="/"
+          className={styles.link}
+          onClick={onNavHeaderHandler}
+        >
           <img
             src={invoice}
             className={styles.icon}
@@ -29,15 +44,27 @@ const NavList = (props) => {
           />
           Manage Project Users
         </NavLink>
-        <NavLink to="/projects" className={styles.link} onClick={props.onNavHeaderHandler}>
+        <NavLink
+          to="/projects"
+          className={styles.link}
+          onClick={onNavHeaderHandler}
+        >
           <img src={box} className={styles.icon} alt="box" />
           My Projects
         </NavLink>
-        <NavLink to="/tickets" className={styles.link} onClick={props.onNavHeaderHandler}>
+        <NavLink
+          to="/tickets"
+          className={styles.link}
+          onClick={onNavHeaderHandler}
+        >
           <img src={ticket} className={styles.icon} alt="ticket" />
           My Tickets
         </NavLink>
-        <NavLink to="/notifications" className={styles.link} onClick={props.onNavHeaderHandler}>
+        <NavLink
+          to="/notifications"
+          className={styles.link}
+          onClick={onNavHeaderHandler}
+        >
           <img src={bell} className={styles.icon} alt="bell" />
           Notifications
         </NavLink>

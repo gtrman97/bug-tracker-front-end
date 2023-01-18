@@ -4,8 +4,7 @@ import styles from "./Chart.module.css";
 
 const Chart = (props) => {
   
-    let data = props.data,
-    barWidth = props.barWidth;
+  const { data, barWidth } = props;
 
   const isMobile = window.screen.width < 897;
 
