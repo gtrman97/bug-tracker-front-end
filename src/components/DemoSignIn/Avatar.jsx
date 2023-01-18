@@ -4,11 +4,13 @@ import styles from "./Avatar.module.css"
 
 const Avatar = (props) => {
 
+  const {path, userId, avatar, title} = props;
+
   return (
     <div className={styles.option}>
-      <Link to={props.path} permissions={props.userId}  className={styles.link}>
-        <img src={props.avatar} alt="avatar" className={styles["avatar"]} />
-        <p className={styles.user}>{props.title}</p>
+      <Link to={path} permissions={userId}  className={styles.link}>
+        <img src={avatar} alt="avatar" className={styles["avatar"]} />
+        <p className={styles.user}>{title}</p>
       </Link>
     </div>
   );
