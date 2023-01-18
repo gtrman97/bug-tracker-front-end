@@ -7,8 +7,8 @@ const Label = (props) => {
 
   return (
     <div className={styles["input-group"]}>
-      <label htmlFor={title}></label>
-      <input type="text" id={title} name={title} placeholder={title} />
+      <label htmlFor={title} className={styles.label}>{ title }</label>
+      <input type="text" id={title} name={title} className={styles.input}/>
     </div>
   );
 };

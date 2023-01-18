@@ -15,10 +15,9 @@ const SignUpForm = () => {
         <p className={styles.prompt}>
           Enter your name, email and password to register
         </p>
-        <Label title={"Username"} />
-        <Label title={"Email"} />
-        <Label title={"Password"} />
-        <Label title={"Confirm Password"} />
+        <Label title={"email"} />
+        <Label title={"password"} />
+        <Label title={"confirm password"} />
         <Button title={"sign up"} color={"red"} />
         <p className={styles.option}>
           Already have an account?{" "}

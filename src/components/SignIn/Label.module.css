@@ -1,5 +1,18 @@
-input {
+.input-group {
+    position: relative;
+}
+.label {
+    text-transform: capitalize;
+    position: absolute;
+    background-color: white;
+    font-size: 12px;
+    left: 1rem;
+    top: -0.75rem;
+    padding: 0 0.15rem;    
+}
+.input {
     padding: 0.5em;
-    border-radius: 10px;
+    border-radius: 25px;
+    border: solid 1.5px black;
     height: 2.5rem;
 }

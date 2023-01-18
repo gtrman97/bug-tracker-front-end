@@ -13,7 +13,7 @@ const ForgotPassword = () => {
       <form className={styles["forgot-password-form"]}>
         <img src={bugIcon} alt="bug-icon" id={styles["logo"]} />
         <p className={styles.prompt}>Enter your email to reset your password</p>
-        <Label title={"Email"} />
+        <Label title={"email"} />
         <Button title={"reset password"} color={"red"} />
         <p className={styles.option}>
           Already have an account?{" "}
