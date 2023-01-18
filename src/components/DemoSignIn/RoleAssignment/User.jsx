@@ -4,15 +4,14 @@ import styles from "./User.module.css";
 
 const User = (props) => {
 
-  const toggleUser = props.toggleUser;
-  const toggleRole = props.toggleRole;
+  const {toggleUser, toggleRole, selection, user, index} = props;
 
   const getIndex = props.indexChangeHandler;
 
-  const cols = props.selection === "person" ? true : false;
+  const cols = selection === "person" ? true : false;
 
-  const userTable = props.selection === "user" ? true : false;
-  const roleTable = props.selection === "role" ? true : false;
+  const userTable = selection === "user" ? true : false;
+  const roleTable = selection === "role" ? true : false;
 
   const [selectedUser, setSelectedUser] = useState(false);
   const [selectedRole, setSelectedRole] = useState(false);
@@ -24,7 +23,7 @@ const User = (props) => {
 
   const toggleRoleGradient = (event) => {
     setSelectedRole(!selectedRole);
-    getIndex(!selectedRole ? props.index : null);
+    getIndex(!selectedRole ? index : null);
     toggleRole(!selectedRole ? event.target.innerText : null);
   };
 
@@ -34,7 +33,7 @@ const User = (props) => {
         className={
           selectedUser
             ? styles[`toggle-user`]
-            : (props.selectedIndex === props.index)
+            : (props.selectedIndex === index)
             ? styles["toggle-role"]
             : ""
         }
@@ -42,12 +41,12 @@ const User = (props) => {
       >
         <td className={cols ? styles[`person-row`] : styles["user-row"]}>
           <div className={cols ? styles[`person-col`] : ""}>
-            {cols ? props.user.name : props.user}
+            {cols ? user.name : user}
           </div>
           {cols ? (
             <>
-              <div className={styles["email-col"]}>{props.user.email}</div>
-              <div className={styles["person-col"]}>{props.user.role}</div>
+              <div className={styles["email-col"]}>{user.email}</div>
+              <div className={styles["person-col"]}>{user.role}</div>
             </>
           ) : null}
         </td>

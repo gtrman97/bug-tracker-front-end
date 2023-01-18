@@ -3,11 +3,20 @@ import User from "./User";
 import styles from "./AssignmentCard.module.css";
 
 const AssignmentCard = (props) => {
-  const header = props.selection === "person" ? true : false;
 
-  const getPersonMap = props.getPersonMap;
-  const getUsers = props.getUsers;
-  const getRole = props.getRole;
+  const {
+    selection,
+    color,
+    title,
+    getPersonMap,
+    getUsers,
+    getRole,
+    selectionChangeHandler,
+    toggleUser,
+    toggleRole,
+  } = props;
+
+  const header = selection === "person" ? true : false;
 
   const [selectedRole, setSelectedRoles] = useState(-1);
 
@@ -19,9 +28,7 @@ const AssignmentCard = (props) => {
     }
   };
 
-  // const rows = props.rows;
-
-  const [rows, setRows] = useState(props.rows)
+  const [rows, setRows] = useState(props.rows);
 
   const changeRoles = () => {
     const personMap = getPersonMap();
@@ -44,14 +51,12 @@ const AssignmentCard = (props) => {
   return (
     <>
       <div className={styles.col}>
-        <div className={`${styles[`${props.selection}-card`]} ${styles.card}`}>
+        <div className={`${styles[`${selection}-card`]} ${styles.card}`}>
           <div className={styles["card-header"]}>
             <div
-              className={`${styles[`${props.color}-gradient`]} ${
-                styles.gradient
-              }`}
+              className={`${styles[`${color}-gradient`]} ${styles.gradient}`}
             >
-              <h6 className={styles.title}>{props.title}</h6>
+              <h6 className={styles.title}>{title}</h6>
             </div>
           </div>
           {header ? (
@@ -71,11 +76,11 @@ const AssignmentCard = (props) => {
                     <User
                       user={user}
                       index={i}
-                      color={props.color}
-                      selection={props.selection}
-                      selectionChangeHandler={props.selectionChangeHandler}
-                      toggleUser={props.toggleUser}
-                      toggleRole={props.toggleRole}
+                      color={color}
+                      selection={selection}
+                      selectionChangeHandler={selectionChangeHandler}
+                      toggleUser={toggleUser}
+                      toggleRole={toggleRole}
                       indexChangeHandler={getIndex}
                       selectedIndex={selectedRole}
                     />
@@ -86,7 +91,11 @@ const AssignmentCard = (props) => {
           </div>
         </div>
       </div>
-      {header ? <button className={styles.assign} onClick={changeRoles}>assign</button> : null}
+      {header ? (
+        <button className={styles.assign} onClick={changeRoles}>
+          assign
+        </button>
+      ) : null}
     </>
   );
 };
