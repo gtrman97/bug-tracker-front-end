@@ -1,20 +1,17 @@
 .button {
-    text-transform: capitalize;
-    width: 12.5rem;
-    /* height: 3rem; */
-    /* position: inherit; */
-    padding: 0.5em;
-    border: none;
-    border-radius: 0.75rem;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* background-color: red; */
-    color: white;
-    font-size: large;
-    text-transform: capitalize;
+  text-transform: capitalize;
+  width: 12.5rem;
+  padding: 0.5em;
+  border: none;
+  border-radius: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  font-size: large;
+  text-transform: capitalize;
 }
 .red {
-    background-image: var(--red);
+  background-image: var(--red);
 }
 .blue {
-    background-image: var(--blue);
+  background-image: var(--blue);
 }
