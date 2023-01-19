@@ -1,49 +1,50 @@
 .sign-up {
-    text-align: center;
-    background-image: var(--black);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .sign-up-form {
-    width: 20rem;
-    height: 35rem;
-    /* border: solid 2px #FF1D19; */
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2.5%;
-  }
-  #logo {
-    width: 3.5rem;
-    height: 3.5rem;
-    margin-top: 2rem;
-    /* margin-bottom: 0; */
-    /* border: solid 2px black; */
-  }
+  text-align: center;
+  background-image: var(--black);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+}
+.sign-up-form {
+  width: 20rem;
+  height: 35rem;
+  /* border: solid 2px #FF1D19; */
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5%;
+}
+#logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-top: 2rem;
+  /* margin-bottom: 0; */
+  /* border: solid 2px black; */
+}
 
-  .prompt {
-    margin-top: 0.5rem;
+.prompt {
+  margin-top: 0.5rem;
+}
 
-  }
+.prompt,
+.option {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* border: solid 2px black; */
+}
 
-  .prompt, .option {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* border: solid 2px black; */
+.link {
+  /* text-decoration: none; */
+  color: #e22e6d;
+}
 
-  }
-
-  .link {
-    /* text-decoration: none; */
-    color: #e22e6d;
-  }
-  
-  /* @media (min-width: 768px) {
+/* @media (min-width: 768px) {
     #logo {
       width: 10px;
       height: 10px;

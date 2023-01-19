@@ -35,6 +35,7 @@
     top: 7.25rem;
   }
 }
+/* This is the phone I have */
 @media screen and (min-width: 391px) {
   .main-header {
     text-transform: capitalize;
@@ -46,7 +47,7 @@
     top: 5.85rem;
   }
   .header {
-    top: 8.8rem;
+    top: 5.85rem;
   }
 }
 @media screen and (min-width: 415px) {
