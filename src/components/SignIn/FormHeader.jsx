@@ -5,8 +5,10 @@ const FormHeader = (props) => {
 
   const { title } = props;
 
+  const main = props.type;
+
   return (
-    <div className={styles.header}>
+    <div className={main ? styles['main-header'] : styles.header}>
       <div className={styles.gradient}>
         <h4>{title}</h4>
       </div>

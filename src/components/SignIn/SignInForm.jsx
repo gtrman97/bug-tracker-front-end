@@ -5,11 +5,30 @@ import FormHeader from "./FormHeader";
 import bugIcon from "../../images/icons/bug.png";
 import Label from "../SignIn/Label";
 import Button from "../SignIn/Button";
+import { TypeAnimation } from 'react-type-animation';
 
 const SignInForm = () => {
   return (
+    <>
     <div className={styles["sign-in"]}>
-      <FormHeader title={"sign in"}/>
+    <TypeAnimation
+    // Same String at the start will only be typed once, initially
+    sequence={[
+    'Welcome to Bug Tracker',
+    1000,
+    'Create Projects',
+    1000,
+    'Track Issues',
+    1000,
+    'Add Features',
+    1000
+    ]}
+    speed={50} // Custom Speed from 1-99 - Default Speed: 40
+    style={{ fontSize: '1.5rem', color: 'white' }}
+    wrapper="span" // Animation will be rendered as a <span>
+    repeat={Infinity} // Repeat this Animation Sequence infinitely
+  />
+      <FormHeader title={"sign in"} type={'main'}/>
       <form className={styles["sign-in-form"]}>
         <img src={bugIcon} alt="bug icon" id={styles.logo} />
         <Label title={"email"} />
@@ -36,8 +55,8 @@ const SignInForm = () => {
           </p>
         </div>
       </form>
-      <Outlet />
     </div>
+    </>
   );
 };
 

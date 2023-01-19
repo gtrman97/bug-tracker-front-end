@@ -8,6 +8,7 @@ import Button from "../SignIn/Button";
 
 const ForgotPassword = () => {
   return (
+    <>
     <div className={styles["forgot-password"]}>
       <FormHeader title={"reset password"} className={styles.header} />
       <form className={styles["forgot-password-form"]}>
@@ -23,6 +24,7 @@ const ForgotPassword = () => {
         </p>
       </form>
     </div>
+    </>
   );
 };
 
