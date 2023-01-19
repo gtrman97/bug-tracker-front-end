@@ -52,9 +52,9 @@
 }
 @media screen and (min-width: 415px) {
   .main-header {
-    top: 7.5rem;
+    top: 6rem;
   }
   .header {
-    top: 4.75rem;
+    top: 6rem;
   }
 }
