@@ -5,15 +5,25 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   position: absolute;
-  top: 8.75rem;
+  top: 6.25rem;
 }
 .gradient {
   border-radius: 25px;
   background-image: var(--red);
   padding: 1rem 0.25rem 1rem 0.25rem;
 }
+@media screen and (min-width: 376px) {
+  .header {
+    top: 7.25rem;
+  }
+}
+@media screen and (min-width: 391px) {
+  .header {
+    top: 8.8rem;
+  }
+}
 @media screen and (min-width: 415px) {
   .header {
-    top: 4.75rem;
+    top: 8.8rem;
   }
 }
