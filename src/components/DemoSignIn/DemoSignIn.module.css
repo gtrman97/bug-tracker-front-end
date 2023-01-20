@@ -9,6 +9,10 @@
   justify-content: flex-start;
   gap: 2.5rem;
 }
+.span {
+  height: 5rem;
+  visibility: hidden;
+}
 .demo-sign-in-form {
   width: 20rem;
   height: 35rem;
@@ -25,7 +29,6 @@
   width: 20%;
   height: 15%;
 }
-
 #users {
   display: flex;
   align-items: center;
@@ -51,4 +54,3 @@
     border: solid 2px red;
   }
 }
-
