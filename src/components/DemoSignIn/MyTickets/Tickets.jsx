@@ -83,9 +83,7 @@ const Tickets = () => {
 
   const createTicket = (newAssignee = devs[0], newTime) => {
     const ticketId =
-      notStartedTickets.length +
-      inProgressTickets.length +
-      completedTickets.length +
+      [...allTickets[0], ...allTickets[1], ...allTickets[2]].length +
       1;
     setShuffledNewTickets((oldTickets) => [
       ...oldTickets,
