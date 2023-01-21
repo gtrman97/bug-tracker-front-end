@@ -72,7 +72,11 @@ const Tickets = () => {
     [...completedTickets],
   ];
 
-  const [tickets, setTickets] = useState(notStartedTickets);
+  const [tickets, setTickets] = useState([
+    ...notStartedTickets,
+    ...inProgressTickets,
+    ...completedTickets,
+  ]);
   const [createTicketModal, setCreateTicketModal] = useState(false);
   const [editTicketModal, setEditTicketModal] = useState(false);
   const [deleteProjectModal, setDeleteProjectModal] = useState(false);
@@ -83,8 +87,7 @@ const Tickets = () => {
 
   const createTicket = (newAssignee = devs[0], newTime) => {
     const ticketId =
-      [...allTickets[0], ...allTickets[1], ...allTickets[2]].length +
-      1;
+      [...allTickets[0], ...allTickets[1], ...allTickets[2]].length + 1;
     setShuffledNewTickets((oldTickets) => [
       ...oldTickets,
       { id: ticketId, assignee: newAssignee, time: newTime },
@@ -95,7 +98,7 @@ const Tickets = () => {
   const deleteTicket = () => {
     setDeleteProjectModal(!deleteProjectModal);
     setEditTicketModal(!editTicketModal);
-  }
+  };
 
   const [id, setId] = useState();
   const [status, setStatus] = useState();
@@ -187,7 +190,7 @@ const Tickets = () => {
             statuses={statuses}
           />
         ) : deleteProjectModal ? (
-          <DeleteModal onToggleModal={deleteTicket}/>
+          <DeleteModal onToggleModal={deleteTicket} />
         ) : null}
         <TicketTable
           color={"red"}
