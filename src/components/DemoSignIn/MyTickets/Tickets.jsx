@@ -87,7 +87,11 @@ const Tickets = () => {
 
   const createTicket = (newAssignee = devs[0], newTime) => {
     const ticketId =
-      [...allTickets[0], ...allTickets[1], ...allTickets[2]].length + 1;
+      tickets.length + 1;
+      setTickets((oldTickets) => [
+        ...oldTickets,
+        { id: ticketId, assignee: newAssignee, time: newTime },
+      ]);
     setShuffledNewTickets((oldTickets) => [
       ...oldTickets,
       { id: ticketId, assignee: newAssignee, time: newTime },
