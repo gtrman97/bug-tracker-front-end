@@ -50,6 +50,16 @@
   width: 100%;
   padding: 0;
 }
+
+[data-testid="tr"] {
+  border: none !important;
+  border-bottom: solid 1px black !important;
+}
+
+[data-testid="tr"]:last-child {
+  border-bottom: none !important;
+}
+
 .table {
   margin-bottom: 0;
   width: 100%;

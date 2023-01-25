@@ -1,6 +1,6 @@
 import {React, useState} from "react";
-import styles from "./Notifications.module.css";
 import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
+import styles from "./Notifications.module.css";
 import {Table, Thead, Tbody, Tr, Th, Td} from 'react-super-responsive-table';
 
 const Notifications = () => {
