@@ -35,16 +35,6 @@ const ManageRoles = () => {
       role: "project manager",
     },
     {
-      name: "brandon ellis",
-      email: "brandon@ellis.com",
-      role: "project manager",
-    },
-    {
-      name: "ryan knight",
-      email: "ryan@knight.com",
-      role: "developer",
-    },
-    {
       name: "brian eschbach",
       email: "brian@eschbach.com",
       role: "project manager",
@@ -55,18 +45,13 @@ const ManageRoles = () => {
       role: "submitter",
     },
     {
-      name: "lawrence perry",
-      email: "lawrence@perry.com",
-      role: "submitter",
+      name: "ryan knight",
+      email: "ryan@knight.com",
+      role: "developer",
     },
     {
-      name: "napoleon hill",
-      email: "napoleon@hill.com",
-      role: "project manager",
-    },
-    {
-      name: "jose silva",
-      email: "jose@silva.com",
+      name: "brandon ellis",
+      email: "brandon@ellis.com",
       role: "project manager",
     },
     {
@@ -75,29 +60,69 @@ const ManageRoles = () => {
       role: "submitter",
     },
     {
+      name: "jose silva",
+      email: "jose@silva.com",
+      role: "project manager",
+    },
+    {
+      name: "napoleon hill",
+      email: "napoleon@hill.com",
+      role: "project manager",
+    },
+    {
+      name: "lawrence perry",
+      email: "lawrence@perry.com",
+      role: "submitter",
+    },
+    {
+      name: "john mcDougall",
+      email: "john@mcdougall.com",
+      role: "developer",
+    },
+    {
+      name: "mark morton",
+      email: "mark@morton.com",
+      role: "submitter",
+    },
+    {
+      name: "john michael",
+      email: "john@michael.com",
+      role: "developer",
+    },
+    {
       name: "jimmy jones",
       email: "jimmy@jones.com",
       role: "developer",
     },
     {
-      name: "john michael",
-      email: "john@michael.com",
-      role: "submitter",
+      name: "jack allen",
+      email: "jack@allen.com",
+      role: "developer",
+    },
+    {
+      name: "nathan thunderstone",
+      email: "nathan@thunderstone.com",
+      role: "developer",
+    },
+    {
+      name: "marcus aurelius",
+      email: "marcus@aurelius.com",
+      role: "developer",
+    },
+    {
+      name: "john smith",
+      email: "john@smith.com",
+      role: "developer",
+    },
+    {
+      name: "brian holt",
+      email: "brian@holt.com",
+      role: "developer",
     },
     {
       name: "shad helmstetter",
       email: "shad@helmstetter.com",
       role: "developer",
-    },
-    {
-      name: "trevor strnad",
-      email: "trevor@strnad.com",
-      role: "project manager",
-    },
-    {
-      name: "brian eschbach",
-      email: "brian@eschbach.com",
-      role: "project manager",
     },
     {
       name: "richard gran",
@@ -108,42 +133,7 @@ const ManageRoles = () => {
       name: "moby eric",
       email: "moby@eric.com",
       role: "submitter",
-    },
-    {
-      name: "jimmy jones",
-      email: "jimmy@jones.com",
-      role: "developer",
-    },
-    {
-      name: "trevor strnad",
-      email: "trevor@strnad.com",
-      role: "project manager",
-    },
-    {
-      name: "brian eschbach",
-      email: "brian@eschbach.com",
-      role: "project manager",
-    },
-    {
-      name: "moby eric",
-      email: "moby@eric.com",
-      role: "submitter",
-    },
-    {
-      name: "jimmy jones",
-      email: "jimmy@jones.com",
-      role: "developer",
-    },
-    {
-      name: "trevor strnad",
-      email: "trevor@strnad.com",
-      role: "project manager",
-    },
-    {
-      name: "brian eschbach",
-      email: "brian@eschbach.com",
-      role: "project manager",
-    },
+    }
   ];
 
   const personMap = {};
