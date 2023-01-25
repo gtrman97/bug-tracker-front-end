@@ -6,21 +6,24 @@ import AssignmentCard from "./AssignmentCard";
 const ManageRoles = () => {
   const users = [
     "trevor strnad",
-    "brandon ellis",
-    "ryan knight",
     "brian eschbach",
     "shannon lucas",
-    "lawrence perry",
-    "napoleon hill",
-    "jose silva",
+    "ryan knight",
+    "brandon ellis",
     "vinnie moore",
+    "jose silva",
+    "napoleon hill",
+    "lawrence perry",
+    "john mcDougall",
+    "mark morton",
+    "john michael",
     "jimmy jones",
-    "john michael",
-    "shad helmstetter",
-    "brian eschbach",
-    "john michael",
-    "brian eschbach",
-    "john michael",
+    "jack allen",
+    "nathan thunderstone",
+    "marcus aurelius",
+    "john smith",
+    "brian holt",
+    "shad helmstetter"
   ];
 
   const roles = ["admin", "project manager", "developer", "submitter"];

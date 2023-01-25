@@ -16,7 +16,7 @@ const Tickets = () => {
     { id: 7, assignee: "jose silva", time: "2d" },
     { id: 8, assignee: "napoleon hill", time: "2d" },
     { id: 9, assignee: "lawrence perry", time: "1h" },
-    { id: 10, assignee: "john mcDougall ", time: "1h" },
+    { id: 10, assignee: "john mcDougall", time: "1h" },
   ];
   const inProgressTickets = [
     { id: 11, assignee: "mark morton", time: "1h" },
@@ -26,7 +26,7 @@ const Tickets = () => {
     { id: 15, assignee: "jack allen", time: "1h" },
   ];
   const completedTickets = [
-    { id: 16, assignee: "nathan thunderstone ", time: "1h" },
+    { id: 16, assignee: "nathan thunderstone", time: "1h" },
     { id: 17, assignee: "marcus aurelius", time: "2h" },
     { id: 18, assignee: "john smith", time: "1h" },
     { id: 19, assignee: "brian holt", time: "50m" },
