@@ -8,9 +8,11 @@ const Chart = (props) => {
 
   const isMobile = window.screen.width < 897;
 
+  const isLarge = window.screen.width > 1727;
+
   return (
     <BarChart
-      width={400}
+      width={isLarge ? 400 : 300}
       height={isMobile ? 150 : 200}
       data={data}
       margin={{
