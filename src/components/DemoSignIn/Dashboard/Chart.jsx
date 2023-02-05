@@ -10,7 +10,7 @@ const Chart = (props) => {
 
   return (
     <BarChart
-      width={300}
+      width={400}
       height={isMobile ? 150 : 200}
       data={data}
       margin={{

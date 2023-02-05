@@ -13,7 +13,7 @@
 }
 @media screen and (min-width: 415px) {
   #nav-bar {
-    height: 46rem;
+    height: 100%;
     width: initial;
     border-radius: 0.75rem;
     background-image: var(--black);
