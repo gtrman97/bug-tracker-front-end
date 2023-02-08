@@ -85,7 +85,7 @@ const Tickets = () => {
 
   const devs = [...notStartedTickets.map((ticket) => ticket.assignee)];
 
-  const createTicket = (newAssignee = devs[0], newTime) => {
+  const createTicket = (newAssignee, newTime) => {
     const ticketId =
       tickets.length + 1;
       setTickets((oldTickets) => [

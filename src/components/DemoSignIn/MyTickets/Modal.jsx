@@ -16,8 +16,9 @@ const Modal = (props) => {
   };
 
   const assigneeChangeHandler = (event) => {
-    newAssignee = event.target.value;
-    console.log(newAssignee);
+    // it's not target.value for some reason here
+    newAssignee = event.target.text;
+    console.log(event.target.text);
   };
 
   const newTicketHandler = () => {
@@ -29,6 +30,7 @@ const Modal = (props) => {
   const statuses = props.statuses;
 
   let devs = props.devs;
+  newAssignee = devs[0].assignee;
 
   const capitalize = (dev) => {
     dev = dev.split(" ");
